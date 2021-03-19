@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <connectionStrings>
+    <add name="TransportationDB" connectionString="Data Source=DESKTOP-CLHA1Q5\SQLEXPRESS;Initial Catalog=transportation;Persist Security Info=True;User ID=sa;Password=asif2050" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+  </startup>
+</configuration>

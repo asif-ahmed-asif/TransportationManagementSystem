@@ -1,0 +1,5 @@
+Transportation.App/App.config
+.vs
+**/bin
+**/obj
+packages
