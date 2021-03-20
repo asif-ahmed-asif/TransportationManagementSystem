@@ -16,5 +16,20 @@ namespace Transportation.App
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (frmDashboard das = new frmDashboard())
+            {
+                das.ShowDialog();
+
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
