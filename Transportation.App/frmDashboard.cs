@@ -30,10 +30,15 @@ namespace Transportation.App
             this.pnlRed.Height = this.btnProfile.Height;
             this.pnlRed.Top = this.btnProfile.Top;
         }
-       /* private void SetPanelPosition(object button)
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            this.pnlRed.Height = button.Height;
-            this.pnlRed.Top = this.btnProfile.Top;
-        } */
+
+        }
+        /* private void SetPanelPosition(object button)
+{
+    this.pnlRed.Height = button.Height;
+    this.pnlRed.Top = this.btnProfile.Top;
+} */
     }
 }
