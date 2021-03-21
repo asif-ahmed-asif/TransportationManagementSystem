@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Repository.Entity")]
+[assembly: AssemblyTitle("Transportation.Entity")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Repository.Entity")]
+[assembly: AssemblyProduct("Transportation.Entity")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("0b96c5cb-2c96-4636-a296-2598d26ac624")]
+[assembly: Guid("ccbf824b-31f5-4a0d-bd6f-941cf9579f40")]
 
 // Version information for an assembly consists of the following four values:
 //
