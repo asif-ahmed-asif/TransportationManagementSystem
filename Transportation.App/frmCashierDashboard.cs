@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace Transportation.App
 {
-    public partial class frmDashboard : Form
+    public partial class frmCashierDashboard : Form
     {
-        public frmDashboard()
+        public frmCashierDashboard()
         {
             InitializeComponent();
             this.pnlRed.Height = this.btnHome.Height;
+        }
+
+        private void frmCashierDashboard_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.pnlRed.Height = this.btnHome.Height;
             this.pnlRed.Top = this.btnHome.Top;
-            
+
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
@@ -30,25 +35,6 @@ namespace Transportation.App
             this.pnlRed.Height = this.btnProfile.Height;
             this.pnlRed.Top = this.btnProfile.Top;
         }
-       /* private void SetPanelPosition(object button)
-        {
-<<<<<<< Updated upstream
-            this.pnlRed.Height = button.Height;
-            this.pnlRed.Top = this.btnProfile.Top;
-        } */
-=======
 
-        }
-
-        private void frmDashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-        /* private void SetPanelPosition(object button)
-{
-this.pnlRed.Height = button.Height;
-this.pnlRed.Top = this.btnProfile.Top;
-} */
->>>>>>> Stashed changes
     }
 }
