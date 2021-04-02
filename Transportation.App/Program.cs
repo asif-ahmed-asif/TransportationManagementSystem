@@ -18,8 +18,8 @@ namespace Transportation.App
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLogin());
-            // Application.Run(new frmDashboard());
-            Application.Run(new AdminForm());
+            Application.Run(new frmDashboard());
+            //Application.Run(new AdminForm());
         }
     }
 }
