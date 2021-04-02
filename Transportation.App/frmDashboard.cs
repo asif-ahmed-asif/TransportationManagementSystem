@@ -32,23 +32,8 @@ namespace Transportation.App
         }
        /* private void SetPanelPosition(object button)
         {
-<<<<<<< Updated upstream
             this.pnlRed.Height = button.Height;
             this.pnlRed.Top = this.btnProfile.Top;
         } */
-=======
-
-        }
-
-        private void frmDashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-        /* private void SetPanelPosition(object button)
-{
-this.pnlRed.Height = button.Height;
-this.pnlRed.Top = this.btnProfile.Top;
-} */
->>>>>>> Stashed changes
     }
 }
