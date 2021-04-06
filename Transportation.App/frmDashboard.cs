@@ -35,10 +35,15 @@ namespace Transportation.App
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         /* private void SetPanelPosition(object button)
 {
-    this.pnlRed.Height = button.Height;
-    this.pnlRed.Top = this.btnProfile.Top;
+this.pnlRed.Height = button.Height;
+this.pnlRed.Top = this.btnProfile.Top;
 } */
     }
 }
