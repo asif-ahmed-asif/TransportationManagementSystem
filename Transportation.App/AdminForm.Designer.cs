@@ -84,7 +84,7 @@
             // pnlRed
             // 
             this.pnlRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnlRed.Location = new System.Drawing.Point(3, 63);
+            this.pnlRed.Location = new System.Drawing.Point(3, 69);
             this.pnlRed.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRed.Name = "pnlRed";
             this.pnlRed.Size = new System.Drawing.Size(13, 41);
@@ -150,10 +150,12 @@
             // 
             // schedule1
             // 
+            this.schedule1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.schedule1.Location = new System.Drawing.Point(169, 66);
             this.schedule1.Name = "schedule1";
             this.schedule1.Size = new System.Drawing.Size(1021, 664);
             this.schedule1.TabIndex = 5;
+            this.schedule1.Load += new System.EventHandler(this.schedule1_Load);
             // 
             // adminHome1
             // 
