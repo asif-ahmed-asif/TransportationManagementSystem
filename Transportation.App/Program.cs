@@ -18,7 +18,7 @@ namespace Transportation.App
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLogin());
-            Application.Run(new frmDashboard());
+            Application.Run(new frmCashierDashboard());
             //Application.Run(new AdminForm());
         }
     }

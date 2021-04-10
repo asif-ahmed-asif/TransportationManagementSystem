@@ -1,6 +1,6 @@
 ﻿namespace Transportation.App
 {
-    partial class frmDashboard
+    partial class frmCashierDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCashierDashboard));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnProfile = new System.Windows.Forms.Button();
             this.pnlRed = new System.Windows.Forms.Panel();
@@ -130,7 +130,7 @@
             this.panel1.Size = new System.Drawing.Size(794, 27);
             this.panel1.TabIndex = 2;
             // 
-            // frmDashboard
+            // frmCashierDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -138,8 +138,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(500, 500);
-            this.Name = "frmDashboard";
-            this.Text = "Dashboard";
+            this.Name = "frmCashierDashboard";
+            this.Text = "Cashier Dashboard";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

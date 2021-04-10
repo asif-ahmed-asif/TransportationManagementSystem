@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Transportation.App
 {
-    public partial class frmDashboard : Form
+    public partial class frmCashierDashboard : Form
     {
-        public frmDashboard()
+        public frmCashierDashboard()
         {
             InitializeComponent();
             this.pnlRed.Height = this.btnHome.Height;
