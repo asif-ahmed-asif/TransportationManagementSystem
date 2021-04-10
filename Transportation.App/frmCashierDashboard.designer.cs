@@ -36,6 +36,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cashierTicketControl11 = new Transportation.App.cashierTicketControl1();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,14 +128,26 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel1.Location = new System.Drawing.Point(3, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(794, 27);
+            this.panel1.Size = new System.Drawing.Size(968, 27);
             this.panel1.TabIndex = 2;
+            // 
+            // cashierTicketControl11
+            // 
+            this.cashierTicketControl11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cashierTicketControl11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cashierTicketControl11.Location = new System.Drawing.Point(151, 184);
+            this.cashierTicketControl11.Name = "cashierTicketControl11";
+            this.cashierTicketControl11.Size = new System.Drawing.Size(820, 305);
+            this.cashierTicketControl11.TabIndex = 3;
             // 
             // frmCashierDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 486);
+            this.ClientSize = new System.Drawing.Size(972, 486);
+            this.Controls.Add(this.cashierTicketControl11);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(500, 500);
@@ -154,6 +167,7 @@
         private System.Windows.Forms.Panel pnlRed;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Panel panel1;
+        private cashierTicketControl1 cashierTicketControl11;
     }
 }
 
