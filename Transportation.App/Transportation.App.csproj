@@ -61,6 +61,12 @@
     <Compile Include="AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="cashierTicketControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cashierTicketControl1.Designer.cs">
+      <DependentUpon>cashierTicketControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCashierDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashierTicketControl1.resx">
+      <DependentUpon>cashierTicketControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCashierDashboard.resx">
       <DependentUpon>frmCashierDashboard.cs</DependentUpon>
