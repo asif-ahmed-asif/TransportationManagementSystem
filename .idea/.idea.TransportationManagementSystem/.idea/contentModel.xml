@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\ASUS\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ASUS\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_TransportationManagementSystem.-751508739.00" t="ExcludeRecursive" />
+    <e p="D:\Software Project 1" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Transportation.App" t="IncludeRecursive">
+        <e p="AdminForm.cs" t="Include" />
+        <e p="AdminForm.Designer.cs" t="Include" />
+        <e p="AdminForm.resx" t="Include" />
+        <e p="AdminHome.cs" t="Include" />
+        <e p="AdminHome.Designer.cs" t="Include" />
+        <e p="AdminHome.resx" t="Include" />
+        <e p="App.config" t="Include" />
+        <e p="App.config.example" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="frmDashboard.cs" t="Include" />
+        <e p="frmDashboard.designer.cs" t="Include" />
+        <e p="frmDashboard.resx" t="Include" />
+        <e p="frmLogin.cs" t="Include" />
+        <e p="frmLogin.Designer.cs" t="Include" />
+        <e p="frmLogin.resx" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Schedule.cs" t="Include" />
+        <e p="Schedule.Designer.cs" t="Include" />
+        <e p="Schedule.resx" t="Include" />
+        <e p="Transportation.App.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Transportation.Data" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DataAccess.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Transportation.Data.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Transportation.Entity" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Bus.cs" t="Include" />
+        <e p="BusTypes.cs" t="Include" />
+        <e p="Counter.cs" t="Include" />
+        <e p="Fares.cs" t="Include" />
+        <e p="Login.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Route.cs" t="Include" />
+        <e p="Sales.cs" t="Include" />
+        <e p="Ticket.cs" t="Include" />
+        <e p="Transportation.Entity.csproj" t="IncludeRecursive" />
+        <e p="User.cs" t="Include" />
+      </e>
+      <e p="Transportation.Repository" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Class1.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Transportation.Repository.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Transportation.Validation" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Class1.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Transportation.Validation.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="TransportationManagementSystem.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
