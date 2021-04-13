@@ -42,26 +42,6 @@ namespace Transportation.App
             this.pnlRed.Height = this.btnProfile.Height;
             this.pnlRed.Top = this.btnProfile.Top;
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
         /* private void SetPanelPosition(object button)
 {
 this.pnlRed.Height = button.Height;
