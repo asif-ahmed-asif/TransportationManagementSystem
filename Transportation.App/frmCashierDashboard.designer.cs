@@ -36,7 +36,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cashierTicketControl11 = new Transportation.App.cashierTicketControl1();
+            this.pnlControl = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,26 +131,25 @@
             this.panel1.Size = new System.Drawing.Size(968, 27);
             this.panel1.TabIndex = 2;
             // 
-            // cashierTicketControl11
+            // pnlControl
             // 
-            this.cashierTicketControl11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cashierTicketControl11.Location = new System.Drawing.Point(154, 134);
-            this.cashierTicketControl11.Name = "cashierTicketControl11";
-            this.cashierTicketControl11.Size = new System.Drawing.Size(814, 481);
-            this.cashierTicketControl11.TabIndex = 3;
+            this.pnlControl.Location = new System.Drawing.Point(157, 52);
+            this.pnlControl.Name = "pnlControl";
+            this.pnlControl.Size = new System.Drawing.Size(803, 425);
+            this.pnlControl.TabIndex = 3;
             // 
             // frmCashierDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 684);
-            this.Controls.Add(this.cashierTicketControl11);
+            this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(500, 499);
             this.Name = "frmCashierDashboard";
             this.Text = "Cashier Dashboard";
+            this.Load += new System.EventHandler(this.frmCashierDashboard_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -165,7 +164,7 @@
         private System.Windows.Forms.Panel pnlRed;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Panel panel1;
-        private cashierTicketControl1 cashierTicketControl11;
+        public System.Windows.Forms.Panel pnlControl;
     }
 }
 

@@ -16,5 +16,11 @@ namespace Transportation.App
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cashierTicketControl1 firstControl = new cashierTicketControl1();
+            MainControl.showControl(firstControl, frmCashierDashboard.ActiveForm);
+        }
     }
 }
