@@ -42,6 +42,11 @@ namespace Transportation.App
             this.pnlRed.Height = this.btnProfile.Height;
             this.pnlRed.Top = this.btnProfile.Top;
         }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
         /* private void SetPanelPosition(object button)
 {
 this.pnlRed.Height = button.Height;

@@ -16,16 +16,44 @@ namespace Transportation.App
         {
             InitializeComponent();
             this.pnlRed.Height = this.btnHome.Height;
+            cashierTicketControl1 firstControl = new cashierTicketControl1();
+            MainControl.showControl(firstControl, this);
+
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.pnlRed.Height = this.btnHome.Height;
             this.pnlRed.Top = this.btnHome.Top;
-            
+
+
+            cashierTicketControl1 firstControl = new cashierTicketControl1();
+            MainControl.showControl(firstControl, this);
+
+
         }
 
-        
+        public  void showControl(Control control)
+        {
+            
+            pnlControl.Controls.Clear();
+            //Controls.Clear();
+
+            pnlControl.Controls.Add(control);
+            control.Location = new Point()
+            {
+                X = pnlControl.Width / 2 - control.Width / 2,
+                Y = pnlControl.Height / 2 - control.Height / 2
+            };
+
+            /* control.Dock = DockStyle.Fill;
+             control.BringToFront();
+             control.Focus();
+
+             Controls.Add(control);*/
+        }
+
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -59,6 +87,13 @@ namespace Transportation.App
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void frmCashierDashboard_Load(object sender, EventArgs e)
         {
 
         }
