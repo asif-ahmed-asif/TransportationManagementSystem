@@ -22,5 +22,11 @@ namespace Transportation.App
             cashierTicketControl1 firstControl = new cashierTicketControl1();
             MainControl.showControl(firstControl, frmCashierDashboard.ActiveForm);
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmSeatVIew seat = new frmSeatVIew();
+            seat.Show();
+        }
     }
 }

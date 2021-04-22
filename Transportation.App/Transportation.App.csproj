@@ -92,6 +92,12 @@
     <Compile Include="frmDashboard.designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSeatVIew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeatVIew.Designer.cs">
+      <DependentUpon>frmSeatVIew.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeatVIew.resx">
+      <DependentUpon>frmSeatVIew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
