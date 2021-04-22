@@ -25,8 +25,9 @@ namespace Transportation.App
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
             frmSeatVIew seat = new frmSeatVIew();
-            seat.Show();
+            seat.ShowDialog();
         }
     }
 }
