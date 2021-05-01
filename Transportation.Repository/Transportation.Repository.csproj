@@ -41,8 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="RouteRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Transportation.Data\Transportation.Data.csproj">
+      <Project>{23e923ef-ca33-40cd-8314-b3de75b0ae09}</Project>
+      <Name>Transportation.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transportation.Entity\Transportation.Entity.csproj">
+      <Project>{ccbf824b-31f5-4a0d-bd6f-941cf9579f40}</Project>
+      <Name>Transportation.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
