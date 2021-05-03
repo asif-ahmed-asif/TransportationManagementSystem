@@ -25,9 +25,14 @@ namespace Transportation.App
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
+
+            cashierTicketControl3 third = new cashierTicketControl3();
+
             frmSeatVIew seat = new frmSeatVIew();
-            seat.ShowDialog();
+            DialogResult result = seat.ShowDialog();
+            if(result== DialogResult.OK)
+                MainControl.showControl(third, frmCashierDashboard.ActiveForm);
+
         }
     }
 }

@@ -133,15 +133,17 @@
             // 
             // pnlControl
             // 
+            this.pnlControl.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlControl.Location = new System.Drawing.Point(157, 52);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(803, 425);
+            this.pnlControl.Size = new System.Drawing.Size(803, 441);
             this.pnlControl.TabIndex = 3;
             // 
             // frmCashierDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(972, 684);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.panel2);

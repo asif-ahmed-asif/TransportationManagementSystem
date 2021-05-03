@@ -74,6 +74,12 @@
     <Compile Include="cashierTicketControl2.Designer.cs">
       <DependentUpon>cashierTicketControl2.cs</DependentUpon>
     </Compile>
+    <Compile Include="cashierTicketControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cashierTicketControl3.Designer.cs">
+      <DependentUpon>cashierTicketControl3.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCashierDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cashierTicketControl2.resx">
       <DependentUpon>cashierTicketControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashierTicketControl3.resx">
+      <DependentUpon>cashierTicketControl3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCashierDashboard.resx">
       <DependentUpon>frmCashierDashboard.cs</DependentUpon>
