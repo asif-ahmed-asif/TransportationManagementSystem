@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace Transportation.App
 {
-    public partial class frmSeatVIew : Form
+    public partial class cashierTicketControl3 : UserControl
     {
-        public frmSeatVIew()
+        public cashierTicketControl3()
         {
             InitializeComponent();
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            
+            cashierTicketControl2 second = new cashierTicketControl2();
+            MainControl.showControl(second, frmCashierDashboard.ActiveForm);
         }
     }
 }

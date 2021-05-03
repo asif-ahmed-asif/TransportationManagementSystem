@@ -118,12 +118,14 @@ namespace Transportation.App
             // 
             // btnConfirm
             // 
+            this.btnConfirm.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnConfirm.Location = new System.Drawing.Point(9, 465);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(313, 23);
             this.btnConfirm.TabIndex = 37;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // button37
             // 
