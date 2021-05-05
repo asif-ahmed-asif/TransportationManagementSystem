@@ -50,18 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminForm.Designer.cs">
-      <DependentUpon>AdminForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminHome.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminHome.Designer.cs">
-      <DependentUpon>AdminHome.cs</DependentUpon>
-    </Compile>
     <Compile Include="cashierTicketControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,12 +107,6 @@
     <Compile Include="Schedule.Designer.cs">
       <DependentUpon>Schedule.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminForm.resx">
-      <DependentUpon>AdminForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminHome.resx">
-      <DependentUpon>AdminHome.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="cashierTicketControl1.resx">
       <DependentUpon>cashierTicketControl1.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,8 +143,8 @@
     <EmbeddedResource Include="Schedule.resx">
       <DependentUpon>Schedule.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config.example" />
     <None Include="App.config" />
+    <None Include="App.config.example" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
