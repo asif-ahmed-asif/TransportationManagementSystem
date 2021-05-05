@@ -52,7 +52,7 @@
             this.panel2.Controls.Add(this.btnHome);
             this.panel2.Location = new System.Drawing.Point(0, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(151, 686);
+            this.panel2.Size = new System.Drawing.Size(151, 717);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -85,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(42, 617);
+            this.label1.Location = new System.Drawing.Point(42, 648);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 2;
@@ -99,7 +99,7 @@
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(46, 577);
+            this.btnLogout.Location = new System.Drawing.Point(46, 608);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(44, 37);
             this.btnLogout.TabIndex = 4;
@@ -128,7 +128,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel1.Location = new System.Drawing.Point(3, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(968, 27);
+            this.panel1.Size = new System.Drawing.Size(1096, 47);
             this.panel1.TabIndex = 2;
             // 
             // pnlControl
@@ -136,7 +136,7 @@
             this.pnlControl.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlControl.Location = new System.Drawing.Point(157, 52);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(803, 441);
+            this.pnlControl.Size = new System.Drawing.Size(942, 651);
             this.pnlControl.TabIndex = 3;
             // 
             // frmCashierDashboard
@@ -144,7 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(972, 684);
+            this.ClientSize = new System.Drawing.Size(1100, 715);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

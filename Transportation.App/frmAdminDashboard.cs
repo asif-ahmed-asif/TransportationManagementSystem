@@ -41,6 +41,11 @@ namespace Transportation.App
         {
             this.pnlRed.Height = this.btnProfile.Height;
             this.pnlRed.Top = this.btnProfile.Top;
+
+
+            userControl user = new userControl();
+            MainControl.showControl(user, frmAdminDashboard.ActiveForm);
+
         }
 
         private void frmAdminDashboard_Load(object sender, EventArgs e)
