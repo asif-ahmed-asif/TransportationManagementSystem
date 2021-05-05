@@ -137,6 +137,7 @@ namespace Transportation.App
             this.Controls.Add(this.label2);
             this.Name = "cashierTicketControl3";
             this.Size = new System.Drawing.Size(606, 380);
+            this.Load += new System.EventHandler(this.cashierTicketControl3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -22,5 +22,10 @@ namespace Transportation.App
             cashierTicketControl2 second = new cashierTicketControl2();
             MainControl.showControl(second, frmCashierDashboard.ActiveForm);
         }
+
+        private void cashierTicketControl3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
