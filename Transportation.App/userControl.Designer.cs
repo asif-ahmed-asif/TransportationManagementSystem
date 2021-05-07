@@ -33,19 +33,21 @@ namespace Transportation.App
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.rtxtAddress = new System.Windows.Forms.RichTextBox();
+            this.rtxtPhn = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.rtxtMail = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.rtxtSalary = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.rtxtName = new System.Windows.Forms.RichTextBox();
+            this.rtxtId = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -91,22 +93,22 @@ namespace Transportation.App
             this.label4.TabIndex = 59;
             this.label4.Text = "email";
             // 
-            // richTextBox1
+            // rtxtAddress
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(15, 365);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(222, 112);
-            this.richTextBox1.TabIndex = 65;
-            this.richTextBox1.Text = "";
+            this.rtxtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtAddress.Location = new System.Drawing.Point(15, 365);
+            this.rtxtAddress.Name = "rtxtAddress";
+            this.rtxtAddress.Size = new System.Drawing.Size(222, 112);
+            this.rtxtAddress.TabIndex = 65;
+            this.rtxtAddress.Text = "";
             // 
-            // richTextBox3
+            // rtxtPhn
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(15, 149);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(222, 44);
-            this.richTextBox3.TabIndex = 67;
-            this.richTextBox3.Text = "";
+            this.rtxtPhn.Location = new System.Drawing.Point(15, 149);
+            this.rtxtPhn.Name = "rtxtPhn";
+            this.rtxtPhn.Size = new System.Drawing.Size(222, 44);
+            this.rtxtPhn.TabIndex = 67;
+            this.rtxtPhn.Text = "";
             // 
             // label3
             // 
@@ -119,13 +121,13 @@ namespace Transportation.App
             this.label3.TabIndex = 55;
             this.label3.Text = "Phone Number";
             // 
-            // richTextBox4
+            // rtxtMail
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(15, 248);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(222, 44);
-            this.richTextBox4.TabIndex = 68;
-            this.richTextBox4.Text = "";
+            this.rtxtMail.Location = new System.Drawing.Point(15, 248);
+            this.rtxtMail.Name = "rtxtMail";
+            this.rtxtMail.Size = new System.Drawing.Size(222, 44);
+            this.rtxtMail.TabIndex = 68;
+            this.rtxtMail.Text = "";
             // 
             // label5
             // 
@@ -138,13 +140,13 @@ namespace Transportation.App
             this.label5.TabIndex = 69;
             this.label5.Text = "Salary";
             // 
-            // richTextBox5
+            // rtxtSalary
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(363, 43);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(222, 44);
-            this.richTextBox5.TabIndex = 70;
-            this.richTextBox5.Text = "";
+            this.rtxtSalary.Location = new System.Drawing.Point(363, 43);
+            this.rtxtSalary.Name = "rtxtSalary";
+            this.rtxtSalary.Size = new System.Drawing.Size(222, 44);
+            this.rtxtSalary.TabIndex = 70;
+            this.rtxtSalary.Text = "";
             // 
             // label6
             // 
@@ -170,6 +172,7 @@ namespace Transportation.App
             // 
             // cmbType
             // 
+            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbType.FormattingEnabled = true;
             this.cmbType.Location = new System.Drawing.Point(363, 152);
@@ -180,6 +183,7 @@ namespace Transportation.App
             // 
             // cmbStatus
             // 
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(363, 259);
@@ -187,52 +191,75 @@ namespace Transportation.App
             this.cmbStatus.Size = new System.Drawing.Size(219, 33);
             this.cmbStatus.TabIndex = 77;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(366, 365);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 41);
-            this.button1.TabIndex = 78;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSave.Location = new System.Drawing.Point(363, 337);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(97, 41);
+            this.btnSave.TabIndex = 78;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(488, 364);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 41);
-            this.button2.TabIndex = 79;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClear.Location = new System.Drawing.Point(485, 336);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(97, 41);
+            this.btnClear.TabIndex = 79;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
-            // richTextBox2
+            // rtxtName
             // 
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(15, 43);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(222, 44);
-            this.richTextBox2.TabIndex = 66;
-            this.richTextBox2.Text = "";
+            this.rtxtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtName.Location = new System.Drawing.Point(15, 43);
+            this.rtxtName.Name = "rtxtName";
+            this.rtxtName.Size = new System.Drawing.Size(222, 44);
+            this.rtxtName.TabIndex = 66;
+            this.rtxtName.Text = "";
+            // 
+            // rtxtId
+            // 
+            this.rtxtId.Location = new System.Drawing.Point(341, 433);
+            this.rtxtId.Name = "rtxtId";
+            this.rtxtId.Size = new System.Drawing.Size(222, 44);
+            this.rtxtId.TabIndex = 81;
+            this.rtxtId.Text = "";
+            this.rtxtId.TextChanged += new System.EventHandler(this.rtxtId_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(336, 396);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 25);
+            this.label8.TabIndex = 80;
+            this.label8.Text = "ID";
             // 
             // userControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rtxtId);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.richTextBox5);
+            this.Controls.Add(this.rtxtSalary);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.richTextBox4);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtxtMail);
+            this.Controls.Add(this.rtxtPhn);
+            this.Controls.Add(this.rtxtName);
+            this.Controls.Add(this.rtxtAddress);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
@@ -240,6 +267,7 @@ namespace Transportation.App
             this.Controls.Add(this.label2);
             this.Name = "userControl";
             this.Size = new System.Drawing.Size(738, 491);
+            this.Load += new System.EventHandler(this.userControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,18 +278,20 @@ namespace Transportation.App
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox rtxtAddress;
+        private System.Windows.Forms.RichTextBox rtxtPhn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox rtxtMail;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox richTextBox5;
+        private System.Windows.Forms.RichTextBox rtxtSalary;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.RichTextBox rtxtName;
+        private System.Windows.Forms.RichTextBox rtxtId;
+        private System.Windows.Forms.Label label8;
     }
 }
