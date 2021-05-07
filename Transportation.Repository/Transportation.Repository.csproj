@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="RouteRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Transportation.Data\Transportation.Data.csproj">
