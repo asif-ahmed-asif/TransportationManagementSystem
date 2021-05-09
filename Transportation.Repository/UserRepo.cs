@@ -10,12 +10,18 @@ namespace Transportation.Repository
 {
     public class UserRepo
     {
-        public static int InsertUsser(User user)
+        public static bool Save(User u)
         {
-            //float floatSalary = float.Parse(user.Salary);
-            string sql = "insert into [user] values('"+GetId()+"','"+user.Name + "','" +user.Email + "','" +user.Phone + @"
-                          ','" +user.Address + "','" +user.UserType + "'," +user.Salary+ ",'" +user.Status + "');";
-          return DataAccess.ExecuteDmlQuery(sql);
+            var sql = $"INSERT INTO [user] VALUES('{u.UserId}', '{u.Name}', '{u.Email}', '{u.Phone}', '{u.Address}', '{u.UserType}', '{u.Salary}', '{u.UserId}')";
+            var row = DataAccess.ExecuteDmlQuery(sql);
+            return row == 1;
+        }
+
+        public static bool Update(User u)
+        {
+            var sql = $"UPDATE [user] SET name = '{u.Name}', email = '{u.Email}', phone = '{u.Phone}', address = '{u.Address}', user_type = '{u.UserType}', salary = '{u.Salary}', status = '{u.Status}' where user_id = '{u.UserId}';";
+            var row = DataAccess.ExecuteDmlQuery(sql);
+            return row == 1;
         }
 
         public static string GetId()
@@ -35,9 +41,14 @@ namespace Transportation.Repository
 
             return "01";
 
-            
-           
+      
+        }
 
+        public static bool SearchUserId(string key)
+        {
+            var sql = "select * from [user] where user_id = '" + key + "';";
+            var dt = DataAccess.GetDataTable(sql);
+            return dt.Rows.Count == 1;
         }
     }
 }
