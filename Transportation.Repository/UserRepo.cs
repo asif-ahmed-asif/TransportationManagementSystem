@@ -12,7 +12,7 @@ namespace Transportation.Repository
     {
         public static bool Save(User u)
         {
-            var sql = $"INSERT INTO [user] VALUES('{u.UserId}', '{u.Name}', '{u.Email}', '{u.Phone}', '{u.Address}', '{u.UserType}', '{u.Salary}', '{u.UserId}')";
+            var sql = $"INSERT INTO [user] VALUES('{u.UserId}', '{u.Name}', '{u.Email}', '{u.Phone}', '{u.Address}', '{u.UserType}', '{u.Salary}', '{u.Status}')";
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1;
         }
