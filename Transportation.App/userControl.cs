@@ -89,6 +89,7 @@ namespace Transportation.App
                 Email = this.rtxtMail.Text,
                 Phone = this.rtxtPhn.Text,
                 Address = this.rtxtAddress.Text,
+                Password = this.rtxtPassword.Text,
                 UserType = this.cmbType.Text,
                 Salary = this.rtxtSalary.Text,
                 Status = this.cmbStatus.Text
@@ -125,6 +126,7 @@ namespace Transportation.App
                 Email = this.rtxtMail.Text,
                 Phone = this.rtxtPhn.Text,
                 Address = this.rtxtAddress.Text,
+                Password = this.rtxtPassword.Text,
                 UserType = this.cmbType.Text,
                 Salary = this.rtxtSalary.Text,
                 Status = this.cmbStatus.Text
