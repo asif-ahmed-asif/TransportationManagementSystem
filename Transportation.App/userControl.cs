@@ -9,16 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transportation.Entity;
 using Transportation.Repository;
-using Transportation.Validation;
-using FluentValidation.Results;
 
 namespace Transportation.App
 {
     public partial class userControl : UserControl
     {
-        private User User { get; set; }
-        private Login Login { get; set; }
-        private string CurrentUserId { get; set; }
+        private User user = new User();
         public userControl()
         {
             InitializeComponent();
@@ -31,126 +27,23 @@ namespace Transportation.App
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //var idExists = UserRepo.SearchUserId(this.CurrentUserId);
-            var idExists = UserRepo.SearchUserId(this.rtxtId.Text);
-            if (idExists)
-            {
+            user.Name = this.rtxtName.Text;
+            user.Phone = this.rtxtPhn.Text;
+            user.Email = this.rtxtMail.Text;
+            user.Address = this.rtxtAddress.Text;
+            user.Salary = this.rtxtSalary.Text;
+            user.Status = this.cmbStatus.Text;
+            user.UserType = this.cmbType.Text;
 
-                try
-                {
-                    if (!this.UpdateFillEntity())
-                        return;
-                    if (UserRepo.Update(this.User) && LoginRepo.Update(this.Login))
-                    {
-                        MessageBox.Show("Successfully updated  user");
-                        this.rtxtId.Text = UserRepo.GetId();
-                        this.ClearUserInput();
-                    }
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show("Cann't update user\n" + error.Message);
-                    this.ClearUserInput();
-                }
-                this.CurrentUserId = null;
+            try
+            {
+                if(UserRepo.InsertUsser(user)==1)
+                    MessageBox.Show("Insertion Succesful");
             }
-            else
+            catch (Exception error)
             {
-                if (this.cmbType.Text == "Admin")
-                {
-                    MessageBox.Show("Can not create a new admin");
-                    return;
-                }
-                try
-                {
-                    if (!this.FillEntity())
-                        return;
-                    if (UserRepo.Save(this.User) && LoginRepo.Save(this.Login))
-                    {
-                        MessageBox.Show("Successfully created new user");        
-                        this.rtxtId.Text = UserRepo.GetId();
-                        this.ClearUserInput();
-                    }
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show("Cann't add user\n" + error.Message);
-                }
+                MessageBox.Show($"Error fetching data\n{error.Message}");
             }
-
-        }
-
-        private bool FillEntity()
-        {
-            this.User = new User
-            {
-                UserId = UserRepo.GetId(),
-                Name = this.rtxtName.Text,
-                Email = this.rtxtMail.Text,
-                Phone = this.rtxtPhn.Text,
-                Address = this.rtxtAddress.Text,
-                Password = this.rtxtPassword.Text,
-                UserType = this.cmbType.Text,
-                Salary = this.rtxtSalary.Text,
-                Status = this.cmbStatus.Text
-            };
-
-            this.Login = new Login
-            {
-                Password = this.rtxtPassword.Text,
-                UserId = this.User.UserId
-            };
-
-            UserValidation validator = new UserValidation();
-            ValidationResult results = validator.Validate(this.User);
-            IList<ValidationFailure> failures = results.Errors;
-            if (!(results.IsValid))
-            {
-                foreach (ValidationFailure failure in failures)
-                {
-                    MessageBox.Show(failure.ErrorMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        private bool UpdateFillEntity()
-        {
-            this.User = new User
-            {
-                //UserId = this.CurrentUserId,
-                UserId = this.rtxtId.Text,
-                Name = this.rtxtName.Text,
-                Email = this.rtxtMail.Text,
-                Phone = this.rtxtPhn.Text,
-                Address = this.rtxtAddress.Text,
-                Password = this.rtxtPassword.Text,
-                UserType = this.cmbType.Text,
-                Salary = this.rtxtSalary.Text,
-                Status = this.cmbStatus.Text
-            };
-
-            this.Login = new Login
-            {
-                Password = this.rtxtPassword.Text,
-                UserId = this.User.UserId
-            };
-
-            UserValidation validator = new UserValidation();
-            ValidationResult results = validator.Validate(this.User);
-            IList<ValidationFailure> failures = results.Errors;
-            if (!(results.IsValid))
-            {
-                foreach (ValidationFailure failure in failures)
-                {
-                    MessageBox.Show(failure.ErrorMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                    return false;
-                }
-            }
-            return true;
         }
 
         private void userControl_Load(object sender, EventArgs e)
@@ -175,49 +68,22 @@ namespace Transportation.App
 
         }
 
-        private void ClearUserInput()
-        {
-            try
-            {
-                this.rtxtId.Text = UserRepo.GetId();
-                this.rtxtName.Text = "";
-                this.rtxtMail.Text = "";
-                this.rtxtPhn.Text = "";
-                this.rtxtAddress.Text = "";
-                this.rtxtPassword.Text = "";
-                this.cmbType.SelectedIndex = -1;
-                this.rtxtSalary.Text = "";
-                this.cmbStatus.SelectedIndex = -1;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error!" + e.Message);
-            }
-
-        }
-
         private void rtxtId_TextChanged(object sender, EventArgs e)
         {
 
         }
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
-=======
->>>>>>> master
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.ClearUserInput();
         }
-<<<<<<< HEAD
 
         private void rtxtAddress_TextChanged(object sender, EventArgs e)
         {
 
         }
 >>>>>>> Stashed changes
-=======
->>>>>>> master
     }
 }
