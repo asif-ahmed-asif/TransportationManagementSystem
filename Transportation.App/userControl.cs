@@ -72,18 +72,5 @@ namespace Transportation.App
         {
 
         }
-<<<<<<< Updated upstream
-=======
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            this.ClearUserInput();
-        }
-
-        private void rtxtAddress_TextChanged(object sender, EventArgs e)
-        {
-
-        }
->>>>>>> Stashed changes
     }
 }
