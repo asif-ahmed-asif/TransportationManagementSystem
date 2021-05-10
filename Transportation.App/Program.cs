@@ -17,11 +17,7 @@ namespace Transportation.App
             //aaaa
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< Updated upstream
             //Application.Run(new frmLogin());
-=======
-           // Application.Run(new frmLogin());
->>>>>>> Stashed changes
             Application.Run(new frmAdminDashboard());
             //Application.Run(new AdminForm());
         }
