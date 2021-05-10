@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11334c40-00de-4270-a28b-359055b33d6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Transportation.App/AdminForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/AdminForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.App/AdminForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/AdminForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.App/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transportation.Validation/CustomValidations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Validation/CustomValidations.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transportation.Validation/Transportation.Validation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Validation/Transportation.Validation.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transportation.Validation/UserValidation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Validation/UserValidation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +18,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Transportation.Validation/CustomValidations.cs" />
+        <option value="$PROJECT_DIR$/Transportation.Validation/UserValidation.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1qvy2FbViNqaYjXflTVRwKXhmAh" />
   <component name="ProjectViewState">
@@ -62,7 +72,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -72,5 +82,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1617992246624" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1620653796117">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620653796117" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1620653796117">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620653796117" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1620653796117">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620653796117" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1620653796117">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620653796117" />
   </component>
 </project>
