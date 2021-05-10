@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginRepo.cs" />
     <Compile Include="RouteRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserRepo.cs" />
