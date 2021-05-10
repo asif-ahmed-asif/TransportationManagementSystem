@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transportation.Entity;
+using Transportation.Repository;
 
 namespace Transportation.App
 {
@@ -19,10 +21,33 @@ namespace Transportation.App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (frmDashboard das = new frmDashboard())
+            if (textBox1.Text.Equals(String.Empty))
             {
-                das.ShowDialog();
+                MessageBox.Show("User Name Required!");
+            }
+            else if (textBox2.Text.Equals(String.Empty))
+            {
+                MessageBox.Show("Password Required!");
+            }
+            else
+            {
+                Login login = new Login();
 
+                login.Password = textBox1.Text;
+                login.UserId = textBox2.Text;
+                int row = LoginRepo.CheckUserForLogin(login);
+                if (row == 1)
+                {
+                    using (frmDashboard das = new frmDashboard())
+                    {
+                        das.ShowDialog();
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("User Name did not match with the Password! Try Again");
+                }
             }
 
         }
