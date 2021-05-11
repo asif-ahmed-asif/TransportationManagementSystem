@@ -1,7 +1,7 @@
 ﻿
 namespace Transportation.App
 {
-    partial class userControl
+    partial class controlUser
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Transportation.App
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(controlUser));
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
