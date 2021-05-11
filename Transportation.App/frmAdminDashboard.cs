@@ -62,6 +62,17 @@ namespace Transportation.App
             MainControl.showControl(bus, frmAdminDashboard.ActiveForm);
         }
 
+        private void btnRoute_Click(object sender, EventArgs e)
+        {
+            this.pnlRed.Height = this.btnRoute.Height;
+            this.pnlRed.Top = this.btnRoute.Top;
+
+            controlRoute route = new controlRoute();
+            MainControl.showControl(route, frmAdminDashboard.ActiveForm);
+        }
+
+
+
 
 
 
