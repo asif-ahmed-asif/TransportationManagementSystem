@@ -57,6 +57,9 @@ namespace Transportation.App
         {
             this.pnlRed.Height = this.btnBus.Height;
             this.pnlRed.Top = this.btnBus.Top;
+
+            controlBus bus = new controlBus();
+            MainControl.showControl(bus, frmAdminDashboard.ActiveForm);
         }
 
 

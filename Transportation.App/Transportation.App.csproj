@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controlBus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlBus.Designer.cs">
+      <DependentUpon>controlBus.cs</DependentUpon>
+    </Compile>
     <Compile Include="controlUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     <Compile Include="Schedule.Designer.cs">
       <DependentUpon>Schedule.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="controlBus.resx">
+      <DependentUpon>controlBus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controlUser.resx">
       <DependentUpon>controlUser.cs</DependentUpon>
     </EmbeddedResource>
