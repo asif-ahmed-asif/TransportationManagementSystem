@@ -14,12 +14,12 @@ using FluentValidation.Results;
 
 namespace Transportation.App
 {
-    public partial class userControl : UserControl
+    public partial class controlUser : UserControl
     {
         private User User { get; set; }
         private Login Login { get; set; }
         private string CurrentUserId { get; set; }
-        public userControl()
+        public controlUser()
         {
             InitializeComponent();
         }
