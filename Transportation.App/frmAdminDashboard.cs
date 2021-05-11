@@ -57,7 +57,21 @@ namespace Transportation.App
         {
             this.pnlRed.Height = this.btnBus.Height;
             this.pnlRed.Top = this.btnBus.Top;
+
+            controlBus bus = new controlBus();
+            MainControl.showControl(bus, frmAdminDashboard.ActiveForm);
         }
+
+        private void btnRoute_Click(object sender, EventArgs e)
+        {
+            this.pnlRed.Height = this.btnRoute.Height;
+            this.pnlRed.Top = this.btnRoute.Top;
+
+            controlRoute route = new controlRoute();
+            MainControl.showControl(route, frmAdminDashboard.ActiveForm);
+        }
+
+
 
 
 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRoute = new System.Windows.Forms.Button();
             this.btnBus = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.pnlRed = new System.Windows.Forms.Panel();
@@ -45,6 +46,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.btnRoute);
             this.panel2.Controls.Add(this.btnBus);
             this.panel2.Controls.Add(this.btnProfile);
             this.panel2.Controls.Add(this.pnlRed);
@@ -56,6 +58,21 @@
             this.panel2.Size = new System.Drawing.Size(151, 717);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnRoute
+            // 
+            this.btnRoute.FlatAppearance.BorderSize = 0;
+            this.btnRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoute.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRoute.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRoute.Location = new System.Drawing.Point(9, 210);
+            this.btnRoute.Name = "btnRoute";
+            this.btnRoute.Size = new System.Drawing.Size(139, 47);
+            this.btnRoute.TabIndex = 7;
+            this.btnRoute.Text = "Route";
+            this.btnRoute.UseVisualStyleBackColor = true;
+            this.btnRoute.Click += new System.EventHandler(this.btnRoute_Click);
             // 
             // btnBus
             // 
@@ -181,6 +198,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlControl;
         private System.Windows.Forms.Button btnBus;
+        private System.Windows.Forms.Button btnRoute;
     }
 }
 
