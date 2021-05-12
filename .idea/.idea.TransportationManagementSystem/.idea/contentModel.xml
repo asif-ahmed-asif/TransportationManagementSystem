@@ -18,6 +18,15 @@
         <e p="cashierTicketControl3.cs" t="Include" />
         <e p="cashierTicketControl3.Designer.cs" t="Include" />
         <e p="cashierTicketControl3.resx" t="Include" />
+        <e p="controlBus.cs" t="Include" />
+        <e p="controlBus.Designer.cs" t="Include" />
+        <e p="controlBus.resx" t="Include" />
+        <e p="controlRoute.cs" t="Include" />
+        <e p="controlRoute.Designer.cs" t="Include" />
+        <e p="controlRoute.resx" t="Include" />
+        <e p="controlUser.cs" t="Include" />
+        <e p="controlUser.Designer.cs" t="Include" />
+        <e p="controlUser.resx" t="Include" />
         <e p="frmAdminDashboard.cs" t="Include" />
         <e p="frmAdminDashboard.designer.cs" t="Include" />
         <e p="frmAdminDashboard.resx" t="Include" />
@@ -48,9 +57,6 @@
         <e p="Schedule.Designer.cs" t="Include" />
         <e p="Schedule.resx" t="Include" />
         <e p="Transportation.App.csproj" t="IncludeRecursive" />
-        <e p="userControl.cs" t="Include" />
-        <e p="userControl.Designer.cs" t="Include" />
-        <e p="userControl.resx" t="Include" />
       </e>
       <e p="Transportation.Data" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -80,6 +86,8 @@
       </e>
       <e p="Transportation.Repository" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="BusRepo.cs" t="Include" />
+        <e p="BusTypeRepo.cs" t="Include" />
         <e p="LoginRepo.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Properties" t="Include">
@@ -91,6 +99,7 @@
       </e>
       <e p="Transportation.Validation" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="BusValidation.cs" t="Include" />
         <e p="CustomValidations.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />

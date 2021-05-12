@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusValidation.cs" />
     <Compile Include="CustomValidations.cs" />
     <Compile Include="UserValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
