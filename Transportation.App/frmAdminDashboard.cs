@@ -43,7 +43,7 @@ namespace Transportation.App
             this.pnlRed.Top = this.btnProfile.Top;
 
 
-            userControl user = new userControl();
+            controlUser user = new controlUser();
             MainControl.showControl(user, frmAdminDashboard.ActiveForm);
 
         }
@@ -53,7 +53,29 @@ namespace Transportation.App
 
         }
 
-        
+        private void btnBus_Click(object sender, EventArgs e)
+        {
+            this.pnlRed.Height = this.btnBus.Height;
+            this.pnlRed.Top = this.btnBus.Top;
+
+            controlBus bus = new controlBus();
+            MainControl.showControl(bus, frmAdminDashboard.ActiveForm);
+        }
+
+        private void btnRoute_Click(object sender, EventArgs e)
+        {
+            this.pnlRed.Height = this.btnRoute.Height;
+            this.pnlRed.Top = this.btnRoute.Top;
+
+            controlRoute route = new controlRoute();
+            MainControl.showControl(route, frmAdminDashboard.ActiveForm);
+        }
+
+
+
+
+
+
         /* private void SetPanelPosition(object button)
 {
 this.pnlRed.Height = button.Height;
