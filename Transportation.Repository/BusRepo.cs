@@ -40,5 +40,23 @@ namespace Transportation.Repository
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1; 
         }
+        
+        public static int SearchBusId(string key)
+        {
+            if (key == null)
+            {
+                return 0;
+            }
+            var sql = "select * from [bus] where bus_no = '" + key + "';";
+            var dt = DataAccess.GetDataTable(sql);
+            return dt.Rows.Count;
+        }
+        
+        public static bool Update(Bus bus, string busNo)
+        {
+            var sql = $"UPDATE [bus] SET bus_no = '{bus.BusNo}', no_of_seats = '{bus.NoOfSeats}', type_id = '{bus.TypeId}' where bus_no = '"+ busNo + "';";
+            var row = DataAccess.ExecuteDmlQuery(sql);
+            return row == 1;
+        }
     }
 }

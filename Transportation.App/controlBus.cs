@@ -52,6 +52,31 @@ namespace Transportation.App
             }
             return true;
         }
+        
+        private bool UpdateFillEntity()
+        {
+            this.Bus = new Bus
+            {
+                BusNo = rtxtPhn.Text,
+                TypeId = cmbType.Text,
+                NoOfSeats = "45"
+            };
+            
+            BusValidation busValidation = new BusValidation();
+            ValidationResult result = busValidation.Validate(this.Bus);
+            List<ValidationFailure> failures = result.Errors;
+            
+            if (!result.IsValid)
+            {
+                foreach (ValidationFailure failure in failures)
+                {
+                    MessageBox.Show(failure.ErrorMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return false;
+                }
+            }
+            return true;
+        }
 
         private void ClearBusInput()
         {
@@ -61,34 +86,64 @@ namespace Transportation.App
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!FillEntity())
+            int busIdExist = BusRepo.SearchBusId(this.rtxtPhn.ToString());
+            if (busIdExist == 1) //this is for update purpose
             {
-                return;
-            }
-            else if (FillEntity())
-            {
-                int checkBusNumberExist = BusRepo.CheckBusNumber(this.Bus.BusNo);
-
-                if (checkBusNumberExist == 1)
+                string busNumber = this.Bus.BusNo;
+                if (!UpdateFillEntity())
                 {
-                    MessageBox.Show("The Bus Number already Exists. Create a New One!");
+                    return;
                 }
                 else
                 {
-                    if (this.Bus.TypeId == "Non AC")
+                    int checkBusNumberExist = BusRepo.CheckBusNumber(this.Bus.BusNo);
+
+                    if (checkBusNumberExist == 1)
                     {
-                        this.Bus.TypeId = "NON-AC";
+                        MessageBox.Show("The Bus Number already Exists. Create a New One!");
                     }
-                    
-                    this.Bus.TypeId = BusTypeRepo.GetBusTypeForBus(this.Bus.TypeId);
-                    bool insertSignal = BusRepo.Insert(this.Bus);
-                    if (insertSignal)
+                    else
                     {
-                        MessageBox.Show("Bus Created Successuflly!!");
-                        ClearBusInput();
+                        this.Bus.TypeId = BusTypeRepo.GetBusTypeForBus(this.Bus.TypeId);
+                        bool updateSignal = BusRepo.Update(this.Bus, busNumber);
+                        if (updateSignal)
+                        {
+                            MessageBox.Show("Bus Updated Successuflly!!");
+                            ClearBusInput();
+                        }
                     }
                 }
-                
+            }
+            else //this is for insert purpose
+            {
+                if (!FillEntity())
+                {
+                    return;
+                }
+                else if (FillEntity())
+                {
+                    int checkBusNumberExist = BusRepo.CheckBusNumber(this.Bus.BusNo);
+
+                    if (checkBusNumberExist == 1)
+                    {
+                        MessageBox.Show("The Bus Number already Exists. Create a New One!");
+                    }
+                    else
+                    {
+                        if (this.Bus.TypeId == "Non AC")
+                        {
+                            this.Bus.TypeId = "NON-AC";
+                        }
+
+                        this.Bus.TypeId = BusTypeRepo.GetBusTypeForBus(this.Bus.TypeId);
+                        bool insertSignal = BusRepo.Insert(this.Bus);
+                        if (insertSignal)
+                        {
+                            MessageBox.Show("Bus Created Successuflly!!");
+                            ClearBusInput();
+                        }
+                    }
+                }
             }
         }
 
