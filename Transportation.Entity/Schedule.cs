@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Transportation.Entity
 {
-    class Schedule
+    public class Schedule
     {
         public string ScheduleId { get; set; }
         public string DeptTime { get; set; }
