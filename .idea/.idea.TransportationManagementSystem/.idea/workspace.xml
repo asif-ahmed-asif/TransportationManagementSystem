@@ -7,10 +7,8 @@
     <list default="true" id="11334c40-00de-4270-a28b-359055b33d6f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.App/controlBus.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/controlBus.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transportation.App/controlBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/controlBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.Repository/Transportation.Repository.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Repository/Transportation.Repository.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.Validation/Transportation.Validation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Validation/Transportation.Validation.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transportation.Repository/BusRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Repository/BusRepo.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +19,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/f4/debcc811/RichTextBox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C2A08500-0E32-4638-B307-E9A7DA0753F9/8f/e5086ce1/SqlCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/12/ec97fb2a/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C2A08500-0E32-4638-B307-E9A7DA0753F9/b1/7dc309df/RBTree`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -34,10 +33,10 @@
         <option value="$PROJECT_DIR$/Transportation.Repository/LoginRepo.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/frmLogin.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/Program.cs" />
-        <option value="$PROJECT_DIR$/Transportation.Validation/BusValidation.cs" />
-        <option value="$PROJECT_DIR$/Transportation.Repository/BusRepo.cs" />
         <option value="$PROJECT_DIR$/Transportation.Repository/BusTypeRepo.cs" />
+        <option value="$PROJECT_DIR$/Transportation.Validation/BusValidation.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/controlBus.cs" />
+        <option value="$PROJECT_DIR$/Transportation.Repository/BusRepo.cs" />
       </list>
     </option>
   </component>
@@ -82,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617974149287</updated>
       <workItem from="1617974153391" duration="1497000" />
-      <workItem from="1620802810628" duration="14672000" />
+      <workItem from="1620802810628" duration="21767000" />
     </task>
     <servers />
   </component>
@@ -103,86 +102,86 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="443" height="464" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1620819141965" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1620819258815">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1620833006874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620819258815" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1620819258815">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620833006874" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1620833006874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620819258815" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1620819258815">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620833006874" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1620833006874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620819258815" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1620819258815">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620833006874" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1620833006874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620819258815" />
-    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1620819150239">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620833006874" />
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.2.bottom" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.2.center" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.2.center" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.2.left" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.2.left" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.2.right" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.2.right" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.3.bottom" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.3.center" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.3.center" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.3.left" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.3.left" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.3.right" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.3.right" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.4.bottom" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.4.center" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.4.center" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.4.left" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.4.left" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
-    <state width="1493" height="288" key="GridCell.Tab.4.right" timestamp="1620819150239">
+    <state width="1493" height="288" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
+    <state width="1493" height="288" key="GridCell.Tab.4.right" timestamp="1620832995728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1620819150239" />
+    <state width="1493" height="288" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1620832995728" />
     <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1620807422657">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -257,58 +256,6 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
-          <line>69</line>
-          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="69">
-            <startOffsets>
-              <option value="1868" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1933" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
-          <line>71</line>
-          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="71">
-            <startOffsets>
-              <option value="1951" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1980" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
-          <line>82</line>
-          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="77">
-            <startOffsets>
-              <option value="2335" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2399" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
-          <line>83</line>
-          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="78">
-            <startOffsets>
-              <option value="2420" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2465" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Transportation.Repository/BusTypeRepo.cs</url>
           <line>9</line>
           <properties documentPath="D:\Software Project 1\Transportation.Repository\BusTypeRepo.cs" initialLine="9">
@@ -362,55 +309,107 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
-          <line>77</line>
-          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="77">
+          <line>89</line>
+          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="89">
             <startOffsets>
-              <option value="2165" />
+              <option value="2606" />
             </startOffsets>
             <endOffsets>
-              <option value="2197" />
+              <option value="2626" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
-          <line>78</line>
-          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="78">
+          <line>88</line>
+          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="88">
             <startOffsets>
-              <option value="2218" />
+              <option value="2531" />
             </startOffsets>
             <endOffsets>
-              <option value="2219" />
+              <option value="2593" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="26" />
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
-          <line>80</line>
-          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="80">
+          <line>100</line>
+          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="100">
             <startOffsets>
-              <option value="2292" />
+              <option value="2972" />
             </startOffsets>
             <endOffsets>
-              <option value="2293" />
+              <option value="3001" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="27" />
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
-          <line>79</line>
-          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="79">
+          <line>98</line>
+          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="98">
             <startOffsets>
-              <option value="2244" />
+              <option value="2885" />
             </startOffsets>
             <endOffsets>
-              <option value="2271" />
+              <option value="2950" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
+          <line>118</line>
+          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="118">
+            <startOffsets>
+              <option value="3700" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3718" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
+          <line>119</line>
+          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="119">
+            <startOffsets>
+              <option value="3735" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3736" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
+          <line>122</line>
+          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="122">
+            <startOffsets>
+              <option value="3804" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3821" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Transportation.App/controlBus.cs</url>
+          <line>124</line>
+          <properties documentPath="D:\Software Project 1\Transportation.App\controlBus.cs" initialLine="124">
+            <startOffsets>
+              <option value="3860" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3925" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

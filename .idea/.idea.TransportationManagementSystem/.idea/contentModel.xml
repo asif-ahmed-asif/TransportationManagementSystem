@@ -80,6 +80,7 @@
         </e>
         <e p="Route.cs" t="Include" />
         <e p="Sales.cs" t="Include" />
+        <e p="Schedule.cs" t="Include" />
         <e p="Ticket.cs" t="Include" />
         <e p="Transportation.Entity.csproj" t="IncludeRecursive" />
         <e p="User.cs" t="Include" />
