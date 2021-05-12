@@ -41,7 +41,7 @@ namespace Transportation.Validation
             RuleFor(sal => sal.Salary)
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("Salary cannot be empty")
-                .Must(CustomValidations.ValidSalary).WithMessage("Salary cannot contain any alphabet");
+                .Must(CustomValidations.ValidNumber).WithMessage("Salary amount contains only greater than zero numbers");
 
             RuleFor(t => t.UserType)
                 .Cascade(CascadeMode.Stop)

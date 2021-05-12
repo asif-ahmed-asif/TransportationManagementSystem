@@ -23,21 +23,13 @@ namespace Transportation.Validation
             name = name.Replace("-", "");
             return name.All(char.IsNumber);
         }
-        
-        internal static bool ValidSalary(string sal)
-        {
-            try
-            {
-                float salary = float.Parse(sal);
-            }
-            catch(FormatException e)
-            {
-                //MessageBox.Show(e.ToString());
-                return false;
-            }
 
-            return true;
-            //return sal.All(char.IsLetter);
+        internal static bool ValidNumber(string num)
+        {
+            double d;
+            if (double.TryParse(num, out d) && d > 0)
+                return true;
+            return false;
         }
     }
 }
