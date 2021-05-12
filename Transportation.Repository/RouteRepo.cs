@@ -33,11 +33,10 @@ namespace Transportation.Repository
             }
             var r = new Route();
             r.RouteId = row["route_id"].ToString();
-            r.DeptTime = row["dept_time"].ToString();
-            r.ArrivalTime = row["arrival_time"].ToString();
             r.DeptLocation = row["dept_location"].ToString();
             r.Destination = row["destination"].ToString();
             r.BusNo = row["bus_no"].ToString();
+            r.ScheduleId = row["schedule_id"].ToString();
             r.Status = row["status"].ToString();
             return r;
         }
