@@ -163,6 +163,40 @@ namespace Transportation.App
             this.cmbType.Items.Add("Cashier");
             this.cmbType.Items.Add("Accountant");
 
+            int n=0;
+            for (int i = 0; i < 5; i++)
+            {
+                n = dataGridView1.Rows.Add();
+                dataGridView1.Rows[n].Cells[0].Value = "101";
+                dataGridView1.Rows[n].Cells[1].Value = "101";
+                dataGridView1.Rows[n].Cells[2].Value = "101";
+                dataGridView1.Rows[n].Cells[3].Value = "101";
+                dataGridView1.Rows[n].Cells[4].Value = "101";
+                dataGridView1.Rows[n].Cells[5].Value = "101";
+                dataGridView1.Rows[n].Cells[6].Value = "101";
+                dataGridView1.Rows[n].Cells[7].Value = "101";
+                n = dataGridView1.Rows.Add();
+                dataGridView1.Rows[n].Cells[0].Value = "102";
+                dataGridView1.Rows[n].Cells[1].Value = "102";
+                dataGridView1.Rows[n].Cells[2].Value = "102";
+                dataGridView1.Rows[n].Cells[3].Value = "102";
+                dataGridView1.Rows[n].Cells[4].Value = "102";
+                dataGridView1.Rows[n].Cells[5].Value = "102";
+                dataGridView1.Rows[n].Cells[6].Value = "102";
+                dataGridView1.Rows[n].Cells[7].Value = "102";
+
+                n = dataGridView1.Rows.Add();
+                dataGridView1.Rows[n].Cells[0].Value = "103";
+                dataGridView1.Rows[n].Cells[1].Value = "102";
+                dataGridView1.Rows[n].Cells[2].Value = "102";
+                dataGridView1.Rows[n].Cells[3].Value = "102";
+                dataGridView1.Rows[n].Cells[4].Value = "102";
+                dataGridView1.Rows[n].Cells[5].Value = "102";
+                dataGridView1.Rows[n].Cells[6].Value = "102";
+                dataGridView1.Rows[n].Cells[7].Value = "102";
+
+            }
+
             try
             {
                 this.rtxtId.Text = UserRepo.GetId();
@@ -204,6 +238,11 @@ namespace Transportation.App
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.ClearUserInput();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
