@@ -18,7 +18,6 @@ namespace Transportation.App
     {
         private User User { get; set; }
         private Login Login { get; set; }
-        private string CurrentUserId { get; set; }
         public controlUser()
         {
             InitializeComponent();
@@ -31,11 +30,10 @@ namespace Transportation.App
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //var idExists = UserRepo.SearchUserId(this.CurrentUserId);
             var idExists = UserRepo.SearchUserId(this.rtxtId.Text);
             if (idExists)
             {
-
+                
                 try
                 {
                     if (!this.UpdateFillEntity())
@@ -45,6 +43,12 @@ namespace Transportation.App
                         MessageBox.Show("Successfully updated  user");
                         this.rtxtId.Text = UserRepo.GetId();
                         this.ClearUserInput();
+                        this.PopulateGridView();
+                        if (!this.cmbType.Enabled)
+                        {
+                            this.cmbType.Enabled = true;
+                            this.cmbStatus.Enabled = true;
+                        }
                     }
                 }
                 catch (Exception error)
@@ -52,7 +56,6 @@ namespace Transportation.App
                     MessageBox.Show("Cann't update user\n" + error.Message);
                     this.ClearUserInput();
                 }
-                this.CurrentUserId = null;
             }
             else
             {
@@ -70,6 +73,7 @@ namespace Transportation.App
                         MessageBox.Show("Successfully created new user");        
                         this.rtxtId.Text = UserRepo.GetId();
                         this.ClearUserInput();
+                        this.PopulateGridView();
                     }
                 }
                 catch (Exception error)
@@ -120,7 +124,6 @@ namespace Transportation.App
         {
             this.User = new User
             {
-                //UserId = this.CurrentUserId,
                 UserId = this.rtxtId.Text,
                 Name = this.rtxtName.Text,
                 Email = this.rtxtMail.Text,
@@ -153,6 +156,23 @@ namespace Transportation.App
             return true;
         }
 
+        private void PopulateGridView()
+        {
+            try
+            {
+                this.dgvUser.AutoGenerateColumns = false;
+                this.dgvUser.DataSource = UserRepo.ShowAll();
+                this.dgvUser.ClearSelection();
+                this.dgvUser.Refresh();
+                this.cmbStatus.SelectedIndex = 0;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error!" + e.Message);
+            }
+
+        }
+
         private void userControl_Load(object sender, EventArgs e)
         {
             this.cmbStatus.Items.Add("Active");
@@ -163,40 +183,6 @@ namespace Transportation.App
             this.cmbType.Items.Add("Cashier");
             this.cmbType.Items.Add("Accountant");
 
-            int n=0;
-            for (int i = 0; i < 5; i++)
-            {
-                n = dataGridView1.Rows.Add();
-                dataGridView1.Rows[n].Cells[0].Value = "101";
-                dataGridView1.Rows[n].Cells[1].Value = "101";
-                dataGridView1.Rows[n].Cells[2].Value = "101";
-                dataGridView1.Rows[n].Cells[3].Value = "101";
-                dataGridView1.Rows[n].Cells[4].Value = "101";
-                dataGridView1.Rows[n].Cells[5].Value = "101";
-                dataGridView1.Rows[n].Cells[6].Value = "101";
-                dataGridView1.Rows[n].Cells[7].Value = "101";
-                n = dataGridView1.Rows.Add();
-                dataGridView1.Rows[n].Cells[0].Value = "102";
-                dataGridView1.Rows[n].Cells[1].Value = "102";
-                dataGridView1.Rows[n].Cells[2].Value = "102";
-                dataGridView1.Rows[n].Cells[3].Value = "102";
-                dataGridView1.Rows[n].Cells[4].Value = "102";
-                dataGridView1.Rows[n].Cells[5].Value = "102";
-                dataGridView1.Rows[n].Cells[6].Value = "102";
-                dataGridView1.Rows[n].Cells[7].Value = "102";
-
-                n = dataGridView1.Rows.Add();
-                dataGridView1.Rows[n].Cells[0].Value = "103";
-                dataGridView1.Rows[n].Cells[1].Value = "102";
-                dataGridView1.Rows[n].Cells[2].Value = "102";
-                dataGridView1.Rows[n].Cells[3].Value = "102";
-                dataGridView1.Rows[n].Cells[4].Value = "102";
-                dataGridView1.Rows[n].Cells[5].Value = "102";
-                dataGridView1.Rows[n].Cells[6].Value = "102";
-                dataGridView1.Rows[n].Cells[7].Value = "102";
-
-            }
-
             try
             {
                 this.rtxtId.Text = UserRepo.GetId();
@@ -206,6 +192,8 @@ namespace Transportation.App
             {
                 MessageBox.Show($"Error fetching data\n{error.Message}");
             }
+
+            this.PopulateGridView();
 
         }
 
@@ -230,19 +218,62 @@ namespace Transportation.App
 
         }
 
-        private void rtxtId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.ClearUserInput();
+            this.PopulateGridView();
+            if (!this.cmbType.Enabled)
+            {
+                this.cmbType.Enabled = true;
+                this.cmbStatus.Enabled = true;
+            }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvUser_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            this.dgvUser.ClearSelection();
+        }
 
+        private void dgvUser_DoubleClick(object sender, EventArgs e)
+        {
+            this.rtxtId.Text = this.dgvUser.CurrentRow.Cells["user_id"].Value.ToString();
+            this.rtxtName.Text = this.dgvUser.CurrentRow.Cells["name"].Value.ToString();
+            this.rtxtMail.Text = this.dgvUser.CurrentRow.Cells["email"].Value.ToString();
+            this.rtxtPhn.Text = this.dgvUser.CurrentRow.Cells["phone"].Value.ToString();
+            this.rtxtAddress.Text = this.dgvUser.CurrentRow.Cells["address"].Value.ToString();
+            this.cmbType.Text = this.dgvUser.CurrentRow.Cells["user_type"].Value.ToString();
+            this.rtxtSalary.Text = this.dgvUser.CurrentRow.Cells["salary"].Value.ToString();
+            this.cmbStatus.Text = this.dgvUser.CurrentRow.Cells["status"].Value.ToString();
+            this.rtxtPassword.Text = this.dgvUser.CurrentRow.Cells["password"].Value.ToString();
+
+            if (this.cmbType.Text == "Admin")
+            {
+                this.cmbType.Enabled = false;
+                this.cmbStatus.Enabled = false;
+            }
+            else
+            {
+                this.cmbType.Enabled = true;
+                this.cmbStatus.Enabled = true;
+            }
+
+
+        }
+
+        private void rtxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                this.dgvUser.AutoGenerateColumns = false;
+                this.dgvUser.DataSource = UserRepo.SearchUser(this.rtxtSearch.Text);
+                this.dgvUser.ClearSelection();
+                this.dgvUser.Refresh();
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show("Error!" + a.Message);
+            }
         }
     }
 }
