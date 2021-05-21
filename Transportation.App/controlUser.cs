@@ -44,17 +44,12 @@ namespace Transportation.App
                         this.rtxtId.Text = UserRepo.GetId();
                         this.ClearUserInput();
                         this.PopulateGridView();
-                        if (!this.cmbType.Enabled)
-                        {
-                            this.cmbType.Enabled = true;
-                            this.cmbStatus.Enabled = true;
-                        }
+
                     }
                 }
                 catch (Exception error)
                 {
                     MessageBox.Show("Cann't update user\n" + error.Message);
-                    this.ClearUserInput();
                 }
             }
             else
@@ -209,7 +204,11 @@ namespace Transportation.App
                 this.rtxtPassword.Text = "";
                 this.cmbType.SelectedIndex = -1;
                 this.rtxtSalary.Text = "";
-                this.cmbStatus.SelectedIndex = -1;
+                if (!this.cmbType.Enabled)
+                {
+                    this.cmbType.Enabled = true;
+                    this.cmbStatus.Enabled = true;
+                }
             }
             catch (Exception e)
             {
@@ -223,11 +222,6 @@ namespace Transportation.App
         {
             this.ClearUserInput();
             this.PopulateGridView();
-            if (!this.cmbType.Enabled)
-            {
-                this.cmbType.Enabled = true;
-                this.cmbStatus.Enabled = true;
-            }
         }
 
         private void dgvUser_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
