@@ -48,7 +48,7 @@ namespace Transportation.Repository
 
             if (dt.Rows.Count > 0)
             {
-                string id = dt.Rows[0]["user_id"].ToString();
+                string id = dt.Rows[0]["route_id"].ToString();
                
                 int intId=int.Parse(id) ;
                 intId++;
@@ -56,6 +56,29 @@ namespace Transportation.Repository
             }
 
             return "01";
+        }
+        
+        public static bool SearchRouteId(string key)
+        {
+            var sql = "select * from [Route] where route_id = '" + key + "';";
+            var dt = DataAccess.GetDataTable(sql);
+            return dt.Rows.Count == 1;
+        }
+        
+        public static bool Insert(Route route)
+        {
+            int? n = null;
+            var sql = $"INSERT INTO [Route] VALUES('{route.RouteId}', '{n}', '{n}', '{n}', '{route.DeptLocation}', '{route.Destination}', '{route.BusNo}', '{route.Status}')";
+            var row = DataAccess.ExecuteDmlQuery(sql);
+            return row == 1; 
+        }
+        
+        public static bool Update(Route route)
+        {
+            int? n = null;
+            var sql = $"UPDATE [Route] SET route_id = '{route.RouteId}', dept_time = '{n}', arrival_time = '{n}', journey_date = '{n}', dept_location = '{route.DeptLocation}', destination = '{route.Destination}', bus_no = '{route.BusNo}', status = '{route.Status}';";
+            var row = DataAccess.ExecuteDmlQuery(sql);
+            return row == 1;
         }
     }
 }

@@ -23,19 +23,26 @@ namespace Transportation.App
         {
             InitializeComponent();
             FillDropDownFromDb();
+            GenerateRouteId();
         }
 
-        void FillDropDownFromDb()
+        void FillDropDownFromDb() //Used to Fill the Drop Down List with bus_no
         {
-            DataTable dataTable = BusRepo.GetAll();
+            List<Bus> buses = BusRepo.GetAll();
             int i;
-            for (i= 0; i < dataTable.Rows.Count; i++)
+            
+            for (i= 0; i < buses.Count; i++)
             {
                 for (int j = 0; j < 1; j++)
                 {
-                    this.cmbBus.Items.Add(dataTable.Rows[i][j].ToString());
+                    this.cmbBus.Items.Add(buses[i].BusNo);
                 }
             }
+        }
+
+        void GenerateRouteId()
+        {
+            this.disableBusIdText.Text = RouteRepo.GetId();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -55,22 +62,52 @@ namespace Transportation.App
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            /*throw new System.NotImplementedException();*/
-            if (!this.RouteFill())
+            bool idExist = RouteRepo.SearchRouteId(this.disableBusIdText.Text);
+            if (idExist) //For Update purpose
             {
-                return;
+                if (!this.RouteFill())
+                {
+                    return;
+                }
+                else
+                {
+                    bool insertSignal = RouteRepo.Update(this.Route);
+                    if (insertSignal)
+                    {
+                        MessageBox.Show("Route Updated Successuflly!!");
+                        ClearRouteInput();
+
+                        //Once the save button is clicked for edit, new Id, as primary key, will be generated for the route table.
+                        this.disableBusIdText.Text = RouteRepo.GetId();
+                    } 
+                }
             }
-            else if(this.RouteFill())
+            if (!idExist) //for insert purpose
             {
-                
+                if (!this.RouteFill())
+                {
+                    return;
+                }
+                else if (this.RouteFill())
+                {
+                    bool insertSignal = RouteRepo.Insert(this.Route);
+                    if (insertSignal)
+                    {
+                        MessageBox.Show("Route Created Successuflly!!");
+                        ClearRouteInput();
+
+                        //Once the save button is clicked, new Id, as primary key, will be generated for the route table.
+                        this.disableBusIdText.Text = RouteRepo.GetId();
+                    }
+                }
             }
-            
         }
 
-        public bool RouteFill()
+        private bool RouteFill()
         {
             this.Route = new Route
             {
+                RouteId = this.disableBusIdText.Text,
                 DeptLocation = this.departureText.Text,
                 Destination = this.richTextBox1.Text,
                 BusNo = this.cmbBus.Text,
@@ -93,6 +130,18 @@ namespace Transportation.App
             }
 
             return true;
+        }
+
+        private void ClearRouteInput()
+        {
+            this.departureText.Text = "";
+            this.richTextBox1.Text = "";
+            this.cmbBus.Text = null;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            this.ClearRouteInput();
         }
     }
 }

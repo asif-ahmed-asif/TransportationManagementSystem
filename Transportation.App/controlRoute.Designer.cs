@@ -58,6 +58,8 @@ namespace Transportation.App
             this.departureTextFiled = new System.Windows.Forms.PictureBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.disabledRouteIdForm = new System.Windows.Forms.PictureBox();
+            this.disableBusIdText = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.numericUpDown2)).BeginInit();
@@ -66,6 +68,7 @@ namespace Transportation.App
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.departureTextFiled)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.disabledRouteIdForm)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -281,6 +284,7 @@ namespace Transportation.App
             this.btnClear.TabIndex = 106;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -383,11 +387,38 @@ namespace Transportation.App
             this.pictureBox3.TabIndex = 116;
             this.pictureBox3.TabStop = false;
             // 
+            // disabledRouteIdForm
+            // 
+            this.disabledRouteIdForm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.disabledRouteIdForm.Image = ((System.Drawing.Image) (resources.GetObject("disabledRouteIdForm.Image")));
+            this.disabledRouteIdForm.Location = new System.Drawing.Point(782, 456);
+            this.disabledRouteIdForm.Margin = new System.Windows.Forms.Padding(4);
+            this.disabledRouteIdForm.Name = "disabledRouteIdForm";
+            this.disabledRouteIdForm.Size = new System.Drawing.Size(316, 92);
+            this.disabledRouteIdForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.disabledRouteIdForm.TabIndex = 118;
+            this.disabledRouteIdForm.TabStop = false;
+            this.disabledRouteIdForm.Visible = false;
+            // 
+            // disableBusIdText
+            // 
+            this.disableBusIdText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.disableBusIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.disableBusIdText.Location = new System.Drawing.Point(802, 488);
+            this.disableBusIdText.Margin = new System.Windows.Forms.Padding(4);
+            this.disableBusIdText.Name = "disableBusIdText";
+            this.disableBusIdText.Size = new System.Drawing.Size(275, 27);
+            this.disableBusIdText.TabIndex = 119;
+            this.disableBusIdText.Text = "";
+            this.disableBusIdText.Visible = false;
+            // 
             // controlRoute
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.disableBusIdText);
+            this.Controls.Add(this.disabledRouteIdForm);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.departureText);
@@ -428,9 +459,14 @@ namespace Transportation.App
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.departureTextFiled)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.disabledRouteIdForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.RichTextBox disableBusIdText;
+
+        private System.Windows.Forms.PictureBox disabledRouteIdForm;
 
         private System.Windows.Forms.RichTextBox departureText;
 
