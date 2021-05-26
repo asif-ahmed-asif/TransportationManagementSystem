@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using Transportation.Data;
 using Transportation.Entity;
@@ -57,6 +58,13 @@ namespace Transportation.Repository
             var sql = $"UPDATE [bus] SET bus_no = '{bus.BusNo}', no_of_seats = '{bus.NoOfSeats}', type_id = '{bus.TypeId}' where bus_no = '"+ busNo + "';";
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1;
+        }
+
+        public static DataTable GetAll()
+        {
+            string sql = "Select * from [bus]";
+            DataTable data = DataAccess.GetDataTable(sql);
+            return data;
         }
     }
 }

@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="BusValidation.cs" />
     <Compile Include="CustomValidations.cs" />
+    <Compile Include="RouteValidation.cs" />
     <Compile Include="UserValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
