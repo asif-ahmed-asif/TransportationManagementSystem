@@ -34,7 +34,7 @@ namespace Transportation.App
             control.Location = new Point()
             {
                 X = panel.Width / 2 - control.Width / 2,
-                Y = (panel.Height / 2 - control.Height / 2)
+                Y = (panel.Height / 2 - control.Height / 2)+100
             };
 
             /* control.Dock = DockStyle.Fill;
