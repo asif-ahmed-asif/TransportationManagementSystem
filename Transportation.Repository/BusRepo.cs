@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using Transportation.Data;
@@ -60,11 +61,39 @@ namespace Transportation.Repository
             return row == 1;
         }
 
-        public static DataTable GetAll()
+        public static List<Bus> GetAll()
         {
             string sql = "Select * from [bus]";
             DataTable data = DataAccess.GetDataTable(sql);
-            return data;
+
+            int i = 0;
+            List<Bus> busData = new List<Bus>();
+            while (i < data.Rows.Count)
+            {
+                Bus bus = ConvertToEntity(data.Rows[i]);
+                busData.Add(bus);
+                i++;
+            }
+            return busData;
+        }
+
+        public static Bus ConvertToEntity(DataRow data)
+        {
+            if (data == null)
+            {
+                return null;
+            }
+            else
+            {
+                Bus bus = new Bus
+                {
+                    BusNo = data["bus_no"].ToString(),
+                    NoOfSeats = data["no_of_seats"].ToString(),
+                    TypeId = data["type_id"].ToString()
+                };
+
+                return bus;
+            }
         }
     }
 }
