@@ -107,6 +107,7 @@
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
+        <e p="RouteValidation.cs" t="Include" />
         <e p="Transportation.Validation.csproj" t="IncludeRecursive" />
         <e p="UserValidation.cs" t="Include" />
       </e>

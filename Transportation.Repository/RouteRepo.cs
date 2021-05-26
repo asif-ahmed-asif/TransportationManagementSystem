@@ -40,5 +40,22 @@ namespace Transportation.Repository
             r.Status = row["status"].ToString();
             return r;
         }
+        
+        public static string GetId() //Used to generate an Id
+        {
+            string sql = "select TOP 1 * from [Route] order by route_id DESC;";
+            var dt = DataAccess.GetDataTable(sql);
+
+            if (dt.Rows.Count > 0)
+            {
+                string id = dt.Rows[0]["user_id"].ToString();
+               
+                int intId=int.Parse(id) ;
+                intId++;
+                return intId.ToString();
+            }
+
+            return "01";
+        }
     }
 }
