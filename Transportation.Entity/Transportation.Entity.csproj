@@ -50,6 +50,7 @@
     <Compile Include="Route.cs" />
     <Compile Include="Sales.cs" />
     <Compile Include="Schedule.cs" />
+    <Compile Include="Booking.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
