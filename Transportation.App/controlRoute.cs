@@ -45,20 +45,6 @@ namespace Transportation.App
             this.disableBusIdText.Text = RouteRepo.GetId();
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -142,6 +128,16 @@ namespace Transportation.App
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.ClearRouteInput();
+        }
+
+        private void rtxtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvUser_DoubleClick(object sender, EventArgs e)
+        {
+
         }
     }
 }
