@@ -30,22 +30,12 @@ namespace Transportation.App
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(controlRoute));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cmbDestination = new System.Windows.Forms.ComboBox();
-            this.cmbDeparture = new System.Windows.Forms.ComboBox();
             this.cmbBus = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
@@ -60,157 +50,33 @@ namespace Transportation.App
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.disabledRouteIdForm = new System.Windows.Forms.PictureBox();
             this.disableBusIdText = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.departureTextFiled)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.disabledRouteIdForm)).BeginInit();
+            this.rtxtSearch = new System.Windows.Forms.RichTextBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvUser = new System.Windows.Forms.DataGridView();
+            this.dept = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.user_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.departureTextFiled)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disabledRouteIdForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 42);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(313, 62);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(22, 56);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(60, 26);
-            this.numericUpDown1.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label3.Location = new System.Drawing.Point(51, 12);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 29);
-            this.label3.TabIndex = 89;
-            this.label3.Text = "Departure Time";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.Location = new System.Drawing.Point(81, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
-            this.label1.TabIndex = 90;
-            this.label1.Text = "Hours";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(154, 56);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(60, 26);
-            this.numericUpDown2.TabIndex = 91;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(217, 59);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
-            this.label2.TabIndex = 92;
-            this.label2.Text = "Minutes";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label4.Location = new System.Drawing.Point(845, 59);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
-            this.label4.TabIndex = 98;
-            this.label4.Text = "Minutes";
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(782, 56);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(60, 26);
-            this.numericUpDown3.TabIndex = 97;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label5.Location = new System.Drawing.Point(709, 58);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 20);
-            this.label5.TabIndex = 96;
-            this.label5.Text = "Hours";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label6.Location = new System.Drawing.Point(638, 7);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 29);
-            this.label6.TabIndex = 95;
-            this.label6.Text = "Arrival Time";
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.numericUpDown4.Location = new System.Drawing.Point(650, 56);
-            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(60, 26);
-            this.numericUpDown4.TabIndex = 94;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(632, 42);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(313, 62);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 93;
-            this.pictureBox2.TabStop = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label7.Location = new System.Drawing.Point(49, 137);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(17, 19);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(190, 29);
@@ -221,42 +87,20 @@ namespace Transportation.App
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label8.Location = new System.Drawing.Point(587, 137);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(531, 19);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 29);
             this.label8.TabIndex = 100;
             this.label8.Text = "Destination";
             // 
-            // cmbDestination
-            // 
-            this.cmbDestination.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.cmbDestination.FormattingEnabled = true;
-            this.cmbDestination.Location = new System.Drawing.Point(322, 49);
-            this.cmbDestination.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbDestination.Name = "cmbDestination";
-            this.cmbDestination.Size = new System.Drawing.Size(291, 37);
-            this.cmbDestination.TabIndex = 101;
-            // 
-            // cmbDeparture
-            // 
-            this.cmbDeparture.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDeparture.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.cmbDeparture.FormattingEnabled = true;
-            this.cmbDeparture.Location = new System.Drawing.Point(322, 4);
-            this.cmbDeparture.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbDeparture.Name = "cmbDeparture";
-            this.cmbDeparture.Size = new System.Drawing.Size(291, 37);
-            this.cmbDeparture.TabIndex = 102;
-            // 
             // cmbBus
             // 
             this.cmbBus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.cmbBus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBus.FormattingEnabled = true;
-            this.cmbBus.Location = new System.Drawing.Point(51, 367);
+            this.cmbBus.Location = new System.Drawing.Point(536, 245);
             this.cmbBus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBus.Name = "cmbBus";
             this.cmbBus.Size = new System.Drawing.Size(291, 37);
@@ -266,8 +110,8 @@ namespace Transportation.App
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label9.Location = new System.Drawing.Point(57, 319);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(542, 197);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(154, 29);
@@ -277,7 +121,7 @@ namespace Transportation.App
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.SystemColors.Control;
-            this.btnClear.Location = new System.Drawing.Point(515, 498);
+            this.btnClear.Location = new System.Drawing.Point(484, 478);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(212, 50);
@@ -289,7 +133,7 @@ namespace Transportation.App
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Location = new System.Drawing.Point(268, 498);
+            this.btnSave.Location = new System.Drawing.Point(237, 478);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(225, 50);
@@ -302,8 +146,8 @@ namespace Transportation.App
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label10.Location = new System.Drawing.Point(463, 321);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(19, 198);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(188, 29);
@@ -313,7 +157,7 @@ namespace Transportation.App
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(667, 383);
+            this.dateTimePicker2.Location = new System.Drawing.Point(223, 260);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(265, 22);
@@ -323,8 +167,8 @@ namespace Transportation.App
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label11.Location = new System.Drawing.Point(463, 379);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(19, 256);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(149, 29);
@@ -334,18 +178,17 @@ namespace Transportation.App
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(667, 327);
+            this.dateTimePicker1.Location = new System.Drawing.Point(223, 204);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 111;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
             // 
             // departureText
             // 
             this.departureText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.departureText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.departureText.Location = new System.Drawing.Point(72, 214);
+            this.departureText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.departureText.Location = new System.Drawing.Point(40, 96);
             this.departureText.Margin = new System.Windows.Forms.Padding(4);
             this.departureText.Name = "departureText";
             this.departureText.Size = new System.Drawing.Size(275, 27);
@@ -355,8 +198,8 @@ namespace Transportation.App
             // departureTextFiled
             // 
             this.departureTextFiled.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.departureTextFiled.Image = ((System.Drawing.Image) (resources.GetObject("departureTextFiled.Image")));
-            this.departureTextFiled.Location = new System.Drawing.Point(51, 182);
+            this.departureTextFiled.Image = ((System.Drawing.Image)(resources.GetObject("departureTextFiled.Image")));
+            this.departureTextFiled.Location = new System.Drawing.Point(19, 64);
             this.departureTextFiled.Margin = new System.Windows.Forms.Padding(4);
             this.departureTextFiled.Name = "departureTextFiled";
             this.departureTextFiled.Size = new System.Drawing.Size(316, 92);
@@ -367,8 +210,8 @@ namespace Transportation.App
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.richTextBox1.Location = new System.Drawing.Point(608, 214);
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(552, 96);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(275, 27);
@@ -378,8 +221,8 @@ namespace Transportation.App
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox3.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(587, 182);
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(531, 64);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(316, 92);
@@ -390,11 +233,11 @@ namespace Transportation.App
             // disabledRouteIdForm
             // 
             this.disabledRouteIdForm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.disabledRouteIdForm.Image = ((System.Drawing.Image) (resources.GetObject("disabledRouteIdForm.Image")));
-            this.disabledRouteIdForm.Location = new System.Drawing.Point(782, 456);
+            this.disabledRouteIdForm.Image = ((System.Drawing.Image)(resources.GetObject("disabledRouteIdForm.Image")));
+            this.disabledRouteIdForm.Location = new System.Drawing.Point(544, 334);
             this.disabledRouteIdForm.Margin = new System.Windows.Forms.Padding(4);
             this.disabledRouteIdForm.Name = "disabledRouteIdForm";
-            this.disabledRouteIdForm.Size = new System.Drawing.Size(316, 92);
+            this.disabledRouteIdForm.Size = new System.Drawing.Size(277, 72);
             this.disabledRouteIdForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.disabledRouteIdForm.TabIndex = 118;
             this.disabledRouteIdForm.TabStop = false;
@@ -403,20 +246,216 @@ namespace Transportation.App
             // disableBusIdText
             // 
             this.disableBusIdText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.disableBusIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.disableBusIdText.Location = new System.Drawing.Point(802, 488);
+            this.disableBusIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.disableBusIdText.Location = new System.Drawing.Point(564, 360);
             this.disableBusIdText.Margin = new System.Windows.Forms.Padding(4);
             this.disableBusIdText.Name = "disableBusIdText";
-            this.disableBusIdText.Size = new System.Drawing.Size(275, 27);
+            this.disableBusIdText.ReadOnly = true;
+            this.disableBusIdText.Size = new System.Drawing.Size(232, 21);
             this.disableBusIdText.TabIndex = 119;
             this.disableBusIdText.Text = "";
             this.disableBusIdText.Visible = false;
+            // 
+            // rtxtSearch
+            // 
+            this.rtxtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtSearch.Location = new System.Drawing.Point(1085, 74);
+            this.rtxtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxtSearch.Name = "rtxtSearch";
+            this.rtxtSearch.Size = new System.Drawing.Size(211, 27);
+            this.rtxtSearch.TabIndex = 123;
+            this.rtxtSearch.Text = "";
+            this.rtxtSearch.TextChanged += new System.EventHandler(this.rtxtSearch_TextChanged);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(1053, 52);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(276, 71);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 122;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1337, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(201, 29);
+            this.label1.TabIndex = 121;
+            this.label1.Text = "Search by Route";
+            // 
+            // dgvUser
+            // 
+            this.dgvUser.AllowUserToAddRows = false;
+            this.dgvUser.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUser.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvUser.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dept,
+            this.email,
+            this.phone,
+            this.address,
+            this.user_type,
+            this.salary,
+            this.status,
+            this.password});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvUser.EnableHeadersVisualStyles = false;
+            this.dgvUser.Location = new System.Drawing.Point(953, 158);
+            this.dgvUser.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUser.Name = "dgvUser";
+            this.dgvUser.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvUser.RowHeadersVisible = false;
+            this.dgvUser.RowHeadersWidth = 51;
+            this.dgvUser.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUser.Size = new System.Drawing.Size(724, 562);
+            this.dgvUser.TabIndex = 120;
+            this.dgvUser.DoubleClick += new System.EventHandler(this.dgvUser_DoubleClick);
+            // 
+            // dept
+            // 
+            this.dept.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dept.DataPropertyName = "DeptLocation";
+            this.dept.HeaderText = "Departure";
+            this.dept.MinimumWidth = 6;
+            this.dept.Name = "dept";
+            this.dept.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.email.DataPropertyName = "Email";
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // phone
+            // 
+            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phone.DataPropertyName = "Phone";
+            this.phone.HeaderText = "Phone Number";
+            this.phone.MinimumWidth = 6;
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            // 
+            // address
+            // 
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.address.DataPropertyName = "Address";
+            this.address.HeaderText = "Address";
+            this.address.MinimumWidth = 6;
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            // 
+            // user_type
+            // 
+            this.user_type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.user_type.DataPropertyName = "UserType";
+            this.user_type.HeaderText = "Type";
+            this.user_type.MinimumWidth = 6;
+            this.user_type.Name = "user_type";
+            this.user_type.ReadOnly = true;
+            // 
+            // salary
+            // 
+            this.salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.salary.DataPropertyName = "Salary";
+            this.salary.HeaderText = "Salary";
+            this.salary.MinimumWidth = 6;
+            this.salary.Name = "salary";
+            this.salary.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status.DataPropertyName = "Status";
+            this.status.HeaderText = "Status";
+            this.status.MinimumWidth = 6;
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
+            // password
+            // 
+            this.password.DataPropertyName = "Password";
+            this.password.HeaderText = "Password";
+            this.password.MinimumWidth = 6;
+            this.password.Name = "password";
+            this.password.ReadOnly = true;
+            this.password.Width = 80;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(19, 373);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(291, 37);
+            this.comboBox1.TabIndex = 125;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 325);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 29);
+            this.label2.TabIndex = 124;
+            this.label2.Text = "Bus Number";
             // 
             // controlRoute
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.rtxtSearch);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.disableBusIdText);
             this.Controls.Add(this.disabledRouteIdForm);
             this.Controls.Add(this.richTextBox1);
@@ -431,37 +470,20 @@ namespace Transportation.App
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbBus);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cmbDeparture);
-            this.Controls.Add(this.cmbDestination);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.pictureBox1);
             this.Location = new System.Drawing.Point(15, 15);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "controlRoute";
-            this.Size = new System.Drawing.Size(1213, 646);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.departureTextFiled)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.disabledRouteIdForm)).EndInit();
+            this.Size = new System.Drawing.Size(1705, 755);
+            ((System.ComponentModel.ISupportInitialize)(this.departureTextFiled)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disabledRouteIdForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.RichTextBox disableBusIdText;
@@ -476,22 +498,8 @@ namespace Transportation.App
         private System.Windows.Forms.RichTextBox richTextBox1;
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cmbDestination;
-        private System.Windows.Forms.ComboBox cmbDeparture;
         private System.Windows.Forms.ComboBox cmbBus;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnClear;
@@ -500,5 +508,19 @@ namespace Transportation.App
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.RichTextBox rtxtSearch;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dept;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn user_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn password;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
