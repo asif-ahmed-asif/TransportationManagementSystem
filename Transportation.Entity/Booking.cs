@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Transportation.Entity
 {
-    public class Schedule
+    public class Booking
     {
+        public string JourneyDate { get; set; }
+        public string Seats { get; set; }
         public string ScheduleId { get; set; }
-        public string DeptTime { get; set; }
-        public string ArrivalTime { get; set; }
     }
 }
