@@ -84,7 +84,6 @@ namespace Transportation.Repository
         
         public static bool Insert(Route route)
         {
-            int? n = null;
             var sql = $"INSERT INTO [Route] VALUES('{route.RouteId}', '{route.DeptLocation}', '{route.Destination}', '{route.BusNo}', '{route.ScheduleId}', '{route.Status}')";
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1; 
@@ -121,8 +120,8 @@ namespace Transportation.Repository
         {
             string sqlQuery = @"select route.*, schedule.* from route, schedule
                                 where route.schedule_id = schedule.schedule_id
-                                and dept_location like '%" + key + "%'" +
-                              " or destination like '%" + key + "%'" +
+                                and dept_location like '" + key + "%'" +
+                              " or destination like '" + key + "%'" +
                               " and route.schedule_id = schedule.schedule_id";
             
             DataTable data = DataAccess.GetDataTable(sqlQuery);

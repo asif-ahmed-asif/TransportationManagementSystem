@@ -22,12 +22,16 @@ namespace Transportation.App
         public controlRoute()
         {
             InitializeComponent();
-            FillDropDownFromDb();
-            GenerateRouteId();
-            FillRouteDataGridView();
         }
 
-        void FillDropDownFromDb() //Used to Fill the Drop Down List with bus_no
+        private void controlRoute_Load(object sender, EventArgs e)
+        {
+            this.FillDropDownFromDb();
+            this.GenerateRouteId();
+            this.FillRouteDataGridView();
+        }
+
+        private void FillDropDownFromDb() //Used to Fill the Drop Down List with bus_no
         {
             List<Bus> buses = BusRepo.GetAll();
             int i;
@@ -41,7 +45,7 @@ namespace Transportation.App
             }
         }
 
-        void GenerateRouteId()
+        private void GenerateRouteId()
         {
             this.disableBusIdText.Text = RouteRepo.GetId();
         }
@@ -70,13 +74,11 @@ namespace Transportation.App
                     if (updateRouteSignal && updateScheduleSignal)
                     {
                         MessageBox.Show("Route Updated Successuflly!!");
-                        ClearRouteInput();
+                        this.ClearRouteInput();
 
                         //Once the save button is clicked for edit, new Id, as primary key, will be generated for the route table.
                         this.disableBusIdText.Text = RouteRepo.GetId();
-                        this.changeStatusBtn.Visible = false;
-                        this.routeStatus.Visible = false;
-                        FillRouteDataGridView();
+                        this.FillRouteDataGridView();
                     } 
                 }
             }
@@ -102,11 +104,11 @@ namespace Transportation.App
                     if (insertSignal && insertSignalSchedule)
                     {
                         MessageBox.Show("Route Created Successuflly!!");
-                        ClearRouteInput();
+                        this.ClearRouteInput();
 
                         //Once the save button is clicked, new Id, as primary key, will be generated for the route table.
                         this.disableBusIdText.Text = RouteRepo.GetId();
-                        FillRouteDataGridView();
+                        this.FillRouteDataGridView();
                     }
                 }
             }
@@ -145,12 +147,15 @@ namespace Transportation.App
         {
             this.departureText.Text = "";
             this.richTextBox1.Text = "";
-            this.cmbBus.Text = null;
+            this.cmbBus.SelectedIndex = -1;
+            this.changeStatusBtn.Visible = false;
+            this.routeStatus.Visible = false;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.ClearRouteInput();
+            this.FillRouteDataGridView();
         }
 
         private void rtxtSearch_TextChanged(object sender, EventArgs e)
@@ -182,7 +187,6 @@ namespace Transportation.App
             this.dgvRoute.DataSource = RouteRepo.ShowAll();
             this.dgvRoute.ClearSelection();
             this.dgvRoute.Refresh();
-            //this.cmbBus.SelectedIndex = 0;
         }
 
         private void changeStatusBtn_Click(object sender, EventArgs e)
@@ -196,5 +200,12 @@ namespace Transportation.App
                 this.routeStatus.Text = "Active";
             }
         }
+
+        private void dgvRoute_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.dgvRoute.ClearSelection();
+        }
+
+        
     }
 }
