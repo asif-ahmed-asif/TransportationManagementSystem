@@ -96,6 +96,7 @@
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
         <e p="RouteRepo.cs" t="Include" />
+        <e p="ScheduleRepo.cs" t="Include" />
         <e p="Transportation.Repository.csproj" t="IncludeRecursive" />
         <e p="UserRepo.cs" t="Include" />
       </e>

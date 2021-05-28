@@ -37,6 +37,23 @@ namespace Transportation.Repository
             r.Destination = row["destination"].ToString();
             r.BusNo = row["bus_no"].ToString();
             r.ScheduleId = row["schedule_id"].ToString();
+            return r;
+        }
+        
+        private static Route ConvertToEntityForRouteSchedule(DataRow row)
+        {
+            if (row == null)
+            {
+                return null;
+            }
+            var r = new Route();
+            r.RouteId = row["route_id"].ToString();
+            r.DeptLocation = row["dept_location"].ToString();
+            r.Destination = row["destination"].ToString();
+            r.BusNo = row["bus_no"].ToString();
+            r.ScheduleId = row["schedule_id"].ToString();
+            r.ArrivalTime = row["arrival_time"].ToString();
+            r.DeptTime = row["dept_time"].ToString();
             r.Status = row["status"].ToString();
             return r;
         }
@@ -68,17 +85,59 @@ namespace Transportation.Repository
         public static bool Insert(Route route)
         {
             int? n = null;
-            var sql = $"INSERT INTO [Route] VALUES('{route.RouteId}', '{n}', '{n}', '{n}', '{route.DeptLocation}', '{route.Destination}', '{route.BusNo}', '{route.Status}')";
+            var sql = $"INSERT INTO [Route] VALUES('{route.RouteId}', '{route.DeptLocation}', '{route.Destination}', '{route.BusNo}', '{route.ScheduleId}', '{route.Status}')";
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1; 
         }
         
         public static bool Update(Route route)
         {
-            int? n = null;
-            var sql = $"UPDATE [Route] SET route_id = '{route.RouteId}', dept_time = '{n}', arrival_time = '{n}', journey_date = '{n}', dept_location = '{route.DeptLocation}', destination = '{route.Destination}', bus_no = '{route.BusNo}', status = '{route.Status}';";
+            var sql = $"UPDATE [Route] SET route_id = '{route.RouteId}', dept_location = '{route.DeptLocation}', destination = '{route.Destination}', bus_no = '{route.BusNo}' , status = '{route.Status}' where route_id = '{route.RouteId}';";
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1;
+        }
+
+        public static List<Route> ShowAll()
+        {
+            string sqlQuery = "select route.*, schedule.* " +
+                              "from route, schedule " +
+                              "where route.schedule_id = schedule.schedule_id";
+
+            DataTable data = DataAccess.GetDataTable(sqlQuery);
+
+            List<Route> routes = new List<Route>();
+            int index = 0;
+            while (index < data.Rows.Count)
+            {
+                Route route = ConvertToEntityForRouteSchedule(data.Rows[index]);
+                routes.Add(route);
+                index++;
+            }
+
+            return routes;
+        }
+
+        public static List<Route> LiveSearchRoutes(string key)
+        {
+            string sqlQuery = @"select route.*, schedule.* from route, schedule
+                                where route.schedule_id = schedule.schedule_id
+                                and dept_location like '%" + key + "%'" +
+                              " or destination like '%" + key + "%'" +
+                              " and route.schedule_id = schedule.schedule_id";
+            
+            DataTable data = DataAccess.GetDataTable(sqlQuery);
+
+            List<Route> routes = new List<Route>();
+            int index = 0;
+            
+            while (index < data.Rows.Count)
+            {
+                Route route = ConvertToEntityForRouteSchedule(data.Rows[index]);
+                routes.Add(route);
+                index++;
+            }
+
+            return routes;
         }
     }
 }

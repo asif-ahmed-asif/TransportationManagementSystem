@@ -24,6 +24,7 @@ namespace Transportation.App
             InitializeComponent();
             FillDropDownFromDb();
             GenerateRouteId();
+            FillRouteDataGridView();
         }
 
         void FillDropDownFromDb() //Used to Fill the Drop Down List with bus_no
@@ -57,14 +58,25 @@ namespace Transportation.App
                 }
                 else
                 {
-                    bool insertSignal = RouteRepo.Update(this.Route);
-                    if (insertSignal)
+                    Entity.Schedule schedule = new Entity.Schedule();
+                    schedule.ScheduleId = this.invisibleScheduleIdText.Text;
+                    schedule.DeptTime = this.dateTimePicker1.Text;
+                    schedule.ArrivalTime = this.dateTimePicker2.Text;
+
+                    bool updateScheduleSignal = ScheduleRepo.Update(schedule);
+
+                    Route.Status = this.routeStatus.Text;
+                    bool updateRouteSignal = RouteRepo.Update(this.Route);
+                    if (updateRouteSignal && updateScheduleSignal)
                     {
                         MessageBox.Show("Route Updated Successuflly!!");
                         ClearRouteInput();
 
                         //Once the save button is clicked for edit, new Id, as primary key, will be generated for the route table.
                         this.disableBusIdText.Text = RouteRepo.GetId();
+                        this.changeStatusBtn.Visible = false;
+                        this.routeStatus.Visible = false;
+                        FillRouteDataGridView();
                     } 
                 }
             }
@@ -76,14 +88,25 @@ namespace Transportation.App
                 }
                 else if (this.RouteFill())
                 {
-                    bool insertSignal = RouteRepo.Insert(this.Route);
-                    if (insertSignal)
+                    //First we have to insert data into schedule table and then to route table
+                    Entity.Schedule schedule = new Entity.Schedule();
+                    schedule.ScheduleId = ScheduleRepo.GetId();
+                    schedule.DeptTime = this.dateTimePicker1.Text;
+                    schedule.ArrivalTime = this.dateTimePicker2.Text;
+
+                    this.Route.ScheduleId = schedule.ScheduleId; //In Route table schedule_id is a foreign key.
+
+                    bool insertSignalSchedule = ScheduleRepo.Insert(schedule); //inserting into schedule table
+                    
+                    bool insertSignal = RouteRepo.Insert(this.Route); //inserting into the route table
+                    if (insertSignal && insertSignalSchedule)
                     {
                         MessageBox.Show("Route Created Successuflly!!");
                         ClearRouteInput();
 
                         //Once the save button is clicked, new Id, as primary key, will be generated for the route table.
                         this.disableBusIdText.Text = RouteRepo.GetId();
+                        FillRouteDataGridView();
                     }
                 }
             }
@@ -132,12 +155,46 @@ namespace Transportation.App
 
         private void rtxtSearch_TextChanged(object sender, EventArgs e)
         {
-
+            this.dgvRoute.AutoGenerateColumns = false;
+            this.dgvRoute.DataSource = RouteRepo.LiveSearchRoutes(this.rtxtSearch.Text);
+            this.dgvRoute.ClearSelection();
+            this.dgvRoute.Refresh();
         }
 
-        private void dgvUser_DoubleClick(object sender, EventArgs e)
+        private void dgvRoute_DoubleClick(object sender, EventArgs e)
         {
+            this.changeStatusBtn.Visible = true;
+            this.routeStatus.Visible = true;
+            this.routeStatus.Text = this.dgvRoute.CurrentRow.Cells[7].Value.ToString();;
+            
+            this.departureText.Text = this.dgvRoute.CurrentRow.Cells[2].Value.ToString();
+            this.richTextBox1.Text = this.dgvRoute.CurrentRow.Cells[3].Value.ToString();
+            this.cmbBus.Text = this.dgvRoute.CurrentRow.Cells[6].Value.ToString();
+            this.dateTimePicker1.Text = this.dgvRoute.CurrentRow.Cells[4].Value.ToString();
+            this.dateTimePicker2.Text = this.dgvRoute.CurrentRow.Cells[5].Value.ToString();
+            this.disableBusIdText.Text = this.dgvRoute.CurrentRow.Cells[0].Value.ToString();
+            this.invisibleScheduleIdText.Text = this.dgvRoute.CurrentRow.Cells[1].Value.ToString();
+        }
 
+        private void FillRouteDataGridView()
+        {
+            this.dgvRoute.AutoGenerateColumns = false;
+            this.dgvRoute.DataSource = RouteRepo.ShowAll();
+            this.dgvRoute.ClearSelection();
+            this.dgvRoute.Refresh();
+            //this.cmbBus.SelectedIndex = 0;
+        }
+
+        private void changeStatusBtn_Click(object sender, EventArgs e)
+        {
+            if (this.routeStatus.Text == "Active")
+            {
+                this.routeStatus.Text = "Inactive";
+            }
+            else if (this.routeStatus.Text == "Inactive")
+            {
+                this.routeStatus.Text = "Active";
+            }
         }
     }
 }
