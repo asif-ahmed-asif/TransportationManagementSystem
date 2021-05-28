@@ -23,11 +23,6 @@ namespace Transportation.App
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             var idExists = UserRepo.SearchUserId(this.rtxtId.Text);
