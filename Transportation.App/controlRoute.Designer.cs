@@ -54,6 +54,15 @@ namespace Transportation.App
             this.rtxtSearch = new System.Windows.Forms.RichTextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.dgvRoute = new System.Windows.Forms.DataGridView();
+            this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ScheduleId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BusFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.changeStatusBtn = new System.Windows.Forms.Button();
             this.routeStatus = new System.Windows.Forms.Label();
             this.invisibleScheduleIdText = new System.Windows.Forms.RichTextBox();
@@ -64,15 +73,6 @@ namespace Transportation.App
             this.fareTextField = new System.Windows.Forms.RichTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ScheduleId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BusFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize) (this.departureTextFiled)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.disabledRouteIdForm)).BeginInit();
@@ -356,6 +356,88 @@ namespace Transportation.App
             this.dgvRoute.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvRoute_DataBindingComplete);
             this.dgvRoute.DoubleClick += new System.EventHandler(this.dgvRoute_DoubleClick);
             // 
+            // user_id
+            // 
+            this.user_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.user_id.DataPropertyName = "RouteId";
+            this.user_id.HeaderText = "RouteId";
+            this.user_id.MinimumWidth = 6;
+            this.user_id.Name = "user_id";
+            this.user_id.ReadOnly = true;
+            this.user_id.Visible = false;
+            // 
+            // ScheduleId
+            // 
+            this.ScheduleId.DataPropertyName = "ScheduleId";
+            this.ScheduleId.HeaderText = "ScheduleId";
+            this.ScheduleId.MinimumWidth = 6;
+            this.ScheduleId.Name = "ScheduleId";
+            this.ScheduleId.ReadOnly = true;
+            this.ScheduleId.Visible = false;
+            this.ScheduleId.Width = 125;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "DeptLocation";
+            this.name.HeaderText = "Departure";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.email.DataPropertyName = "Destination";
+            this.email.HeaderText = "Destination";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // phone
+            // 
+            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phone.DataPropertyName = "DeptTime";
+            this.phone.HeaderText = "Departure Time";
+            this.phone.MinimumWidth = 6;
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            // 
+            // address
+            // 
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.address.DataPropertyName = "ArrivalTime";
+            this.address.HeaderText = "Arrival Time";
+            this.address.MinimumWidth = 6;
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            // 
+            // salary
+            // 
+            this.salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.salary.DataPropertyName = "BusNo";
+            this.salary.HeaderText = "Bus No.";
+            this.salary.MinimumWidth = 6;
+            this.salary.Name = "salary";
+            this.salary.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status.DataPropertyName = "Status";
+            this.status.HeaderText = "Status";
+            this.status.MinimumWidth = 6;
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
+            // BusFare
+            // 
+            this.BusFare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BusFare.DataPropertyName = "Fare";
+            this.BusFare.HeaderText = "Fare";
+            this.BusFare.Name = "BusFare";
+            this.BusFare.ReadOnly = true;
+            // 
             // changeStatusBtn
             // 
             this.changeStatusBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -391,6 +473,7 @@ namespace Transportation.App
             this.invisibleScheduleIdText.Size = new System.Drawing.Size(232, 21);
             this.invisibleScheduleIdText.TabIndex = 134;
             this.invisibleScheduleIdText.Text = "";
+            this.invisibleScheduleIdText.Visible = false;
             // 
             // disabledScheduleIdBox
             // 
@@ -475,88 +558,6 @@ namespace Transportation.App
             this.label3.Size = new System.Drawing.Size(64, 29);
             this.label3.TabIndex = 138;
             this.label3.Text = "Fare";
-            // 
-            // user_id
-            // 
-            this.user_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.user_id.DataPropertyName = "RouteId";
-            this.user_id.HeaderText = "RouteId";
-            this.user_id.MinimumWidth = 6;
-            this.user_id.Name = "user_id";
-            this.user_id.ReadOnly = true;
-            this.user_id.Visible = false;
-            // 
-            // ScheduleId
-            // 
-            this.ScheduleId.DataPropertyName = "ScheduleId";
-            this.ScheduleId.HeaderText = "ScheduleId";
-            this.ScheduleId.MinimumWidth = 6;
-            this.ScheduleId.Name = "ScheduleId";
-            this.ScheduleId.ReadOnly = true;
-            this.ScheduleId.Visible = false;
-            this.ScheduleId.Width = 125;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.DataPropertyName = "DeptLocation";
-            this.name.HeaderText = "Departure";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.email.DataPropertyName = "Destination";
-            this.email.HeaderText = "Destination";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // phone
-            // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phone.DataPropertyName = "DeptTime";
-            this.phone.HeaderText = "Departure Time";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            // 
-            // address
-            // 
-            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.address.DataPropertyName = "ArrivalTime";
-            this.address.HeaderText = "Arrival Time";
-            this.address.MinimumWidth = 6;
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            // 
-            // salary
-            // 
-            this.salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.salary.DataPropertyName = "BusNo";
-            this.salary.HeaderText = "Bus No.";
-            this.salary.MinimumWidth = 6;
-            this.salary.Name = "salary";
-            this.salary.ReadOnly = true;
-            // 
-            // status
-            // 
-            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.status.DataPropertyName = "Status";
-            this.status.HeaderText = "Status";
-            this.status.MinimumWidth = 6;
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
-            // BusFare
-            // 
-            this.BusFare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BusFare.DataPropertyName = "Fare";
-            this.BusFare.HeaderText = "Fare";
-            this.BusFare.Name = "BusFare";
-            this.BusFare.ReadOnly = true;
             // 
             // controlRoute
             // 
