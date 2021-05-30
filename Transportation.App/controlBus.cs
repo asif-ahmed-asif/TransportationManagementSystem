@@ -151,5 +151,15 @@ namespace Transportation.App
         {
             ClearBusInput();   
         }
+
+        private void rtxtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvRoute_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
