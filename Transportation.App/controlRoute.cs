@@ -206,6 +206,9 @@ namespace Transportation.App
             this.dgvRoute.ClearSelection();
         }
 
-        
+        private void cmbBus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
