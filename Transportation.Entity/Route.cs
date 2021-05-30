@@ -16,6 +16,8 @@ namespace Transportation.Entity
         public string Fare { get; set; }
         public string DeptTime { get; set; } //view model
         public string ArrivalTime { get; set; } //view model
+        
+        public string ScheduleId { get; set; } //view model
         public string Status { get; set; }
     }
 }

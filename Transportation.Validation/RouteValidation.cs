@@ -22,9 +22,14 @@ namespace Transportation.Validation
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("Select a Bus Number");
 
-            RuleFor(t => t.BusType)
+            /*RuleFor(t => t.BusType)
                 .Cascade(CascadeMode.Stop)
-                .NotEmpty().WithMessage("Select a Bus Type");
+                .NotEmpty().WithMessage("Select a Bus Type");*/
+            
+            RuleFor(fare => fare.Fare)
+                .Cascade(CascadeMode.Stop)
+                .NotEmpty().WithMessage("Fare cannot be empty")
+                .Must(CustomValidations.ValidNumber).WithMessage("Fare amount contains only greater than zero numbers");
         }
     }
 }

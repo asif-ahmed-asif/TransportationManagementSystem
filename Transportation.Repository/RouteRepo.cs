@@ -36,6 +36,7 @@ namespace Transportation.Repository
             r.DeptLocation = row["dept_location"].ToString();
             r.Destination = row["destination"].ToString();
             r.BusNo = row["bus_no"].ToString();
+            r.Fare = row["fare"].ToString();
             r.ScheduleId = row["schedule_id"].ToString();
             return r;
         }
@@ -55,6 +56,7 @@ namespace Transportation.Repository
             r.ArrivalTime = row["arrival_time"].ToString();
             r.DeptTime = row["dept_time"].ToString();
             r.Status = row["status"].ToString();
+            r.Fare = row["fare"].ToString();
             return r;
         }
         
@@ -84,14 +86,14 @@ namespace Transportation.Repository
         
         public static bool Insert(Route route)
         {
-            var sql = $"INSERT INTO [Route] VALUES('{route.RouteId}', '{route.DeptLocation}', '{route.Destination}', '{route.BusNo}', '{route.ScheduleId}', '{route.Status}')";
+            var sql = $"INSERT INTO [Route] VALUES('{route.RouteId}', '{route.DeptLocation}', '{route.Destination}', '{route.BusNo}', '{route.Status}', '{route.Fare}')"; //'{route.ScheduleId}',
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1; 
         }
         
         public static bool Update(Route route)
         {
-            var sql = $"UPDATE [Route] SET route_id = '{route.RouteId}', dept_location = '{route.DeptLocation}', destination = '{route.Destination}', bus_no = '{route.BusNo}' , status = '{route.Status}' where route_id = '{route.RouteId}';";
+            var sql = $"UPDATE [Route] SET route_id = '{route.RouteId}', dept_location = '{route.DeptLocation}', destination = '{route.Destination}', bus_no = '{route.BusNo}' , status = '{route.Status}', fare = '{route.Fare}' where route_id = '{route.RouteId}';";
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1;
         }
@@ -100,7 +102,7 @@ namespace Transportation.Repository
         {
             string sqlQuery = "select route.*, schedule.* " +
                               "from route, schedule " +
-                              "where route.schedule_id = schedule.schedule_id";
+                              "where route.route_id = schedule.route_id";
 
             DataTable data = DataAccess.GetDataTable(sqlQuery);
 
@@ -119,10 +121,10 @@ namespace Transportation.Repository
         public static List<Route> LiveSearchRoutes(string key)
         {
             string sqlQuery = @"select route.*, schedule.* from route, schedule
-                                where route.schedule_id = schedule.schedule_id
-                                and dept_location like '" + key + "%'" +
-                              " or destination like '" + key + "%'" +
-                              " and route.schedule_id = schedule.schedule_id";
+                                where route.route_id = schedule.route_id
+                                and dept_location like '%" + key + "%'" +
+                              " or destination like '%" + key + "%'" +
+                              " and route.route_id = schedule.route_id";
             
             DataTable data = DataAccess.GetDataTable(sqlQuery);
 
@@ -137,6 +139,17 @@ namespace Transportation.Repository
             }
 
             return routes;
+        }
+
+        public static string BusTypeForRoute(string key)
+        {
+            string sqlQuery = @"select bus_type from bus_type, bus
+                                where bus.type_id = bus_type.type_id
+                                and bus_no = '" + key + "';";
+            
+            DataTable data = DataAccess.GetDataTable(sqlQuery);
+            string rowData = data.Rows[0][0].ToString();
+            return rowData;
         }
     }
 }
