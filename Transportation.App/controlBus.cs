@@ -26,6 +26,9 @@ namespace Transportation.App
         {
             this.cmbType.Items.Add("AC");
             this.cmbType.Items.Add("Non AC");
+            
+            //Now the DataGridView must be filled when this form loads
+            this.FillBusDataGridView();
         }
         
         private bool FillEntity()
@@ -87,30 +90,52 @@ namespace Transportation.App
         private void btnSave_Click(object sender, EventArgs e)
         {
             int busIdExist = BusRepo.SearchBusId(this.rtxtPhn.ToString());
-            if (busIdExist == 1) //this is for update purpose
+            if (this.invisibleBusNoText.Text != "" || this.invisibleBusNoText.Text != null) //this is for update purpose
             {
-                string busNumber = this.Bus.BusNo;
+                //string busNumber = this.Bus.BusNo;
                 if (!UpdateFillEntity())
                 {
                     return;
                 }
                 else
                 {
-                    int checkBusNumberExist = BusRepo.CheckBusNumber(this.Bus.BusNo);
+                    /*int checkBusNumberExist = BusRepo.CheckBusNumber(this.Bus.BusNo);
 
                     if (checkBusNumberExist == 1)
                     {
                         MessageBox.Show("The Bus Number already Exists. Create a New One!");
-                    }
-                    else
+                    }*/
+                    /*else
                     {
+                        if (this.Bus.TypeId == "Non AC")
+                        {
+                            this.Bus.TypeId = "NON-AC";
+                        }
+                        
                         this.Bus.TypeId = BusTypeRepo.GetBusTypeForBus(this.Bus.TypeId);
-                        bool updateSignal = BusRepo.Update(this.Bus, busNumber);
+                        bool updateSignal = BusRepo.Update(this.Bus);
                         if (updateSignal)
                         {
                             MessageBox.Show("Bus Updated Successuflly!!");
                             ClearBusInput();
+                            this.FillBusDataGridView();
                         }
+                    }*/
+                    UpdateFillEntity();
+                    
+                    if (this.Bus.TypeId == "Non AC")
+                    {
+                        this.Bus.TypeId = "NON-AC";
+                    }
+                        
+                    this.Bus.TypeId = BusTypeRepo.GetBusTypeForBus(this.Bus.TypeId);
+                    bool updateSignal = BusRepo.Update(this.Bus, this.invisibleBusNoText.Text);
+                    if (updateSignal)
+                    {
+                        MessageBox.Show("Bus Updated Successuflly!!");
+                        ClearBusInput();
+                        this.invisibleBusNoText.Text = "";
+                        this.FillBusDataGridView();
                     }
                 }
             }
@@ -141,6 +166,7 @@ namespace Transportation.App
                         {
                             MessageBox.Show("Bus Created Successuflly!!");
                             ClearBusInput();
+                            this.FillBusDataGridView();
                         }
                     }
                 }
@@ -151,15 +177,53 @@ namespace Transportation.App
         {
             ClearBusInput();   
         }
+        
+        private void FillBusDataGridView()
+        {
+            this.dgvBus.AutoGenerateColumns = false;
+            try
+            {
+                this.dgvBus.DataSource = BusRepo.ShowAll();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Something went wrong!");
+            }
+            
+            this.dgvBus.ClearSelection();
+            this.dgvBus.Refresh();
+        }
 
         private void rtxtSearch_TextChanged(object sender, EventArgs e)
         {
-
+            this.dgvBus.AutoGenerateColumns = false;
+            try
+            {
+                this.dgvBus.DataSource = BusRepo.LiveSearchBus(this.rtxtSearch.Text);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("Something went wrong!");
+            }
+            this.dgvBus.ClearSelection();
+            this.dgvBus.Refresh();
         }
 
+        private void dgvBus_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.dgvBus.ClearSelection(); // The column will be unselected in the grid view 
+        }
+        
         private void dgvRoute_DoubleClick(object sender, EventArgs e)
         {
+            this.rtxtPhn.Text = this.dgvBus.CurrentRow.Cells[0].Value.ToString();
+            if (this.dgvBus.CurrentRow.Cells[1].Value.ToString() == "NON-AC")
+            {
+                this.cmbType.Text = "Non AC";
+            }
 
+            this.cmbType.Text = this.dgvBus.CurrentRow.Cells[1].Value.ToString();
+            this.invisibleBusNoText.Text = this.dgvBus.CurrentRow.Cells[0].Value.ToString();
         }
     }
 }

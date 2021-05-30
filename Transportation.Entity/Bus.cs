@@ -11,5 +11,7 @@ namespace Transportation.Entity
         public string BusNo { get; set; }
         public string NoOfSeats { get; set; }
         public string TypeId { get; set; }
+        
+        public string BusType { get; set; } //view model
     }
 }
