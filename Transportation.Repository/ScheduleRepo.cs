@@ -24,7 +24,7 @@ namespace Transportation.Repository
         
         public static bool Insert(Schedule schedule)
         {
-            string sql = $"INSERT INTO [Schedule] VALUES('{schedule.ScheduleId}', '{schedule.DeptTime}', '{schedule.ArrivalTime}')";
+            string sql = $"INSERT INTO [Schedule] VALUES('{schedule.ScheduleId}', '{schedule.DeptTime}', '{schedule.ArrivalTime}', '{schedule.RouteId}')";
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1; 
         }
