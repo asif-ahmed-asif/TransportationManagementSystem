@@ -43,8 +43,6 @@
   <ItemGroup>
     <Compile Include="Bus.cs" />
     <Compile Include="BusTypes.cs" />
-    <Compile Include="Counter.cs" />
-    <Compile Include="Fares.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Route.cs" />
