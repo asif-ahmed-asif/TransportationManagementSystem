@@ -11,5 +11,6 @@ namespace Transportation.Entity
         public string ScheduleId { get; set; }
         public string DeptTime { get; set; }
         public string ArrivalTime { get; set; }
+        public string RouteId { get; set; }
     }
 }

@@ -62,15 +62,16 @@ namespace Transportation.App
                 }
                 else
                 {
+                    Route.Status = this.routeStatus.Text;
+                    bool updateRouteSignal = RouteRepo.Update(this.Route);
+                    
                     Entity.Schedule schedule = new Entity.Schedule();
                     schedule.ScheduleId = this.invisibleScheduleIdText.Text;
                     schedule.DeptTime = this.dateTimePicker1.Text;
                     schedule.ArrivalTime = this.dateTimePicker2.Text;
+                    schedule.RouteId = this.disableBusIdText.Text;
 
                     bool updateScheduleSignal = ScheduleRepo.Update(schedule);
-
-                    Route.Status = this.routeStatus.Text;
-                    bool updateRouteSignal = RouteRepo.Update(this.Route);
                     if (updateRouteSignal && updateScheduleSignal)
                     {
                         MessageBox.Show("Route Updated Successuflly!!");
@@ -90,17 +91,17 @@ namespace Transportation.App
                 }
                 else if (this.RouteFill())
                 {
+                    bool insertSignal = RouteRepo.Insert(this.Route); //inserting into the route table
+                    
                     //First we have to insert data into schedule table and then to route table
                     Entity.Schedule schedule = new Entity.Schedule();
                     schedule.ScheduleId = ScheduleRepo.GetId();
                     schedule.DeptTime = this.dateTimePicker1.Text;
                     schedule.ArrivalTime = this.dateTimePicker2.Text;
-
-                    this.Route.ScheduleId = schedule.ScheduleId; //In Route table schedule_id is a foreign key.
-
-                    bool insertSignalSchedule = ScheduleRepo.Insert(schedule); //inserting into schedule table
+                    schedule.RouteId = this.disableBusIdText.Text; //In Schedule table route_id is a foreign key.
+                    //this.Route.ScheduleId = schedule.ScheduleId; //In Route table schedule_id is a foreign key.
                     
-                    bool insertSignal = RouteRepo.Insert(this.Route); //inserting into the route table
+                    bool insertSignalSchedule = ScheduleRepo.Insert(schedule); //inserting into schedule table
                     if (insertSignal && insertSignalSchedule)
                     {
                         MessageBox.Show("Route Created Successuflly!!");
@@ -122,6 +123,7 @@ namespace Transportation.App
                 DeptLocation = this.departureText.Text,
                 Destination = this.richTextBox1.Text,
                 BusNo = this.cmbBus.Text,
+                Fare = this.fareTextField.Text,
                 Status = "Active"
             };
             
@@ -147,9 +149,15 @@ namespace Transportation.App
         {
             this.departureText.Text = "";
             this.richTextBox1.Text = "";
-            this.cmbBus.SelectedIndex = -1;
+            try
+            {
+                this.cmbBus.SelectedIndex = -1;
+            }
+            catch (Exception e) { }
             this.changeStatusBtn.Visible = false;
             this.routeStatus.Visible = false;
+            this.BusTypeTextField.Text = "";
+            this.fareTextField.Text = "";
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -170,7 +178,7 @@ namespace Transportation.App
         {
             this.changeStatusBtn.Visible = true;
             this.routeStatus.Visible = true;
-            this.routeStatus.Text = this.dgvRoute.CurrentRow.Cells[7].Value.ToString();;
+            this.routeStatus.Text = this.dgvRoute.CurrentRow.Cells[7].Value.ToString();
             
             this.departureText.Text = this.dgvRoute.CurrentRow.Cells[2].Value.ToString();
             this.richTextBox1.Text = this.dgvRoute.CurrentRow.Cells[3].Value.ToString();
@@ -179,6 +187,7 @@ namespace Transportation.App
             this.dateTimePicker2.Text = this.dgvRoute.CurrentRow.Cells[5].Value.ToString();
             this.disableBusIdText.Text = this.dgvRoute.CurrentRow.Cells[0].Value.ToString();
             this.invisibleScheduleIdText.Text = this.dgvRoute.CurrentRow.Cells[1].Value.ToString();
+            this.fareTextField.Text = this.dgvRoute.CurrentRow.Cells[8].Value.ToString();
         }
 
         private void FillRouteDataGridView()
@@ -206,6 +215,9 @@ namespace Transportation.App
             this.dgvRoute.ClearSelection();
         }
 
-        
+        private void cmbBus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.BusTypeTextField.Text = RouteRepo.BusTypeForRoute(cmbBus.Text);
+        }
     }
 }

@@ -12,9 +12,12 @@ namespace Transportation.Entity
         public string DeptLocation { get; set; }
         public string Destination { get; set; }
         public string BusNo { get; set; }
-        public string ScheduleId { get; set; }
+        public string BusType { get; set; } //view model
+        public string Fare { get; set; }
         public string DeptTime { get; set; } //view model
         public string ArrivalTime { get; set; } //view model
+        
+        public string ScheduleId { get; set; } //view model
         public string Status { get; set; }
     }
 }
