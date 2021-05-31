@@ -1,7 +1,7 @@
 ﻿
 namespace Transportation.App
 {
-    partial class AccControl2
+    partial class controlAccount2
     {
         /// <summary> 
         /// Required designer variable.

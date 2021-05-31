@@ -53,23 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccControl1.cs">
+    <Compile Include="controlAccount1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AccControl1.Designer.cs">
-      <DependentUpon>AccControl1.cs</DependentUpon>
+    <Compile Include="controlAccount1.Designer.cs">
+      <DependentUpon>controlAccount1.cs</DependentUpon>
     </Compile>
-    <Compile Include="AccControl2.cs">
+    <Compile Include="controlAccount2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AccControl2.Designer.cs">
-      <DependentUpon>AccControl2.cs</DependentUpon>
+    <Compile Include="controlAccount2.Designer.cs">
+      <DependentUpon>controlAccount2.cs</DependentUpon>
     </Compile>
-    <Compile Include="AccControl3.cs">
+    <Compile Include="controlAccount3.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AccControl3.Designer.cs">
-      <DependentUpon>AccControl3.cs</DependentUpon>
+    <Compile Include="controlAccount3.Designer.cs">
+      <DependentUpon>controlAccount3.cs</DependentUpon>
     </Compile>
     <Compile Include="controlBus.cs">
       <SubType>UserControl</SubType>
@@ -146,20 +146,20 @@
     <Compile Include="Schedule.Designer.cs">
       <DependentUpon>Schedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAccDashboard.cs">
+    <Compile Include="frmAccountDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAccDashboard.designer.cs">
-      <DependentUpon>frmAccDashboard.cs</DependentUpon>
+    <Compile Include="frmAccountDashboard.designer.cs">
+      <DependentUpon>frmAccountDashboard.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccControl1.resx">
-      <DependentUpon>AccControl1.cs</DependentUpon>
+    <EmbeddedResource Include="controlAccount1.resx">
+      <DependentUpon>controlAccount1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AccControl2.resx">
-      <DependentUpon>AccControl2.cs</DependentUpon>
+    <EmbeddedResource Include="controlAccount2.resx">
+      <DependentUpon>controlAccount2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AccControl3.resx">
-      <DependentUpon>AccControl3.cs</DependentUpon>
+    <EmbeddedResource Include="controlAccount3.resx">
+      <DependentUpon>controlAccount3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controlBus.resx">
       <DependentUpon>controlBus.cs</DependentUpon>
@@ -206,8 +206,8 @@
     <EmbeddedResource Include="Schedule.resx">
       <DependentUpon>Schedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAccDashboard.resx">
-      <DependentUpon>frmAccDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="frmAccountDashboard.resx">
+      <DependentUpon>frmAccountDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="App.config.example" />
