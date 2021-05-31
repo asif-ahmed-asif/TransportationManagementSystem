@@ -1,4 +1,5 @@
-﻿
+﻿using Transportation.App;
+
 namespace Transportation.App
 {
     partial class Transportation
@@ -38,6 +39,7 @@ namespace Transportation.App
             this.btnLogout = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.costControl = new AccControl1();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +74,7 @@ namespace Transportation.App
             this.button1.TabIndex = 6;
             this.button1.Text = "Withdrawable";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnProfile
             // 
@@ -149,11 +152,19 @@ namespace Transportation.App
             this.panel1.Size = new System.Drawing.Size(934, 27);
             this.panel1.TabIndex = 2;
             // 
+            // costControl
+            // 
+            this.costControl.Location = new System.Drawing.Point(152, 32);
+            this.costControl.Name = "costControl";
+            this.costControl.Size = new System.Drawing.Size(763, 389);
+            this.costControl.TabIndex = 3;
+            // 
             // Transportation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 553);
+            this.Controls.Add(this.costControl);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(500, 500);
@@ -175,6 +186,7 @@ namespace Transportation.App
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private AccControl1 costControl;
     }
 }
 

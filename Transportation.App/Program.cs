@@ -18,7 +18,9 @@ namespace Transportation.App
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLogin());
-            Application.Run(new frmAdminDashboard());
+           // Application.Run(new frmAdminDashboard());
+            Application.Run(new Transportation()); // <= This is actually Accountant Dashboard
+
             //Application.Run(new AdminForm());
         }
     }

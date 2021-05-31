@@ -22,6 +22,7 @@ namespace Transportation.App
         {
             this.pnlRed.Height = this.btn1.Height;
             this.pnlRed.Top = this.btn1.Top;
+           // AccControl1.BringToFront();
 
         }
 
@@ -45,6 +46,13 @@ namespace Transportation.App
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.pnlRed.Height = this.button1.Height;
+            this.pnlRed.Top = this.button1.Top;
 
         }
         /* private void SetPanelPosition(object button)
