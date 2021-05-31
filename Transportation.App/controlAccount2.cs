@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Transportation.App
 {
-    public partial class AccControl1 : UserControl
+    public partial class controlAccount2 : UserControl
     {
-        public AccControl1()
+        public controlAccount2()
         {
             InitializeComponent();
         }
