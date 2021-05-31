@@ -53,6 +53,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccControl1.Designer.cs">
+      <DependentUpon>AccControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccControl2.Designer.cs">
+      <DependentUpon>AccControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccControl3.Designer.cs">
+      <DependentUpon>AccControl3.cs</DependentUpon>
+    </Compile>
     <Compile Include="controlBus.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -128,6 +146,21 @@
     <Compile Include="Schedule.Designer.cs">
       <DependentUpon>Schedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAccDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccDashboard.designer.cs">
+      <DependentUpon>frmAccDashboard.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccControl1.resx">
+      <DependentUpon>AccControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccControl2.resx">
+      <DependentUpon>AccControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccControl3.resx">
+      <DependentUpon>AccControl3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controlBus.resx">
       <DependentUpon>controlBus.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +205,9 @@
     </Compile>
     <EmbeddedResource Include="Schedule.resx">
       <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccDashboard.resx">
+      <DependentUpon>frmAccDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="App.config.example" />
