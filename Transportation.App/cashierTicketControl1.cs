@@ -41,7 +41,9 @@ namespace Transportation.App
             {
                 DeptLocation = this.cboFrom.Text,
                 Destination = this.cboTo.Text,
-                BusType = this.cmbBusType.Text
+                BusType = this.cmbBusType.Text,
+                BusNo = "null",
+                Fare = "5"
             };
 
             RouteValidation routeValidation = new RouteValidation();
@@ -79,6 +81,8 @@ namespace Transportation.App
             {
                 MessageBox.Show($"Error fetching data\n{error.Message}");
             }
+            this.cmbBusType.Items.Add("AC");
+            this.cmbBusType.Items.Add("Non AC");
 
         }
     }
