@@ -33,27 +33,50 @@ namespace Transportation.App
 
         private void FillDropDownFromDb() //Used to Fill the Drop Down List with bus_no
         {
-            List<Bus> buses = BusRepo.GetAll();
-            int i;
-            
-            for (i= 0; i < buses.Count; i++)
+            try
             {
-                for (int j = 0; j < 1; j++)
+                List<Bus> buses = BusRepo.GetAll();
+                int i;
+            
+                for (i= 0; i < buses.Count; i++)
                 {
-                    this.cmbBus.Items.Add(buses[i].BusNo);
+                    for (int j = 0; j < 1; j++)
+                    {
+                        this.cmbBus.Items.Add(buses[i].BusNo);
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong!");
             }
         }
 
         private void GenerateRouteId()
         {
-            this.disableBusIdText.Text = RouteRepo.GetId();
+            try
+            {
+                this.disableBusIdText.Text = RouteRepo.GetId();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong!");
+            }
         }
 
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            bool idExist = RouteRepo.SearchRouteId(this.disableBusIdText.Text);
+            bool idExist;
+            try
+            {
+                idExist = RouteRepo.SearchRouteId(this.disableBusIdText.Text);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
             if (idExist) //For Update purpose
             {
                 if (!this.RouteFill())
@@ -63,24 +86,31 @@ namespace Transportation.App
                 else
                 {
                     Route.Status = this.routeStatus.Text;
-                    bool updateRouteSignal = RouteRepo.Update(this.Route);
-                    
-                    Entity.Schedule schedule = new Entity.Schedule();
-                    schedule.ScheduleId = this.invisibleScheduleIdText.Text;
-                    schedule.DeptTime = this.dateTimePicker1.Text;
-                    schedule.ArrivalTime = this.dateTimePicker2.Text;
-                    schedule.RouteId = this.disableBusIdText.Text;
-
-                    bool updateScheduleSignal = ScheduleRepo.Update(schedule);
-                    if (updateRouteSignal && updateScheduleSignal)
+                    try
                     {
-                        MessageBox.Show("Route Updated Successuflly!!");
-                        this.ClearRouteInput();
+                        bool updateRouteSignal = RouteRepo.Update(this.Route);
+                    
+                        Entity.Schedule schedule = new Entity.Schedule();
+                        schedule.ScheduleId = this.invisibleScheduleIdText.Text;
+                        schedule.DeptTime = this.dateTimePicker1.Text;
+                        schedule.ArrivalTime = this.dateTimePicker2.Text;
+                        schedule.RouteId = this.disableBusIdText.Text;
 
-                        //Once the save button is clicked for edit, new Id, as primary key, will be generated for the route table.
-                        this.disableBusIdText.Text = RouteRepo.GetId();
-                        this.FillRouteDataGridView();
-                    } 
+                        bool updateScheduleSignal = ScheduleRepo.Update(schedule);
+                        if (updateRouteSignal && updateScheduleSignal)
+                        {
+                            MessageBox.Show("Route Updated Successuflly!!");
+                            this.ClearRouteInput();
+
+                            //Once the save button is clicked for edit, new Id, as primary key, will be generated for the route table.
+                            this.disableBusIdText.Text = RouteRepo.GetId();
+                            this.FillRouteDataGridView();
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.WriteLine("Something went wrong!");
+                    }
                 }
             }
             if (!idExist) //for insert purpose
@@ -91,24 +121,56 @@ namespace Transportation.App
                 }
                 else if (this.RouteFill())
                 {
-                    bool insertSignal = RouteRepo.Insert(this.Route); //inserting into the route table
+                    bool insertSignal;
+                    try
+                    {
+                        insertSignal = RouteRepo.Insert(this.Route); //inserting into the route table
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.WriteLine(exception);
+                        throw;
+                    }
                     
                     //First we have to insert data into schedule table and then to route table
                     Entity.Schedule schedule = new Entity.Schedule();
-                    schedule.ScheduleId = ScheduleRepo.GetId();
+                    try
+                    {
+                        schedule.ScheduleId = ScheduleRepo.GetId();
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.WriteLine(exception);
+                    }
                     schedule.DeptTime = this.dateTimePicker1.Text;
                     schedule.ArrivalTime = this.dateTimePicker2.Text;
                     schedule.RouteId = this.disableBusIdText.Text; //In Schedule table route_id is a foreign key.
                     //this.Route.ScheduleId = schedule.ScheduleId; //In Route table schedule_id is a foreign key.
-                    
-                    bool insertSignalSchedule = ScheduleRepo.Insert(schedule); //inserting into schedule table
+
+                    bool insertSignalSchedule;
+                    try
+                    {
+                        insertSignalSchedule = ScheduleRepo.Insert(schedule); //inserting into schedule table
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.WriteLine(exception);
+                        throw;
+                    }
                     if (insertSignal && insertSignalSchedule)
                     {
                         MessageBox.Show("Route Created Successuflly!!");
                         this.ClearRouteInput();
 
                         //Once the save button is clicked, new Id, as primary key, will be generated for the route table.
-                        this.disableBusIdText.Text = RouteRepo.GetId();
+                        try
+                        {
+                            this.disableBusIdText.Text = RouteRepo.GetId();
+                        }
+                        catch (Exception exception)
+                        {
+                            Console.WriteLine("Something went wrong!");
+                        }
                         this.FillRouteDataGridView();
                     }
                 }
@@ -169,7 +231,14 @@ namespace Transportation.App
         private void rtxtSearch_TextChanged(object sender, EventArgs e)
         {
             this.dgvRoute.AutoGenerateColumns = false;
-            this.dgvRoute.DataSource = RouteRepo.LiveSearchRoutes(this.rtxtSearch.Text);
+            try
+            {
+                this.dgvRoute.DataSource = RouteRepo.LiveSearchRoutes(this.rtxtSearch.Text);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("Something went wrong!");
+            }
             this.dgvRoute.ClearSelection();
             this.dgvRoute.Refresh();
         }
@@ -193,7 +262,14 @@ namespace Transportation.App
         private void FillRouteDataGridView()
         {
             this.dgvRoute.AutoGenerateColumns = false;
-            this.dgvRoute.DataSource = RouteRepo.ShowAll();
+            try
+            {
+                this.dgvRoute.DataSource = RouteRepo.ShowAll();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong!");
+            }
             this.dgvRoute.ClearSelection();
             this.dgvRoute.Refresh();
         }
@@ -217,7 +293,14 @@ namespace Transportation.App
 
         private void cmbBus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.BusTypeTextField.Text = RouteRepo.BusTypeForRoute(cmbBus.Text);
+            try
+            {
+                this.BusTypeTextField.Text = RouteRepo.BusTypeForRoute(cmbBus.Text);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong!");
+            }
         }
     }
 }
