@@ -99,28 +99,6 @@ namespace Transportation.App
                 }
                 else
                 {
-                    /*int checkBusNumberExist = BusRepo.CheckBusNumber(this.Bus.BusNo);
-
-                    if (checkBusNumberExist == 1)
-                    {
-                        MessageBox.Show("The Bus Number already Exists. Create a New One!");
-                    }*/
-                    /*else
-                    {
-                        if (this.Bus.TypeId == "Non AC")
-                        {
-                            this.Bus.TypeId = "NON-AC";
-                        }
-                        
-                        this.Bus.TypeId = BusTypeRepo.GetBusTypeForBus(this.Bus.TypeId);
-                        bool updateSignal = BusRepo.Update(this.Bus);
-                        if (updateSignal)
-                        {
-                            MessageBox.Show("Bus Updated Successuflly!!");
-                            ClearBusInput();
-                            this.FillBusDataGridView();
-                        }
-                    }*/
                     UpdateFillEntity();
                     
                     if (this.Bus.TypeId == "Non AC")

@@ -37,7 +37,7 @@ namespace Transportation.Repository
             r.Destination = row["destination"].ToString();
             r.BusNo = row["bus_no"].ToString();
             r.Fare = row["fare"].ToString();
-            r.ScheduleId = row["schedule_id"].ToString();
+            r.Status = row["status"].ToString();
             return r;
         }
         
