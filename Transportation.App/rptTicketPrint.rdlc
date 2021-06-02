@@ -218,7 +218,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!customer_name.Value, "DataSetTicket")</Value>
+                <Value>=First(Fields!customer_name.Value, "DataSet2")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -226,9 +226,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>customer_name</rd:DefaultName>
-        <Top>0.06944in</Top>
-        <Left>0.8425in</Left>
-        <Height>0.23611in</Height>
+        <Top>0.08333in</Top>
+        <Left>0.89459in</Left>
+        <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>7</ZIndex>
         <Style>
@@ -248,7 +248,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!customer_phone.Value, "DataSetTicket")</Value>
+                <Value>=First(Fields!customer_phone.Value, "DataSet2")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -257,7 +257,7 @@
         </Paragraphs>
         <rd:DefaultName>customer_phone</rd:DefaultName>
         <Top>0.375in</Top>
-        <Left>1.23833in</Left>
+        <Left>1.25569in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>8</ZIndex>
@@ -278,7 +278,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!journey_date.Value, "DataSetTicket")</Value>
+                <Value>=First(Fields!journey_date.Value, "DataSet2")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -287,7 +287,7 @@
         </Paragraphs>
         <rd:DefaultName>journey_date</rd:DefaultName>
         <Top>0.69444in</Top>
-        <Left>1.36333in</Left>
+        <Left>1.36681in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>9</ZIndex>
@@ -308,7 +308,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!seat_no.Value, "DataSetTicket")</Value>
+                <Value>=First(Fields!seat_no.Value, "DataSet2")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -316,8 +316,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>seat_no</rd:DefaultName>
-        <Top>0.98611in</Top>
-        <Left>0.8182in</Left>
+        <Top>1.01388in</Top>
+        <Left>0.81819in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>10</ZIndex>
@@ -331,23 +331,23 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="journey_from">
+      <Textbox Name="dept_location">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!journey_from.Value, "DataSetTicket")</Value>
+                <Value>=First(Fields!dept_location.Value, "DataSet2")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>journey_from</rd:DefaultName>
-        <Top>1.30556in</Top>
-        <Left>1.24181in</Left>
+        <rd:DefaultName>dept_location</rd:DefaultName>
+        <Top>1.29166in</Top>
+        <Left>1.25569in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>11</ZIndex>
@@ -361,23 +361,23 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="journey_to">
+      <Textbox Name="destination">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!journey_to.Value, "DataSetTicket")</Value>
+                <Value>=First(Fields!destination.Value, "DataSet2")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>journey_to</rd:DefaultName>
-        <Top>1.59722in</Top>
-        <Left>1.08903in</Left>
+        <rd:DefaultName>destination</rd:DefaultName>
+        <Top>1.625in</Top>
+        <Left>1.08902in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>12</ZIndex>
@@ -391,21 +391,21 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="departure_time">
+      <Textbox Name="dept_time">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!departure_time.Value, "DataSetTicket")</Value>
+                <Value>=First(Fields!dept_time.Value, "DataSet2")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>departure_time</rd:DefaultName>
+        <rd:DefaultName>dept_time</rd:DefaultName>
         <Top>1.94444in</Top>
         <Left>1.25569in</Left>
         <Height>0.25in</Height>
@@ -422,7 +422,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.35417in</Height>
+    <Height>2.375in</Height>
     <Style />
   </Body>
   <Width>3.45833in</Width>
@@ -478,7 +478,6 @@
         </Line>
         <Line Name="Line2">
           <Top>1.06472in</Top>
-          <Left>0in</Left>
           <Height>0in</Height>
           <Width>3.45833in</Width>
           <ZIndex>2</ZIndex>
@@ -518,23 +517,23 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="ticket_id">
+        <Textbox Name="ticket_Id">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!ticket_id.Value, "DataSetTicket")</Value>
+                  <Value>=First(Fields!ticket_Id.Value, "DataSet2")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>ticket_id</rd:DefaultName>
-          <Top>0.68972in</Top>
-          <Left>0.81819in</Left>
+          <rd:DefaultName>ticket_Id</rd:DefaultName>
+          <Top>0.69319in</Top>
+          <Left>0.89459in</Left>
           <Height>0.25in</Height>
           <Width>1in</Width>
           <ZIndex>4</ZIndex>
@@ -570,16 +569,23 @@
       </ConnectionProperties>
       <rd:DataSourceID>d18189ce-9964-491b-a7a0-5b406eefd463</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="DataSetTicket">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>aca8dfe1-be9b-4137-a009-c41d3f6bbc03</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetTicket">
+    <DataSet Name="DataSet2">
       <Query>
-        <DataSourceName>dataSetTicket</DataSourceName>
+        <DataSourceName>DataSetTicket</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="ticket_id">
-          <DataField>ticket_id</DataField>
+        <Field Name="ticket_Id">
+          <DataField>ticket_Id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="customer_name">
@@ -598,23 +604,23 @@
           <DataField>seat_no</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="journey_from">
-          <DataField>journey_from</DataField>
+        <Field Name="dept_location">
+          <DataField>dept_location</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="journey_to">
-          <DataField>journey_to</DataField>
+        <Field Name="destination">
+          <DataField>destination</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="departure_time">
-          <DataField>departure_time</DataField>
+        <Field Name="dept_time">
+          <DataField>dept_time</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>dataSetTicket</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\owner\Documents\GitHub\TransportationManagementSystem\Transportation.App\dataSetTicket.xsd</rd:SchemaPath>
-        <rd:TableName>DataTableTicket</rd:TableName>
+        <rd:DataSetName>DataSetTicket</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\owner\Documents\GitHub\TransportationManagementSystem\Transportation.App\DataSetTicket.xsd</rd:SchemaPath>
+        <rd:TableName>PrintTable</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
