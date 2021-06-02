@@ -2,9 +2,9 @@
 {
 
 
-    partial class dataSetTicket
+    partial class DataSetTicket
     {
-        partial class DataTableTicketDataTable
+        partial class PrintTableDataTable
         {
         }
     }

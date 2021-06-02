@@ -113,13 +113,13 @@
     <Compile Include="cashierTicketControl3.Designer.cs">
       <DependentUpon>cashierTicketControl3.cs</DependentUpon>
     </Compile>
-    <Compile Include="dataSetTicket.cs">
-      <DependentUpon>dataSetTicket.xsd</DependentUpon>
+    <Compile Include="DataSetTicket.cs">
+      <DependentUpon>DataSetTicket.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dataSetTicket.Designer.cs">
+    <Compile Include="DataSetTicket.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dataSetTicket.xsd</DependentUpon>
+      <DependentUpon>DataSetTicket.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmCashierDashboard.cs">
       <SubType>Form</SubType>
@@ -236,16 +236,16 @@
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="App.config.example" />
-    <None Include="dataSetTicket.xsc">
-      <DependentUpon>dataSetTicket.xsd</DependentUpon>
+    <None Include="DataSetTicket.xsc">
+      <DependentUpon>DataSetTicket.xsd</DependentUpon>
     </None>
-    <None Include="dataSetTicket.xsd">
+    <None Include="DataSetTicket.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dataSetTicket.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetTicket.Designer.cs</LastGenOutput>
     </None>
-    <None Include="dataSetTicket.xss">
-      <DependentUpon>dataSetTicket.xsd</DependentUpon>
+    <None Include="DataSetTicket.xss">
+      <DependentUpon>DataSetTicket.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
