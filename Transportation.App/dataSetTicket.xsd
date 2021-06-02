@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dataSetTicket" targetNamespace="http://tempuri.org/dataSetTicket.xsd" xmlns:mstns="http://tempuri.org/dataSetTicket.xsd" xmlns="http://tempuri.org/dataSetTicket.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dataSetTicket" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dataSetTicket" msprop:Generator_UserDSName="dataSetTicket">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableTicket" msprop:Generator_TableClassName="DataTableTicketDataTable" msprop:Generator_TableVarName="tableDataTableTicket" msprop:Generator_TablePropName="DataTableTicket" msprop:Generator_RowDeletingName="DataTableTicketRowDeleting" msprop:Generator_RowChangingName="DataTableTicketRowChanging" msprop:Generator_RowEvHandlerName="DataTableTicketRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableTicketRowDeleted" msprop:Generator_UserTableName="DataTableTicket" msprop:Generator_RowChangedName="DataTableTicketRowChanged" msprop:Generator_RowEvArgName="DataTableTicketRowChangeEvent" msprop:Generator_RowClassName="DataTableTicketRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ticket_id" msprop:Generator_ColumnVarNameInTable="columnticket_id" msprop:Generator_ColumnPropNameInRow="ticket_id" msprop:Generator_ColumnPropNameInTable="ticket_idColumn" msprop:Generator_UserColumnName="ticket_id" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_name" msprop:Generator_ColumnVarNameInTable="columncustomer_name" msprop:Generator_ColumnPropNameInRow="customer_name" msprop:Generator_ColumnPropNameInTable="customer_nameColumn" msprop:Generator_UserColumnName="customer_name" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_phone" msprop:Generator_ColumnVarNameInTable="columncustomer_phone" msprop:Generator_ColumnPropNameInRow="customer_phone" msprop:Generator_ColumnPropNameInTable="customer_phoneColumn" msprop:Generator_UserColumnName="customer_phone" type="xs:string" minOccurs="0" />
+              <xs:element name="journey_date" msprop:Generator_ColumnVarNameInTable="columnjourney_date" msprop:Generator_ColumnPropNameInRow="journey_date" msprop:Generator_ColumnPropNameInTable="journey_dateColumn" msprop:Generator_UserColumnName="journey_date" type="xs:string" minOccurs="0" />
+              <xs:element name="seat_no" msprop:Generator_ColumnVarNameInTable="columnseat_no" msprop:Generator_ColumnPropNameInRow="seat_no" msprop:Generator_ColumnPropNameInTable="seat_noColumn" msprop:Generator_UserColumnName="seat_no" type="xs:string" minOccurs="0" />
+              <xs:element name="journey_from" msprop:Generator_ColumnVarNameInTable="columnjourney_from" msprop:Generator_ColumnPropNameInRow="journey_from" msprop:Generator_ColumnPropNameInTable="journey_fromColumn" msprop:Generator_UserColumnName="journey_from" type="xs:string" minOccurs="0" />
+              <xs:element name="journey_to" msprop:Generator_ColumnVarNameInTable="columnjourney_to" msprop:Generator_ColumnPropNameInRow="journey_to" msprop:Generator_ColumnPropNameInTable="journey_toColumn" msprop:Generator_UserColumnName="journey_to" type="xs:string" minOccurs="0" />
+              <xs:element name="departure_time" msprop:Generator_ColumnVarNameInTable="columndeparture_time" msprop:Generator_ColumnPropNameInRow="departure_time" msprop:Generator_ColumnPropNameInTable="departure_timeColumn" msprop:Generator_UserColumnName="departure_time" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
