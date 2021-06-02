@@ -38,6 +38,7 @@ namespace Transportation.App
             this.txtPhnNumber = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +116,7 @@ namespace Transportation.App
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(318, 314);
+            this.btnCancel.Location = new System.Drawing.Point(405, 314);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(131, 41);
             this.btnCancel.TabIndex = 54;
@@ -123,10 +124,21 @@ namespace Transportation.App
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(236, 314);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 41);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "Print";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // cashierTicketControl3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtPhnNumber);
@@ -155,5 +167,6 @@ namespace Transportation.App
         private System.Windows.Forms.TextBox txtPhnNumber;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button button1;
     }
 }
