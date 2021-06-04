@@ -38,6 +38,7 @@ namespace Transportation.App
 
         private bool Validation()
         {
+            
             this.Route = new Route
             {
                 DeptLocation = this.cboFrom.Text,
@@ -71,9 +72,7 @@ namespace Transportation.App
 
         private void cashierTicketControl1_Load(object sender, EventArgs e)
         {
-            this.cboFrom.Text = MainControl.cashierFrom;
-            this.cboTo.Text = MainControl.cashierTo;
-            this.cmbBusType.Text = MainControl.cashierBusType;
+           
 
             try
             {
@@ -92,6 +91,9 @@ namespace Transportation.App
             this.cmbBusType.Items.Add("AC");
             this.cmbBusType.Items.Add("NON-AC");
 
+            this.cboFrom.Text = MainControl.cashierFrom;
+            this.cboTo.Text = MainControl.cashierTo;
+            this.cmbBusType.Text = MainControl.cashierBusType;
         }
     }
 }
