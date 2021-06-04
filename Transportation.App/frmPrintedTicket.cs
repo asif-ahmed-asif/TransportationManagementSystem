@@ -22,11 +22,19 @@ namespace Transportation.App
 
         private void frmPrintedTicket_Load(object sender, EventArgs e)
         {
+            try
+            {
+                ReportDataSource ds = new ReportDataSource("DataSet2", TicketRepo.printTicket());
+                this.reportViewer1.LocalReport.DataSources.Clear();
+                this.reportViewer1.LocalReport.DataSources.Add(ds);
+                this.reportViewer1.RefreshReport();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"Error fetching data\n{error.Message}");
+            }
 
-            ReportDataSource ds = new ReportDataSource("DataSet2", TicketRepo.printTicket());
-            this.reportViewer1.LocalReport.DataSources.Clear();
-            this.reportViewer1.LocalReport.DataSources.Add(ds);
-            this.reportViewer1.RefreshReport();
+            
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)
