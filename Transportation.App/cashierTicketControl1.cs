@@ -29,7 +29,8 @@ namespace Transportation.App
             {
                 return;
             }
-
+          /*  string id=TicketRepo.getRouteId(this.Route.DeptLocation, this.Route.Destination, this.Route.BusType);
+            MessageBox.Show(id);*/
             cashierTicketControl2 second = new cashierTicketControl2();
             MainControl.showControl(second, frmCashierDashboard.ActiveForm);
            
@@ -60,6 +61,9 @@ namespace Transportation.App
                     return false;
                 }
             }
+            MainControl.cashierBusType = this.Route.BusType;
+            MainControl.cashierFrom = this.Route.DeptLocation;
+            MainControl.cashierTo = this.Route.Destination;
 
             return true;
         }
@@ -67,6 +71,10 @@ namespace Transportation.App
 
         private void cashierTicketControl1_Load(object sender, EventArgs e)
         {
+            this.cboFrom.Text = MainControl.cashierFrom;
+            this.cboTo.Text = MainControl.cashierTo;
+            this.cmbBusType.Text = MainControl.cashierBusType;
+
             try
             {
                 this.RouteList = RouteRepo.GetAll();
@@ -82,7 +90,7 @@ namespace Transportation.App
                 MessageBox.Show($"Error fetching data\n{error.Message}");
             }
             this.cmbBusType.Items.Add("AC");
-            this.cmbBusType.Items.Add("Non AC");
+            this.cmbBusType.Items.Add("NON-AC");
 
         }
     }

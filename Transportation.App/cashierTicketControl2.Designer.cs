@@ -29,22 +29,17 @@ namespace Transportation.App
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBack = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dgvRoute = new System.Windows.Forms.DataGridView();
-            this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ScheduleId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRoute)).BeginInit();
+            this.dgvCashierSchedule = new System.Windows.Forms.DataGridView();
+            this.dept_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.arrival_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bus_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCashierSchedule)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -67,146 +62,89 @@ namespace Transportation.App
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // dgvRoute
+            // dgvCashierSchedule
             // 
-            this.dgvRoute.AllowUserToAddRows = false;
-            this.dgvRoute.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvRoute.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRoute.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvRoute.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvRoute.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvRoute.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRoute.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRoute.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoute.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.user_id,
-            this.ScheduleId,
-            this.name,
-            this.email,
-            this.phone,
-            this.address,
-            this.salary,
-            this.status});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRoute.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvRoute.EnableHeadersVisualStyles = false;
-            this.dgvRoute.Location = new System.Drawing.Point(53, 74);
-            this.dgvRoute.Name = "dgvRoute";
-            this.dgvRoute.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRoute.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvRoute.RowHeadersVisible = false;
-            this.dgvRoute.RowHeadersWidth = 51;
-            this.dgvRoute.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRoute.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoute.Size = new System.Drawing.Size(543, 457);
-            this.dgvRoute.TabIndex = 129;
+            this.dgvCashierSchedule.AllowUserToAddRows = false;
+            this.dgvCashierSchedule.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dgvCashierSchedule.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvCashierSchedule.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCashierSchedule.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvCashierSchedule.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvCashierSchedule.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCashierSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvCashierSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCashierSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dept_time,
+            this.arrival_time,
+            this.bus_no});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCashierSchedule.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvCashierSchedule.EnableHeadersVisualStyles = false;
+            this.dgvCashierSchedule.Location = new System.Drawing.Point(53, 74);
+            this.dgvCashierSchedule.Name = "dgvCashierSchedule";
+            this.dgvCashierSchedule.ReadOnly = true;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCashierSchedule.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvCashierSchedule.RowHeadersVisible = false;
+            this.dgvCashierSchedule.RowHeadersWidth = 51;
+            this.dgvCashierSchedule.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCashierSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCashierSchedule.Size = new System.Drawing.Size(303, 457);
+            this.dgvCashierSchedule.TabIndex = 129;
             // 
-            // user_id
+            // dept_time
             // 
-            this.user_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.user_id.DataPropertyName = "RouteId";
-            this.user_id.HeaderText = "RouteId";
-            this.user_id.MinimumWidth = 6;
-            this.user_id.Name = "user_id";
-            this.user_id.ReadOnly = true;
-            this.user_id.Visible = false;
+            this.dept_time.DataPropertyName = "dept_time";
+            this.dept_time.HeaderText = "Departure Time";
+            this.dept_time.Name = "dept_time";
+            this.dept_time.ReadOnly = true;
             // 
-            // ScheduleId
+            // arrival_time
             // 
-            this.ScheduleId.DataPropertyName = "ScheduleId";
-            this.ScheduleId.HeaderText = "ScheduleId";
-            this.ScheduleId.MinimumWidth = 6;
-            this.ScheduleId.Name = "ScheduleId";
-            this.ScheduleId.ReadOnly = true;
-            this.ScheduleId.Visible = false;
-            this.ScheduleId.Width = 125;
+            this.arrival_time.DataPropertyName = "arrival_time";
+            this.arrival_time.HeaderText = "Arrival Time";
+            this.arrival_time.Name = "arrival_time";
+            this.arrival_time.ReadOnly = true;
             // 
-            // name
+            // bus_no
             // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.DataPropertyName = "DeptLocation";
-            this.name.HeaderText = "Departure";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.email.DataPropertyName = "Destination";
-            this.email.HeaderText = "Destination";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // phone
-            // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phone.DataPropertyName = "DeptTime";
-            this.phone.HeaderText = "Departure Time";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            // 
-            // address
-            // 
-            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.address.DataPropertyName = "ArrivalTime";
-            this.address.HeaderText = "Arrival Time";
-            this.address.MinimumWidth = 6;
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            // 
-            // salary
-            // 
-            this.salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.salary.DataPropertyName = "BusNo";
-            this.salary.HeaderText = "Bus No.";
-            this.salary.MinimumWidth = 6;
-            this.salary.Name = "salary";
-            this.salary.ReadOnly = true;
-            // 
-            // status
-            // 
-            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.status.DataPropertyName = "Status";
-            this.status.HeaderText = "Status";
-            this.status.MinimumWidth = 6;
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
+            this.bus_no.DataPropertyName = "bus_no";
+            this.bus_no.HeaderText = "Bus Number";
+            this.bus_no.Name = "bus_no";
+            this.bus_no.ReadOnly = true;
             // 
             // cashierTicketControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvRoute);
+            this.Controls.Add(this.dgvCashierSchedule);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
             this.Name = "cashierTicketControl2";
             this.Size = new System.Drawing.Size(749, 500);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRoute)).EndInit();
+            this.Load += new System.EventHandler(this.cashierTicketControl2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCashierSchedule)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,14 +153,9 @@ namespace Transportation.App
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dgvRoute;
-        private System.Windows.Forms.DataGridViewTextBoxColumn user_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ScheduleId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salary;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DataGridView dgvCashierSchedule;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dept_time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn arrival_time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bus_no;
     }
 }
