@@ -24,5 +24,15 @@ namespace Transportation.Repository
             return dt;
 
         }
+
+        public static string getRouteId(string from,string to,string busType) 
+        {
+            busType = BusTypeRepo.GetBusTypeForBus(busType);
+            string sql = $"select route_id from route join bus on route.bus_no = bus.bus_no where dept_location = '{from}' and destination = '{to}' and type_id = '{busType}'";
+            var row = DataAccess.GetDataTable(sql);
+            string routeId = row.Rows[0][0].ToString();
+            return routeId;
+
+        }
     }
 }

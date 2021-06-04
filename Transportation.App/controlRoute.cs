@@ -186,6 +186,7 @@ namespace Transportation.App
                 Destination = this.richTextBox1.Text,
                 BusNo = this.cmbBus.Text,
                 Fare = this.fareTextField.Text,
+                BusType = "01",
                 Status = "Active"
             };
             

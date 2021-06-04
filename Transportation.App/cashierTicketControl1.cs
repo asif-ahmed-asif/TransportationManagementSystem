@@ -29,9 +29,10 @@ namespace Transportation.App
             {
                 return;
             }
-
-            cashierTicketControl2 second = new cashierTicketControl2();
-            MainControl.showControl(second, frmCashierDashboard.ActiveForm);
+            string id=TicketRepo.getRouteId(this.Route.DeptLocation, this.Route.Destination, this.Route.BusType);
+            MessageBox.Show(id);
+          /*  cashierTicketControl2 second = new cashierTicketControl2();
+            MainControl.showControl(second, frmCashierDashboard.ActiveForm);*/
            
         }
 
@@ -82,7 +83,7 @@ namespace Transportation.App
                 MessageBox.Show($"Error fetching data\n{error.Message}");
             }
             this.cmbBusType.Items.Add("AC");
-            this.cmbBusType.Items.Add("Non AC");
+            this.cmbBusType.Items.Add("NON-AC");
 
         }
     }
