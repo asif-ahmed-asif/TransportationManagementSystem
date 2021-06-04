@@ -38,7 +38,18 @@ namespace Transportation.App
 
         private void cashierTicketControl2_Load(object sender, EventArgs e)
         {
-            this.dgvCashierSchedule.DataSource = TicketRepo.getSchedule(MainControl.cashierFrom,MainControl.cashierTo,MainControl.cashierBusType);
+            try
+            {
+                this.dgvCashierSchedule.AutoGenerateColumns = false;
+                this.dgvCashierSchedule.DataSource = TicketRepo.getSchedule(MainControl.cashierFrom, MainControl.cashierTo, MainControl.cashierBusType);
+                this.dgvCashierSchedule.ClearSelection();
+                this.dgvCashierSchedule.Refresh();
+            }
+            catch (Exception grid)
+            {
+                MessageBox.Show("Error fetching gridview data!" + grid.Message);
+            }
+            
         }
     }
 }
