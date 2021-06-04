@@ -148,8 +148,13 @@ namespace Transportation.Repository
                                 and bus_no = '" + key + "';";
             
             DataTable data = DataAccess.GetDataTable(sqlQuery);
-            string rowData = data.Rows[0][0].ToString();
-            return rowData;
+            if (data.Rows.Count > 0)
+            {
+                string rowData = data.Rows[0][0].ToString();
+                return rowData;
+            }
+            //string rowData = data.Rows[0][0].ToString();
+            return null;
         }
     }
 }

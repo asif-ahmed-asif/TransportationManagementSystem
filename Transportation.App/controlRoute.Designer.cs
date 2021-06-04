@@ -267,7 +267,6 @@ namespace Transportation.App
             this.disableBusIdText.Size = new System.Drawing.Size(232, 21);
             this.disableBusIdText.TabIndex = 119;
             this.disableBusIdText.Text = "";
-            this.disableBusIdText.Visible = false;
             // 
             // label1
             // 
@@ -473,7 +472,6 @@ namespace Transportation.App
             this.invisibleScheduleIdText.Size = new System.Drawing.Size(232, 21);
             this.invisibleScheduleIdText.TabIndex = 134;
             this.invisibleScheduleIdText.Text = "";
-            this.invisibleScheduleIdText.Visible = false;
             // 
             // disabledScheduleIdBox
             // 

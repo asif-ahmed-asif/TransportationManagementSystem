@@ -48,7 +48,7 @@ namespace Transportation.App
             }
             catch (Exception e)
             {
-                Console.WriteLine("Something went wrong!");
+                Console.WriteLine("Something went wrong in drop down!" +e);
             }
         }
 
@@ -100,16 +100,16 @@ namespace Transportation.App
                         if (updateRouteSignal && updateScheduleSignal)
                         {
                             MessageBox.Show("Route Updated Successuflly!!");
-                            this.ClearRouteInput();
 
                             //Once the save button is clicked for edit, new Id, as primary key, will be generated for the route table.
                             this.disableBusIdText.Text = RouteRepo.GetId();
+                            this.ClearRouteInput();
                             this.FillRouteDataGridView();
                         }
                     }
                     catch (Exception exception)
                     {
-                        Console.WriteLine("Something went wrong!");
+                        Console.WriteLine("Something went wrong in Update!\n" +exception);
                     }
                 }
             }
@@ -160,7 +160,6 @@ namespace Transportation.App
                     if (insertSignal && insertSignalSchedule)
                     {
                         MessageBox.Show("Route Created Successuflly!!");
-                        this.ClearRouteInput();
 
                         //Once the save button is clicked, new Id, as primary key, will be generated for the route table.
                         try
@@ -169,8 +168,9 @@ namespace Transportation.App
                         }
                         catch (Exception exception)
                         {
-                            Console.WriteLine("Something went wrong!");
+                            Console.WriteLine("Something went wrong in Create!\n" +exception);
                         }
+                        this.ClearRouteInput();
                         this.FillRouteDataGridView();
                     }
                 }
@@ -217,8 +217,18 @@ namespace Transportation.App
                 this.cmbBus.SelectedIndex = -1;
             }
             catch (Exception e) { }
-            this.changeStatusBtn.Visible = false;
-            this.routeStatus.Visible = false;
+
+            if (!RouteRepo.SearchRouteId(this.disableBusIdText.Text))
+            {
+                this.changeStatusBtn.Visible = false;
+                this.routeStatus.Visible = false;
+            }
+            else
+            {
+                this.changeStatusBtn.Visible = true;
+                this.routeStatus.Visible = true;
+            }
+            
             this.BusTypeTextField.Text = "";
             this.fareTextField.Text = "";
         }
@@ -269,7 +279,7 @@ namespace Transportation.App
             }
             catch (Exception e)
             {
-                Console.WriteLine("Something went wrong!");
+                Console.WriteLine("Something went wrong in Table!" +e);
             }
             this.dgvRoute.ClearSelection();
             this.dgvRoute.Refresh();
@@ -300,7 +310,7 @@ namespace Transportation.App
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Something went wrong!");
+                MessageBox.Show("Something went wrong in Selected Drop Down!\n" +exception);
             }
         }
     }
