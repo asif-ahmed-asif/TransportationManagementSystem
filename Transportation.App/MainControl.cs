@@ -10,6 +10,9 @@ namespace Transportation.App
 {
     class MainControl
     {
+        public static string cashierFrom = "";
+        public static string cashierTo = "";
+        public static string cashierBusType = "";
         public static void showControl(Control control,Form frm )
         {
             

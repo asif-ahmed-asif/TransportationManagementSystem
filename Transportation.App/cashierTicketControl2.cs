@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transportation.Repository;
 
 namespace Transportation.App
 {
@@ -33,6 +34,11 @@ namespace Transportation.App
             if(result== DialogResult.OK)
                 MainControl.showControl(third, frmCashierDashboard.ActiveForm);
 
+        }
+
+        private void cashierTicketControl2_Load(object sender, EventArgs e)
+        {
+            this.dgvCashierSchedule.DataSource = TicketRepo.getSchedule(MainControl.cashierFrom,MainControl.cashierTo,MainControl.cashierBusType);
         }
     }
 }
