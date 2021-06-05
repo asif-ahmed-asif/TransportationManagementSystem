@@ -55,6 +55,31 @@ namespace Transportation.App
             }
         }
 
-        
+        private void btnConfirm_Click_1(object sender, EventArgs e)
+        {
+            string selectedSeats = "";
+            byte selectedSeatCount = 0;
+            foreach (Control c in this.Controls)
+            {
+
+                if (c.GetType() == typeof(Button))
+                {
+
+
+                    if (c.BackColor == Color.FromArgb(91, 123, 227))
+                        if (selectedSeatCount > 0)
+                        {
+                            selectedSeats += "," + c.Text;
+                            selectedSeatCount++;
+                        }
+                        else
+                        {
+                            selectedSeats += c.Text;
+                            selectedSeatCount++;
+                        }
+                }
+            }
+            MessageBox.Show(selectedSeats);
+        }
     }
 }

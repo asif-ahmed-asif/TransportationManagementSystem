@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookingRepo.cs" />
     <Compile Include="BusRepo.cs" />
     <Compile Include="BusTypeRepo.cs" />
     <Compile Include="LoginRepo.cs" />
