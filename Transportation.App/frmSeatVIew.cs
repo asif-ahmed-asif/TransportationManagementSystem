@@ -21,5 +21,65 @@ namespace Transportation.App
         {
             
         }
+
+        private void frmSeatVIew_Load(object sender, EventArgs e)
+        {
+            foreach (Control c in this.Controls)
+            {
+
+                if (c.GetType() == typeof(Button))
+                {
+
+                    
+                     if (c.Name != "btnConfirm")
+                         c.Click+=buttonClick;
+                }
+            }
+
+        }
+
+        private void buttonClick(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+
+            if(button.BackColor != Color.FromArgb(91, 123, 227))
+            {
+                button.BackColor = Color.FromArgb(91, 123, 227);
+                button.ForeColor = Color.White;
+            }
+            else
+            {
+                
+                button.BackColor = SystemColors.ControlLight;
+                button.ForeColor = SystemColors.ControlText;
+            }
+        }
+
+        private void btnConfirm_Click_1(object sender, EventArgs e)
+        {
+            string selectedSeats = "";
+            byte selectedSeatCount = 0;
+            foreach (Control c in this.Controls)
+            {
+
+                if (c.GetType() == typeof(Button))
+                {
+
+
+                    if (c.BackColor == Color.FromArgb(91, 123, 227))
+                        if (selectedSeatCount > 0)
+                        {
+                            selectedSeats += "," + c.Text;
+                            selectedSeatCount++;
+                        }
+                        else
+                        {
+                            selectedSeats += c.Text;
+                            selectedSeatCount++;
+                        }
+                }
+            }
+            MessageBox.Show(selectedSeats);
+        }
     }
 }

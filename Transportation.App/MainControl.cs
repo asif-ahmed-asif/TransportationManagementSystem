@@ -19,6 +19,7 @@ namespace Transportation.App
            
 
             Panel panel=new Panel();
+            //loop through all the controls until the desired panel is found
             foreach (Control c in frm.Controls)
             {
                 if (c.GetType() == typeof(Panel))
