@@ -21,5 +21,39 @@ namespace Transportation.App
         {
             
         }
+
+        private void frmSeatVIew_Load(object sender, EventArgs e)
+        {
+            foreach (Control c in this.Controls)
+            {
+
+                if (c.GetType() == typeof(Button))
+                {
+
+                    
+                     if (c.Name != "btnConfirm")
+                         c.Click+=buttonClick;
+                }
+            }
+
+        }
+
+        private void buttonClick(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+
+            if(button.BackColor != Color.DarkBlue)
+            {
+                button.BackColor = Color.FromArgb(91, 123, 227);
+                button.ForeColor = Color.White;
+            }
+            else
+            {
+                
+                button.ForeColor = Color.White;
+            }
+        }
+
+        
     }
 }
