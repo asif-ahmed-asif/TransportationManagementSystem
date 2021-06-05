@@ -35,5 +35,14 @@ namespace Transportation.Repository
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1;
         }
+
+        public static string GetScheduleId(string routeId)
+        {
+            string sql = $"select schedule_id from [Schedule] where route_id = '{routeId}';";
+            var dt = DataAccess.GetDataTable(sql);
+
+            string id = dt.Rows[0][0].ToString();
+            return id;
+        }
     }
 }

@@ -7,15 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transportation.Repository;
+using Transportation.Entity;
 
 namespace Transportation.App
 {
     public partial class frmSeatVIew : Form
     {
+        private string selectedSeats = "";
+        private int selectedSeatCount = 0;
+        private int availableSeatCount = 0;
+        private string scheduleId = "";
+
+        private Booking Booking { get; set; }
         public frmSeatVIew()
         {
             InitializeComponent();
         }
+
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
@@ -57,8 +66,7 @@ namespace Transportation.App
 
         private void btnConfirm_Click_1(object sender, EventArgs e)
         {
-            string selectedSeats = "";
-            byte selectedSeatCount = 0;
+            
             foreach (Control c in this.Controls)
             {
 
@@ -79,7 +87,47 @@ namespace Transportation.App
                         }
                 }
             }
-            MessageBox.Show(selectedSeats);
+            try
+            {
+                string[] id = TicketRepo.getRouteAndBusId(MainControl.cashierFrom, MainControl.cashierTo, MainControl.cashierBusType);
+                string routeId = id[0]; //route id is on the index 0
+                scheduleId = ScheduleRepo.GetScheduleId(routeId);
+                availableSeatCount = 37 - selectedSeatCount;
+                
+
+            }
+            catch (Exception id)
+            {
+                MessageBox.Show("Error fetching Schedule ID" + id.Message);
+            }
+
+            try
+            {
+                this.FillEntity();
+                if (BookingRepo.Save(this.Booking))
+                {
+                    MessageBox.Show("Booking data saved");
+                }
+
+            }
+            catch (Exception save)
+            {
+                MessageBox.Show("Can not save into Booking Table" + save.Message);
+            }
+
+
+        }
+
+        private void FillEntity()
+        {
+            this.Booking = new Booking()
+            {
+                JourneyDate = MainControl.cashierJourneyDate,
+                Seats = selectedSeats,
+                AvailableSeatCount = availableSeatCount,
+                ScheduleId = scheduleId
+            };
+
         }
     }
 }

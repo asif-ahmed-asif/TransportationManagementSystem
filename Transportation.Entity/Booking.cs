@@ -10,6 +10,7 @@ namespace Transportation.Entity
     {
         public string JourneyDate { get; set; }
         public string Seats { get; set; }
+        public int AvailableSeatCount { get; set; }
         public string ScheduleId { get; set; }
     }
 }
