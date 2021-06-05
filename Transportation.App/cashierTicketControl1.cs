@@ -65,6 +65,7 @@ namespace Transportation.App
             MainControl.cashierBusType = this.Route.BusType;
             MainControl.cashierFrom = this.Route.DeptLocation;
             MainControl.cashierTo = this.Route.Destination;
+            MainControl.cashierJourneyDate = this.dateTimePicker1.Text;
 
             return true;
         }
