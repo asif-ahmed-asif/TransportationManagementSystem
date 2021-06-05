@@ -144,12 +144,13 @@ namespace Transportation.App
             // 
             // btnH4
             // 
+            this.btnH4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnH4.Location = new System.Drawing.Point(272, 64);
             this.btnH4.Name = "btnH4";
             this.btnH4.Size = new System.Drawing.Size(60, 43);
             this.btnH4.TabIndex = 67;
             this.btnH4.Text = "H4";
-            this.btnH4.UseVisualStyleBackColor = true;
+            this.btnH4.UseVisualStyleBackColor = false;
             // 
             // btnH1
             // 

@@ -42,7 +42,7 @@ namespace Transportation.App
         {
             Button button = (Button)sender;
 
-            if(button.BackColor != Color.DarkBlue)
+            if(button.BackColor != Color.FromArgb(91, 123, 227))
             {
                 button.BackColor = Color.FromArgb(91, 123, 227);
                 button.ForeColor = Color.White;
@@ -50,7 +50,8 @@ namespace Transportation.App
             else
             {
                 
-                button.ForeColor = Color.White;
+                button.BackColor = SystemColors.ControlLight;
+                button.ForeColor = SystemColors.ControlText;
             }
         }
 
