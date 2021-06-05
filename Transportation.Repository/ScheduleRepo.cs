@@ -38,7 +38,7 @@ namespace Transportation.Repository
 
         public static string GetScheduleId(string routeId)
         {
-            string sql = $"select schedule_id from [Schedule] where route_id = '{routeId}';";
+            string sql = $"select schedule_id from [schedule] where route_id = '{routeId}';";
             var dt = DataAccess.GetDataTable(sql);
 
             string id = dt.Rows[0][0].ToString();
