@@ -45,6 +45,40 @@ namespace Transportation.App
                 }
             }
 
+            this.FillEntity();
+            string bookedSeatNames=BookingRepo.GetBookedSeats(Booking.ScheduleId, Booking.JourneyDate);
+            string[] bookedSeatNamesArray = bookedSeatNames.Split(',');
+          //  MessageBox.Show(bookedSeatNamesArray[0]);
+
+            foreach (Control c in this.Controls)
+            {
+
+                if (c.GetType() == typeof(Button))
+                {
+
+
+                    if (c.Name != "btnConfirm")
+                    {
+                        foreach (string s in bookedSeatNamesArray)
+                        {
+                          //  MessageBox.Show(c.Name);
+                          //  MessageBox.Show(s);
+                          //  break;
+                            if (c.Text == s)
+                            {
+                                
+                                
+                                    c.BackColor = Color.Black;
+                                    c.ForeColor = Color.White;
+                                
+                            }
+
+                        }
+                    }
+                }
+            }
+
+
         }
 
         private void buttonClick(object sender, EventArgs e)
@@ -87,23 +121,11 @@ namespace Transportation.App
                         }
                 }
             }
+
+            this.FillEntity();
             try
             {
-                string[] id = TicketRepo.getRouteAndBusId(MainControl.cashierFrom, MainControl.cashierTo, MainControl.cashierBusType);
-                string routeId = id[0]; //route id is on the index 0
-                scheduleId = ScheduleRepo.GetScheduleId(routeId);
-                availableSeatCount = 37 - selectedSeatCount;
                 
-
-            }
-            catch (Exception id)
-            {
-                MessageBox.Show("Error fetching Schedule ID" + id.Message);
-            }
-
-            try
-            {
-                this.FillEntity();
                 if (BookingRepo.Save(this.Booking))
                 {
                     MessageBox.Show("Booking data saved");
@@ -120,6 +142,20 @@ namespace Transportation.App
 
         private void FillEntity()
         {
+            try
+            {
+                string[] id = TicketRepo.getRouteAndBusId(MainControl.cashierFrom, MainControl.cashierTo, MainControl.cashierBusType);
+                string routeId = id[0]; //route id is on the index 0
+                scheduleId = ScheduleRepo.GetScheduleId(routeId);
+                availableSeatCount = 37 - selectedSeatCount;
+
+
+            }
+            catch (Exception id)
+            {
+                MessageBox.Show("Error fetching Schedule ID" + id.Message);
+            }
+
             this.Booking = new Booking()
             {
                 JourneyDate = MainControl.cashierJourneyDate,

@@ -12,7 +12,24 @@ namespace Transportation.Repository
     {
         public static bool Save(Booking b)
         {
-            var sql = $"INSERT INTO [booking] VALUES('{b.JourneyDate}', '{b.Seats}', '{b.ScheduleId}', {b.AvailableSeatCount})";
+            string sql = $"select * from booking where journey_date='{b.JourneyDate} ' and schedule_id='{b.ScheduleId}'";
+            var dt = DataAccess.GetDataTable(sql);
+
+            if (dt.Rows.Count > 0)
+                return Update(b);
+            else
+            {
+                sql = $"INSERT INTO [booking] VALUES('{b.JourneyDate}', '{b.Seats}', '{b.ScheduleId}', {b.AvailableSeatCount})";
+                var row = DataAccess.ExecuteDmlQuery(sql);
+                return row == 1;
+            }
+
+            }
+
+        public static bool Update(Booking b)
+        {
+            string seats = "," + b.Seats;
+         string sql = $"update booking set seats = concat(seats, '{seats}') where journey_date = '{b.JourneyDate}' and schedule_id='{b.ScheduleId}'";
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1;
         }
