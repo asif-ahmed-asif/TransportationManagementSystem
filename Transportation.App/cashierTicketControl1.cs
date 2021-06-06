@@ -16,6 +16,7 @@ namespace Transportation.App
 {
     public partial class cashierTicketControl1 : UserControl
     {
+
         private List<Route> RouteList;
         private Route Route { get; set; }
         public cashierTicketControl1()
@@ -65,7 +66,7 @@ namespace Transportation.App
             MainControl.cashierBusType = this.Route.BusType;
             MainControl.cashierFrom = this.Route.DeptLocation;
             MainControl.cashierTo = this.Route.Destination;
-            MainControl.cashierJourneyDate = this.dateTimePicker1.Text;
+            MainControl.cashierJourneyDate = dateTimePicker1.Value.ToString("yyyy/MM/dd");
 
             return true;
         }
