@@ -66,10 +66,11 @@ namespace Transportation.App
                           //  break;
                             if (c.Text == s)
                             {
-                                
-                                
-                                    c.BackColor = Color.Black;
-                                    c.ForeColor = Color.White;
+
+                                c.Enabled = false;
+                                c.BackColor = Color.FromArgb(237, 193, 123);
+                                c.ForeColor = Color.White;
+                                    
                                 
                             }
 
