@@ -25,6 +25,22 @@ namespace Transportation.Repository
             }
             return routeList;
         }
+
+        public static string[] GetAllDeptLocation()
+        {
+            string sql = $"select dept_location from route group by dept_location";
+            var dt = DataAccess.GetDataTable(sql);
+            string[] list = new string[dt.Rows.Count];
+            int row = 0;
+            while (row < dt.Rows.Count)
+            {
+                list[row] = dt.Rows[row][0].ToString();
+                row++;
+            }
+
+            return list;
+        }
+
         private static Route ConvertToEntity(DataRow row)
         {
             if (row == null)
