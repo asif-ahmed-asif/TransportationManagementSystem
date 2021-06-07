@@ -78,10 +78,9 @@ namespace Transportation.App
 
             try
             {
-                this.RouteList = RouteRepo.GetAll();
+                this.RouteList = RouteRepo.GetAllDestination();
                 foreach (var route in this.RouteList)
                 {
-                  //  this.cboFrom.Items.Add(route.DeptLocation);
                     this.cboTo.Items.Add(route.Destination);
                 }
 

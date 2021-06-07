@@ -11,10 +11,10 @@ namespace Transportation.Repository
 {
     public class RouteRepo
     {
-        public static List<Route> GetAll()
+        public static List<Route> GetAllDestination()
         {
             var routeList = new List<Route>();
-            string sql = "SELECT * FROM route";
+            string sql = "select destination from route group by destination";
             var dt = DataAccess.GetDataTable(sql);
             int row = 0;
             while (row < dt.Rows.Count)
@@ -48,12 +48,7 @@ namespace Transportation.Repository
                 return null;
             }
             var r = new Route();
-            r.RouteId = row["route_id"].ToString();
-            r.DeptLocation = row["dept_location"].ToString();
             r.Destination = row["destination"].ToString();
-            r.BusNo = row["bus_no"].ToString();
-            r.Fare = row["fare"].ToString();
-            r.Status = row["status"].ToString();
             return r;
         }
         

@@ -33,6 +33,17 @@ namespace Transportation.Repository
             
             return row.Rows.Count;
         }
+
+        public static string[] VerifyLogin(string uid, string pass)
+        {
+            string sql = $"select [user].user_type, [user].status FROM [user] INNER JOIN login ON [user].user_id = login.user_id where login.user_id = '{uid}' and login.password = '{pass}'";
+            var row = DataAccess.GetDataTable(sql);
+            string[] loginDetails = new string[2];
+            loginDetails[0] = row.Rows[0][0].ToString(); //user type
+            loginDetails[1] = row.Rows[0][1].ToString();// status
+            return loginDetails;
+
+        }
     }
 
     
