@@ -71,6 +71,16 @@ namespace Transportation.App
             MainControl.showControl(route, frmAdminDashboard.ActiveForm);
         }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure to logout?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                return;
+
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Visible = false;
+        }
+
 
 
 

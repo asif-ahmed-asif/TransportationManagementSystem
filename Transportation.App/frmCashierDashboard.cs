@@ -98,6 +98,16 @@ namespace Transportation.App
 
         }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure to logout?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                return;
+
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Visible = false;
+        }
+
         /* private void SetPanelPosition(object button)
 {
 this.pnlRed.Height = button.Height;
