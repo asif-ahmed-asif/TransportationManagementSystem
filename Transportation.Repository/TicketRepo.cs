@@ -46,5 +46,10 @@ namespace Transportation.Repository
             return id;
 
         }
+
+        public static void Insert()
+        {
+            string sql = $"insert into ticket values('Asif','0178654123','2021-03-04','A1,A2','1')";
+        }
     }
 }

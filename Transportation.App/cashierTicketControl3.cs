@@ -69,6 +69,11 @@ namespace Transportation.App
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Ticket ticket = new Ticket();
+            ticket.CustomerName = this.txtName.Text;
+            ticket.CustomerPhone = this.txtPhnNumber.Text;
+            ticket.JourneyDate = MainControl.cashierJourneyDate;
+            
             frmPrintedTicket printT= new frmPrintedTicket();
             printT.Show();
             
