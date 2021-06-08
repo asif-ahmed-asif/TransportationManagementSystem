@@ -37,13 +37,6 @@ namespace Transportation.App
 
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            this.pnlRed.Height = this.btnRevenue.Height;
-            this.pnlRed.Top = this.btnRevenue.Top;
-            controlAccount2 control = new controlAccount2();
-            MainControl.showControl(control, frmAccountDashboard.ActiveForm);
-        }
 
        
 
@@ -61,13 +54,16 @@ namespace Transportation.App
           
         }
 
-        private void btnWithdraw_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.pnlRed.Height = this.btnWithdraw.Height;
-            this.pnlRed.Top = this.btnWithdraw.Top;
-            controlAccount3 control = new controlAccount3();
-            MainControl.showControl(control, frmAccountDashboard.ActiveForm);
+            if (MessageBox.Show("Are you sure to logout?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                return;
+
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Visible = false;
         }
+
         /* private void SetPanelPosition(object button)
 {
 this.pnlRed.Height = button.Height;
