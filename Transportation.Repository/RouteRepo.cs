@@ -11,10 +11,10 @@ namespace Transportation.Repository
 {
     public class RouteRepo
     {
-        public static List<Route> GetAllDestination()
+        public static List<Route> GetAllDestination(string from)
         {
             var routeList = new List<Route>();
-            string sql = "select destination from route group by destination";
+            string sql = $"select destination from route where dept_location = '{from}'";
             var dt = DataAccess.GetDataTable(sql);
             int row = 0;
             while (row < dt.Rows.Count)

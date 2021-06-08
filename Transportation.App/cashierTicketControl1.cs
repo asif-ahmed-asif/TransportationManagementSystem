@@ -78,11 +78,6 @@ namespace Transportation.App
 
             try
             {
-                this.RouteList = RouteRepo.GetAllDestination();
-                foreach (var route in this.RouteList)
-                {
-                    this.cboTo.Items.Add(route.Destination);
-                }
 
                 string[] deptLocationList=RouteRepo.GetAllDeptLocation();
                 foreach (string s in deptLocationList)
@@ -101,6 +96,24 @@ namespace Transportation.App
             this.cboFrom.Text = MainControl.cashierFrom;
             this.cboTo.Text = MainControl.cashierTo;
             this.cmbBusType.Text = MainControl.cashierBusType;
+        }
+
+        private void cboFrom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.cboTo.Items.Clear();
+            try
+            {
+                this.RouteList = RouteRepo.GetAllDestination(this.cboFrom.Text);
+                foreach (var route in this.RouteList)
+                {
+                    this.cboTo.Items.Add(route.Destination);
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"Error fetching data\n{error.Message}");
+            }
         }
     }
 }
