@@ -28,21 +28,15 @@ namespace Transportation.Repository
         public static string GetId()
         {
             string sql = "select TOP 1 * from [user] order by user_id DESC;";
-            
-            var dt = DataAccess.GetDataTable(sql);
-
-            if (dt.Rows.Count > 0)
+            var data = DataAccess.GetDataTable(sql);
+            if (data.Rows.Count == 1)
             {
-                string id = dt.Rows[0]["user_id"].ToString();
-               
-                int intId=int.Parse(id) ;
-                intId++;
-                return intId.ToString();
+                string appId = data.Rows[0].Field<string>(0);
+                int id = Convert.ToInt32(appId.Split('-')[1]);
+                ++id;
+                return $"user-{id}";
             }
-
-            return "01";
-
-      
+            return "user-1";
         }
 
         public static bool SearchUserId(string key)

@@ -9,25 +9,6 @@ namespace Transportation.Repository
 {
     public class BusRepo
     {
-        public static string GetId()
-        {
-            string sql = "select TOP 1 * from [bus] order by bus_no DESC;";
-            
-            var dt = DataAccess.GetDataTable(sql);
-
-            if (dt.Rows.Count > 0)
-            {
-                string id = dt.Rows[0]["user_id"].ToString();
-               
-                int intId=int.Parse(id) ;
-                intId++;
-                return intId.ToString();
-            }
-
-            return "01";
-
-      
-        }
 
         public static int CheckBusNumber(string busNumber)
         {

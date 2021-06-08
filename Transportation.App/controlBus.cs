@@ -37,7 +37,7 @@ namespace Transportation.App
             {
                 BusNo = rtxtPhn.Text,
                 TypeId = cmbType.Text,
-                NoOfSeats = "45"
+                NoOfSeats = "37"
             };
             
             BusValidation busValidation = new BusValidation();
@@ -62,7 +62,7 @@ namespace Transportation.App
             {
                 BusNo = rtxtPhn.Text,
                 TypeId = cmbType.Text,
-                NoOfSeats = "45"
+                NoOfSeats = "37"
             };
             
             BusValidation busValidation = new BusValidation();
@@ -153,7 +153,8 @@ namespace Transportation.App
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            ClearBusInput();   
+            ClearBusInput();
+            this.FillBusDataGridView();
         }
         
         private void FillBusDataGridView()
