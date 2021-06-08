@@ -16,5 +16,16 @@ namespace Transportation.App
         {
             InitializeComponent();
         }
+
+        private void controlAccount1_Load(object sender, EventArgs e)
+        {
+            this.dtpReport.MaxDate = DateTime.Now;
+            MessageBox.Show(this.dtpReport.Value.ToString("yyyy/MM/dd"));
+        }
+
+        private void dtpReport_ValueChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.dtpReport.Value.ToString("yyyy/MM/dd"));
+        }
     }
 }

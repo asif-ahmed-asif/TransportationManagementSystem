@@ -65,18 +65,6 @@
     <Compile Include="controlAccount1.Designer.cs">
       <DependentUpon>controlAccount1.cs</DependentUpon>
     </Compile>
-    <Compile Include="controlAccount2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="controlAccount2.Designer.cs">
-      <DependentUpon>controlAccount2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="controlAccount3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="controlAccount3.Designer.cs">
-      <DependentUpon>controlAccount3.cs</DependentUpon>
-    </Compile>
     <Compile Include="controlBus.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -175,12 +163,6 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="controlAccount1.resx">
       <DependentUpon>controlAccount1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="controlAccount2.resx">
-      <DependentUpon>controlAccount2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="controlAccount3.resx">
-      <DependentUpon>controlAccount3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controlBus.resx">
       <DependentUpon>controlBus.cs</DependentUpon>

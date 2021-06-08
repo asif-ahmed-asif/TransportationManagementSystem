@@ -9,8 +9,9 @@ namespace Transportation.Entity
     public class Sales
     {
         public string UserId { get; set; }
-        public double TotalPrice { get; set; }
+        public double TotalAmount { get; set; }
+        public string Name { get; set; }
 
-        public string UpdatedAt = "GETDATE()";
+        public string Date { get; set; }
     }
 }
