@@ -74,18 +74,15 @@ namespace Transportation.Repository
         public static string GetId() //Used to generate an Id
         {
             string sql = "select TOP 1 * from [Route] order by route_id DESC;";
-            var dt = DataAccess.GetDataTable(sql);
-
-            if (dt.Rows.Count > 0)
+            var data = DataAccess.GetDataTable(sql);
+            if (data.Rows.Count == 1)
             {
-                string id = dt.Rows[0]["route_id"].ToString();
-               
-                int intId=int.Parse(id) ;
-                intId++;
-                return intId.ToString();
+                string appId = data.Rows[0].Field<string>(0);
+                int id = Convert.ToInt32(appId.Split('-')[1]);
+                ++id;
+                return $"rt-{id}";
             }
-
-            return "01";
+            return "rt-1";
         }
         
         public static bool SearchRouteId(string key)

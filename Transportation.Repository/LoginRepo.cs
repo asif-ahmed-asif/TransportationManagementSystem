@@ -26,14 +26,6 @@ namespace Transportation.Repository
             return row == 1;
         }
 
-        public static int CheckUserForLogin(Login login)
-        {
-            var sqlQuery = $"Select * From [login] where password = '{login.Password}' and user_id = '{login.UserId}';";
-            var row = DataAccess.GetDataTable(sqlQuery);
-            
-            return row.Rows.Count;
-        }
-
         public static string[] VerifyLogin(string uid, string pass)
         {
             string sql = $"select [user].user_type, [user].status FROM [user] INNER JOIN login ON [user].user_id = login.user_id where login.user_id = '{uid}' and login.password = '{pass}'";
