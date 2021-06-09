@@ -41,7 +41,7 @@ namespace Transportation.App
             try
             {
                 this.dgvCashierSchedule.AutoGenerateColumns = false;
-                this.dgvCashierSchedule.DataSource = TicketRepo.getSchedule(MainControl.cashierFrom, MainControl.cashierTo, MainControl.cashierBusType);
+                this.dgvCashierSchedule.DataSource = TicketRepo.getSchedule(MainControl.cashierFrom, MainControl.cashierTo, MainControl.cashierBusType,MainControl.cashierJourneyDate);
                 this.dgvCashierSchedule.ClearSelection();
                 this.dgvCashierSchedule.Refresh();
             }

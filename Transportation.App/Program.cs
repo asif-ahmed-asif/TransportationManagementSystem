@@ -18,11 +18,11 @@ namespace Transportation.App
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLogin());
-            //Application.Run(new frmCashierDashboard());
+            Application.Run(new frmCashierDashboard());
             //Application.Run(new frmAdminDashboard());
             //Application.Run(new frmLogin());
             //Application.Run(new frmAccountDashboard());
-            Application.Run(new frmCashierDashboard());
+            //Application.Run(new frmCashierDashboard());
             //Application.Run(new AdminForm());
         }
     }
