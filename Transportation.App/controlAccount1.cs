@@ -35,7 +35,7 @@ namespace Transportation.App
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Something went wrong when loading data!");
+                MessageBox.Show("Something went wrong when loading data!" + exception.Message);
             }
 
             this.dgvDate.ClearSelection();
@@ -53,11 +53,16 @@ namespace Transportation.App
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Something went wrong!");
+                MessageBox.Show("Something went wrong!" + exception.Message);
             }
             
             this.dgvDate.ClearSelection();
             this.dgvDate.Refresh();
+        }
+
+        private void dgvDate_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.dgvDate.ClearSelection();
         }
     }
 }
