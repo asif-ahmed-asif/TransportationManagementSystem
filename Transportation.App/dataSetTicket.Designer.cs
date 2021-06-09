@@ -279,7 +279,7 @@ namespace Transportation.App {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class PrintTableDataTable : global::System.Data.TypedTableBase<PrintTableRow> {
             
-            private global::System.Data.DataColumn columnticket_Id;
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columncustomer_name;
             
@@ -330,9 +330,9 @@ namespace Transportation.App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ticket_IdColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnticket_Id;
+                    return this.columnid;
                 }
             }
             
@@ -429,10 +429,10 @@ namespace Transportation.App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PrintTableRow AddPrintTableRow(string ticket_Id, string customer_name, string customer_phone, string journey_date, string seat_no, string dept_location, string destination, string dept_time) {
+            public PrintTableRow AddPrintTableRow(string id, string customer_name, string customer_phone, string journey_date, string seat_no, string dept_location, string destination, string dept_time) {
                 PrintTableRow rowPrintTableRow = ((PrintTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ticket_Id,
+                        id,
                         customer_name,
                         customer_phone,
                         journey_date,
@@ -462,7 +462,7 @@ namespace Transportation.App {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnticket_Id = base.Columns["ticket_Id"];
+                this.columnid = base.Columns["id"];
                 this.columncustomer_name = base.Columns["customer_name"];
                 this.columncustomer_phone = base.Columns["customer_phone"];
                 this.columnjourney_date = base.Columns["journey_date"];
@@ -475,8 +475,8 @@ namespace Transportation.App {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnticket_Id = new global::System.Data.DataColumn("ticket_Id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnticket_Id);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columncustomer_name = new global::System.Data.DataColumn("customer_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncustomer_name);
                 this.columncustomer_phone = new global::System.Data.DataColumn("customer_phone", typeof(string), null, global::System.Data.MappingType.Element);
@@ -633,17 +633,17 @@ namespace Transportation.App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string ticket_Id {
+            public string id {
                 get {
                     try {
-                        return ((string)(this[this.tablePrintTable.ticket_IdColumn]));
+                        return ((string)(this[this.tablePrintTable.idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ticket_Id\' in table \'PrintTable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'PrintTable\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrintTable.ticket_IdColumn] = value;
+                    this[this.tablePrintTable.idColumn] = value;
                 }
             }
             
@@ -761,14 +761,14 @@ namespace Transportation.App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isticket_IdNull() {
-                return this.IsNull(this.tablePrintTable.ticket_IdColumn);
+            public bool IsidNull() {
+                return this.IsNull(this.tablePrintTable.idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setticket_IdNull() {
-                this[this.tablePrintTable.ticket_IdColumn] = global::System.Convert.DBNull;
+            public void SetidNull() {
+                this[this.tablePrintTable.idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

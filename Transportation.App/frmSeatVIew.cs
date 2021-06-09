@@ -137,7 +137,7 @@ namespace Transportation.App
             {
                 MessageBox.Show("Can not save into Booking Table" + save.Message);
             }
-
+            MainControl.booking = this.Booking;
 
         }
 

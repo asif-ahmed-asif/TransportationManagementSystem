@@ -211,23 +211,23 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="customer_name">
+      <Textbox Name="destination">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!customer_name.Value, "DataSet2")</Value>
+                <Value>=First(Fields!destination.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>customer_name</rd:DefaultName>
-        <Top>0.08333in</Top>
-        <Left>0.89459in</Left>
+        <rd:DefaultName>destination</rd:DefaultName>
+        <Top>1.63888in</Top>
+        <Left>1.13069in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>7</ZIndex>
@@ -241,23 +241,23 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="customer_phone">
+      <Textbox Name="seat_no">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!customer_phone.Value, "DataSet2")</Value>
+                <Value>=First(Fields!seat_no.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>customer_phone</rd:DefaultName>
-        <Top>0.375in</Top>
-        <Left>1.25569in</Left>
+        <rd:DefaultName>seat_no</rd:DefaultName>
+        <Top>1.01388in</Top>
+        <Left>0.82167in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>8</ZIndex>
@@ -278,7 +278,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!journey_date.Value, "DataSet2")</Value>
+                <Value>=First(Fields!journey_date.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -287,7 +287,7 @@
         </Paragraphs>
         <rd:DefaultName>journey_date</rd:DefaultName>
         <Top>0.69444in</Top>
-        <Left>1.36681in</Left>
+        <Left>1.38069in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>9</ZIndex>
@@ -301,26 +301,56 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="seat_no">
+      <Textbox Name="customer_phone">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!seat_no.Value, "DataSet2")</Value>
+                <Value>=First(Fields!customer_phone.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>seat_no</rd:DefaultName>
-        <Top>1.01388in</Top>
-        <Left>0.81819in</Left>
+        <rd:DefaultName>customer_phone</rd:DefaultName>
+        <Top>0.375in</Top>
+        <Left>1.25569in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="customer_name">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!customer_name.Value, "DataSet1")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>customer_name</rd:DefaultName>
+        <Top>0.06944in</Top>
+        <Left>0.81819in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -338,7 +368,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!dept_location.Value, "DataSet2")</Value>
+                <Value>=First(Fields!dept_location.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -346,38 +376,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>dept_location</rd:DefaultName>
-        <Top>1.29166in</Top>
-        <Left>1.25569in</Left>
-        <Height>0.25in</Height>
-        <Width>1in</Width>
-        <ZIndex>11</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="destination">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!destination.Value, "DataSet2")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>destination</rd:DefaultName>
-        <Top>1.625in</Top>
-        <Left>1.08902in</Left>
+        <Top>1.30556in</Top>
+        <Left>1.22792in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>12</ZIndex>
@@ -398,7 +398,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!dept_time.Value, "DataSet2")</Value>
+                <Value>=First(Fields!dept_time.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -406,7 +406,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>dept_time</rd:DefaultName>
-        <Top>1.94444in</Top>
+        <Top>1.95833in</Top>
         <Left>1.25569in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
@@ -517,23 +517,23 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="ticket_Id">
+        <Textbox Name="id">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!ticket_Id.Value, "DataSet2")</Value>
+                  <Value>=First(Fields!id.Value, "DataSet1")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>ticket_Id</rd:DefaultName>
-          <Top>0.69319in</Top>
-          <Left>0.89459in</Left>
+          <rd:DefaultName>id</rd:DefaultName>
+          <Top>0.68972in</Top>
+          <Left>0.82167in</Left>
           <Height>0.25in</Height>
           <Width>1in</Width>
           <ZIndex>4</ZIndex>
@@ -578,14 +578,14 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet2">
+    <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>DataSetTicket</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="ticket_Id">
-          <DataField>ticket_Id</DataField>
+        <Field Name="id">
+          <DataField>id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="customer_name">

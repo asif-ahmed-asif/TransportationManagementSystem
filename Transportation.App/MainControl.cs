@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transportation.Entity;
 
 namespace Transportation.App
 {
@@ -14,6 +15,7 @@ namespace Transportation.App
         public static string cashierTo = "";
         public static string cashierBusType = "";
         public static string cashierJourneyDate = "";
+        public static Booking booking;
         public static void showControl(Control control,Form frm )
         {
             

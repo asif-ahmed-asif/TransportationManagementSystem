@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Transportation.Data;
 using Microsoft.Reporting.WebForms;
 using System.Data;
+using Transportation.Entity;
 
 namespace Transportation.Repository
 {
@@ -15,7 +16,7 @@ namespace Transportation.Repository
     {
         public static DataTable  printTicket()
         {
-            var sql = "select TOP 1 * from print_ticket order by ticket_id DESC;";
+            var sql = "select TOP 1 * from print_ticket order by id DESC;";
             var dt = DataAccess.GetDataTable(sql);
 
            // ReportDataSource dataSource = new ReportDataSource("DatasetTicket", dt);
@@ -47,9 +48,11 @@ namespace Transportation.Repository
 
         }
 
-        public static void Insert()
+        public static void Insert(Ticket ticket)
         {
-            string sql = $"insert into ticket values('Asif','0178654123','2021-03-04','A1,A2','1')";
+
+            string sql = $"insert into ticket values('{ticket.CustomerName}','{ticket.CustomerPhone}','{ticket.JourneyDate}','{ticket.SeatNo}','{ticket.ScheduleId}')";
+            DataAccess.ExecuteDmlQuery(sql);
         }
     }
 }
