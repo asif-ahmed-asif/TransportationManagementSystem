@@ -85,6 +85,7 @@ namespace Transportation.App
         {
             rtxtPhn.Text = "";
             cmbType.SelectedIndex = -1;
+            this.rtxtPhn.Enabled = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -166,7 +167,7 @@ namespace Transportation.App
             }
             catch (Exception e)
             {
-                MessageBox.Show("Something went wrong!");
+                MessageBox.Show("Something went wrong!"+e.Message);
             }
             
             this.dgvBus.ClearSelection();
@@ -182,7 +183,7 @@ namespace Transportation.App
             }
             catch (Exception exception)
             {
-                Console.WriteLine("Something went wrong!");
+                Console.WriteLine("Something went wrong!"+ exception.Message);
             }
             this.dgvBus.ClearSelection();
             this.dgvBus.Refresh();
@@ -203,6 +204,7 @@ namespace Transportation.App
 
             this.cmbType.Text = this.dgvBus.CurrentRow.Cells[1].Value.ToString();
             this.invisibleBusNoText.Text = this.dgvBus.CurrentRow.Cells[0].Value.ToString();
+            this.rtxtPhn.Enabled = false;
         }
     }
 }
