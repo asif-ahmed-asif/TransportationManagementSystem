@@ -145,6 +145,7 @@ namespace Transportation.App
             this.dgvDate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDate.Size = new System.Drawing.Size(1000, 422);
             this.dgvDate.TabIndex = 133;
+            this.dgvDate.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDate_DataBindingComplete);
             // 
             // salary
             // 
