@@ -90,7 +90,7 @@ namespace Transportation.App
         private void btnSave_Click(object sender, EventArgs e)
         {
             int busIdExist = BusRepo.SearchBusId(this.rtxtPhn.ToString());
-            if (this.invisibleBusNoText.Text != "" || this.invisibleBusNoText.Text != null) //this is for update purpose
+            if (this.invisibleBusNoText.Text != "") //this is for update purpose
             {
                 //string busNumber = this.Bus.BusNo;
                 if (!UpdateFillEntity())
