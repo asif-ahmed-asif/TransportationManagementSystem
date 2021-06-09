@@ -73,7 +73,9 @@ namespace Transportation.App
             ticket.CustomerName = this.txtName.Text;
             ticket.CustomerPhone = this.txtPhnNumber.Text;
             ticket.JourneyDate = MainControl.cashierJourneyDate;
-            
+            ticket.SeatNo = MainControl.booking.Seats;
+            ticket.ScheduleId = MainControl.booking.ScheduleId;
+            TicketRepo.Insert(ticket);
             frmPrintedTicket printT= new frmPrintedTicket();
             printT.Show();
             

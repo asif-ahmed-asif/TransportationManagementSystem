@@ -24,7 +24,8 @@ namespace Transportation.App
         {
             try
             {
-                ReportDataSource ds = new ReportDataSource("DataSet2", TicketRepo.printTicket());
+
+                ReportDataSource ds = new ReportDataSource("DataSet1", TicketRepo.printTicket());
                 this.reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(ds);
                 this.reportViewer1.RefreshReport();

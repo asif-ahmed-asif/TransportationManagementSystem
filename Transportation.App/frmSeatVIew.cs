@@ -137,7 +137,7 @@ namespace Transportation.App
             {
                 MessageBox.Show("Can not save into Booking Table" + save.Message);
             }
-
+            MainControl.booking = this.Booking;
 
         }
 
@@ -147,7 +147,7 @@ namespace Transportation.App
             {
                 string[] id = TicketRepo.getRouteAndBusId(MainControl.cashierFrom, MainControl.cashierTo, MainControl.cashierBusType);
                 string routeId = id[0]; //route id is on the index 0
-                scheduleId = ScheduleRepo.GetScheduleId(routeId);
+                //scheduleId = ScheduleRepo.GetScheduleId(routeId);
                 availableSeatCount = 37 - selectedSeatCount;
 
 
@@ -162,7 +162,7 @@ namespace Transportation.App
                 JourneyDate = MainControl.cashierJourneyDate,
                 Seats = selectedSeats,
                 AvailableSeatCount = availableSeatCount,
-                ScheduleId = scheduleId
+                ScheduleId = MainControl.scheduleId
             };
 
         }
