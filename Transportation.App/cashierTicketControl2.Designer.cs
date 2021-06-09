@@ -36,6 +36,7 @@ namespace Transportation.App
             this.btnBack = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvCashierSchedule = new System.Windows.Forms.DataGridView();
+            this.schedule_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dept_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.arrival_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.available_seat_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,6 +83,7 @@ namespace Transportation.App
             this.dgvCashierSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCashierSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCashierSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.schedule_id,
             this.dept_time,
             this.arrival_time,
             this.available_seat_count});
@@ -110,8 +112,17 @@ namespace Transportation.App
             this.dgvCashierSchedule.RowHeadersWidth = 51;
             this.dgvCashierSchedule.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCashierSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCashierSchedule.Size = new System.Drawing.Size(303, 457);
+            this.dgvCashierSchedule.Size = new System.Drawing.Size(399, 457);
             this.dgvCashierSchedule.TabIndex = 129;
+            this.dgvCashierSchedule.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCashierSchedule_CellClick);
+            this.dgvCashierSchedule.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCashierSchedule_CellContentDoubleClick);
+            // 
+            // schedule_id
+            // 
+            this.schedule_id.DataPropertyName = "schedule_id";
+            this.schedule_id.HeaderText = "Id";
+            this.schedule_id.Name = "schedule_id";
+            this.schedule_id.ReadOnly = true;
             // 
             // dept_time
             // 
@@ -154,6 +165,7 @@ namespace Transportation.App
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvCashierSchedule;
+        private System.Windows.Forms.DataGridViewTextBoxColumn schedule_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn dept_time;
         private System.Windows.Forms.DataGridViewTextBoxColumn arrival_time;
         private System.Windows.Forms.DataGridViewTextBoxColumn available_seat_count;

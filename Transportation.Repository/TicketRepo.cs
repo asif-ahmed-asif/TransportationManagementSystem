@@ -36,7 +36,7 @@ namespace Transportation.Repository
             if (row.Rows.Count <=0)
             {
                 Console.WriteLine("12");
-                sql = $"select dept_time,arrival_time, '37' as available_seat_count from schedule join route on route.route_id=schedule.route_id join bus on route.bus_no=bus.bus_no where dept_location='{from}' and destination='{to}' and type_id='{busType}'";
+                sql = $"select schedule.schedule_id, dept_time,arrival_time, '37' as available_seat_count from schedule join route on route.route_id=schedule.route_id join bus on route.bus_no=bus.bus_no where dept_location='{from}' and destination='{to}' and type_id='{busType}'";
                 row = DataAccess.GetDataTable(sql);
             }
                 return row;

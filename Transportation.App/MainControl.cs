@@ -16,6 +16,7 @@ namespace Transportation.App
         public static string cashierBusType = "";
         public static string cashierJourneyDate = "";
         public static Booking booking;
+        public static string scheduleId = "";
         public static void showControl(Control control,Form frm )
         {
             

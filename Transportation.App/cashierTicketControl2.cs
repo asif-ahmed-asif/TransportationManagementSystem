@@ -51,5 +51,26 @@ namespace Transportation.App
             }
             
         }
+
+        private void dgvCashierSchedule_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dgvCashierSchedule_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dgvCashierSchedule.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                this.dgvCashierSchedule.CurrentRow.Selected = true;
+                MainControl.scheduleId = dgvCashierSchedule.Rows[e.RowIndex].Cells["schedule_id"].FormattedValue.ToString();
+
+                cashierTicketControl3 third = new cashierTicketControl3();
+
+                frmSeatVIew seat = new frmSeatVIew();
+                DialogResult result = seat.ShowDialog();
+                if (result == DialogResult.OK)
+                    MainControl.showControl(third, frmCashierDashboard.ActiveForm);
+            }
+        }
     }
 }
