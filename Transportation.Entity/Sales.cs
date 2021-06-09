@@ -10,7 +10,7 @@ namespace Transportation.Entity
     {
         public string UserId { get; set; }
         public double TotalAmount { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } //view model
 
         public string Date { get; set; }
     }
