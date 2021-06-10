@@ -164,5 +164,14 @@ namespace Transportation.Repository
             //string rowData = data.Rows[0][0].ToString();
             return null;
         }
+
+        public static int GetFare(string routeId)
+        {
+            string sql = $"select fare from [route] where route_id = '{routeId}';";
+            var dt = DataAccess.GetDataTable(sql);
+
+            string amount = dt.Rows[0][0].ToString();
+            return Int32.Parse(amount);
+        }
     }
 }

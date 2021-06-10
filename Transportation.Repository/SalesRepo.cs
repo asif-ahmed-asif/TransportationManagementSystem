@@ -49,5 +49,34 @@ namespace Transportation.Repository
 
             return userSales;
         }
+
+        public static int CurrentSalesAmount(string uid)
+        {
+            string date = DateTime.Now.ToString("yyyy/MM/dd");
+            string sql = $"select total_amount from [sales] where user_id = '{uid}' and date = '{date}';";
+            var dt = DataAccess.GetDataTable(sql);
+            if(dt.Rows.Count > 0)
+            {
+                string amount = dt.Rows[0][0].ToString();
+                return Int32.Parse(amount);
+            }
+            return 0;
+        }
+
+        public static bool Update(string uid, int amount)
+        {
+            string date = DateTime.Now.ToString("yyyy/MM/dd");
+            var sql = $"UPDATE [sales] SET total_amount = '{amount}' where user_id = '{uid}' and date = '{date}';";
+            var row = DataAccess.ExecuteDmlQuery(sql);
+            return row == 1;
+        }
+
+        public static bool Insert(string uid, int amount)
+        {
+            string date = DateTime.Now.ToString("yyyy/MM/dd");
+            var sql = $"INSERT INTO [sales] VALUES('{uid}', '{amount}', '{date}');";
+            var row = DataAccess.ExecuteDmlQuery(sql);
+            return row == 1;
+        }
     }
 }

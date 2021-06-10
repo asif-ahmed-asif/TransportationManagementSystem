@@ -107,8 +107,9 @@ namespace Transportation.App
         MainControl.cashierTo = "";
         MainControl.cashierBusType = "";
         MainControl.cashierJourneyDate = "";
+        MainControl.cashierId = "";
 
-        frmLogin login = new frmLogin();
+            frmLogin login = new frmLogin();
             login.Show();
             this.Visible = false;
         }

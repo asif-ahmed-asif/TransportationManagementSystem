@@ -41,6 +41,7 @@ namespace Transportation.App
                         }
                         else if (loginDetails[0] == "Cashier")
                         {
+                            MainControl.cashierId = this.txtUserName.Text;
                             new frmCashierDashboard().Show();
                         }
                         else if (loginDetails[0] == "Accountant")

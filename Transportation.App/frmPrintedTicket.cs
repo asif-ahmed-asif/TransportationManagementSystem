@@ -15,6 +15,7 @@ namespace Transportation.App
 {
     public partial class frmPrintedTicket : Form
     {
+        public string Phone { get; set; }
         public frmPrintedTicket()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Transportation.App
             try
             {
 
-                ReportDataSource ds = new ReportDataSource("DataSet1", TicketRepo.printTicket());
+                ReportDataSource ds = new ReportDataSource("DataSet1", TicketRepo.printTicket(this.Phone));
                 this.reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(ds);
                 this.reportViewer1.RefreshReport();

@@ -51,26 +51,21 @@ namespace Transportation.App
             }
             
         }
-
-        private void dgvCashierSchedule_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvCashierSchedule_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            
+            this.dgvCashierSchedule.ClearSelection();
         }
 
-        private void dgvCashierSchedule_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvCashierSchedule_DoubleClick(object sender, EventArgs e)
         {
-            if (this.dgvCashierSchedule.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                this.dgvCashierSchedule.CurrentRow.Selected = true;
-                MainControl.scheduleId = dgvCashierSchedule.Rows[e.RowIndex].Cells["schedule_id"].FormattedValue.ToString();
+            MainControl.scheduleId = this.dgvCashierSchedule.CurrentRow.Cells["schedule_id"].Value.ToString();
 
-                cashierTicketControl3 third = new cashierTicketControl3();
+            cashierTicketControl3 third = new cashierTicketControl3();
 
-                frmSeatVIew seat = new frmSeatVIew();
-                DialogResult result = seat.ShowDialog();
-                if (result == DialogResult.OK)
-                    MainControl.showControl(third, frmCashierDashboard.ActiveForm);
-            }
+            frmSeatVIew seat = new frmSeatVIew();
+            DialogResult result = seat.ShowDialog();
+            if (result == DialogResult.OK)
+                MainControl.showControl(third, frmCashierDashboard.ActiveForm);
         }
     }
 }

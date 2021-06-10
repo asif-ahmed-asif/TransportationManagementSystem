@@ -35,19 +35,21 @@ namespace Transportation.App
             // reportViewer1
             // 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Transportation.App.rptTicketPrint.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(22, 12);
+            this.reportViewer1.Location = new System.Drawing.Point(29, 15);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 426);
+            this.reportViewer1.Size = new System.Drawing.Size(527, 524);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // frmPrintedTicket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 450);
+            this.ClientSize = new System.Drawing.Size(616, 554);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrintedTicket";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ticket";
