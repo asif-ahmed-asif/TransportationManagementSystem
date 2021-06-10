@@ -218,19 +218,25 @@ namespace Transportation.App
             }
             catch (Exception e) { }
 
-            if (!RouteRepo.SearchRouteId(this.disableBusIdText.Text))
-            {
-                this.changeStatusBtn.Visible = false;
-                this.routeStatus.Visible = false;
-            }
-            else
-            {
-                this.changeStatusBtn.Visible = true;
-                this.routeStatus.Visible = true;
-            }
-            
             this.BusTypeTextField.Text = "";
             this.fareTextField.Text = "";
+            
+            //If the clear button is clicked then this means a new Route is willingly to be created.
+            this.invisibleScheduleIdText.Text = "";
+            this.routeStatus.Text = "";
+            
+            this.changeStatusBtn.Visible = false;
+            this.routeStatus.Visible = false;
+            
+            //If clear button is clicked then a new routeId will be generated
+            try
+            {
+                this.disableBusIdText.Text = RouteRepo.GetId();
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("Something went wrong in Create!\n" +exception);
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
