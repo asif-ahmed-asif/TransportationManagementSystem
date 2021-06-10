@@ -47,5 +47,14 @@ namespace Transportation.Repository
             string id = dt.Rows[0][0].ToString();
             return id;
         }
+
+        public static string GetRouteId(string scheduleId)
+        {
+            string sql = $"select route_id from [schedule] where schedule_id = '{scheduleId}';";
+            var dt = DataAccess.GetDataTable(sql);
+
+            string id = dt.Rows[0][0].ToString();
+            return id;
+        }
     }
 }

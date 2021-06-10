@@ -13,10 +13,12 @@ namespace Transportation.App
     {
         public static string cashierFrom = "";
         public static string cashierTo = "";
+        public static string cashierId = "";
         public static string cashierBusType = "";
         public static string cashierJourneyDate = "";
         public static Booking booking;
         public static string scheduleId = "";
+        public static int selectedSeatCount = 0;
         public static void showControl(Control control,Form frm )
         {
             

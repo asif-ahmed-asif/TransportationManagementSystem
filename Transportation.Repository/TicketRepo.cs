@@ -9,20 +9,86 @@ using Transportation.Data;
 using Microsoft.Reporting.WebForms;
 using System.Data;
 using Transportation.Entity;
+using System.Reflection;
 
 namespace Transportation.Repository
 {
     public class TicketRepo
     {
-        public static DataTable  printTicket()
+        public static DataTable  printTicket(string phone)
         {
-            var sql = "select TOP 1 * from print_ticket order by id DESC;";
+            var sql = $"select TOP 1 * from print_ticket where customer_phone = '{phone}' order by id DESC;";
             var dt = DataAccess.GetDataTable(sql);
+            Ticket ticket = ConvertToEntity(dt.Rows[0]);
+            var tList = new List<Ticket>();
+            tList.Add(ticket);
 
-           // ReportDataSource dataSource = new ReportDataSource("DatasetTicket", dt);
-            
+            DataTable dataTable = ToDataTable(tList);
 
             return dt;
+        }
+        private static Ticket ConvertToEntity(DataRow row)
+        {
+            if (row == null)
+            {
+                return null;
+            }
+            var t = new Ticket();
+            t.CustomerName = row["customer_name"].ToString();
+            t.CustomerPhone = row["customer_phone"].ToString();
+            var dateTime = DateTime.Parse(row["journey_date"].ToString());
+            t.JourneyDate = dateTime.ToString("yyyy/MM/dd");
+            t.SeatNo = row["seat_no"].ToString();
+            t.DeptLocation = row["dept_location"].ToString();
+            t.Destination = row["destination"].ToString();
+            t.DeptTime = row["dept_time"].ToString();
+
+            return t;
+        }
+
+        private static DataTable ToDataTable<T>(List<T> items)
+
+        {
+
+            DataTable dataTable = new DataTable(typeof(T).Name);
+
+            //Get all the properties
+
+            PropertyInfo[] Props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+
+            foreach (PropertyInfo prop in Props)
+
+            {
+
+                //Setting column names as Property names
+
+                dataTable.Columns.Add(prop.Name);
+
+            }
+
+            foreach (T item in items)
+
+            {
+
+                var values = new object[Props.Length];
+
+                for (int i = 0; i < Props.Length; i++)
+
+                {
+
+                    //inserting property values to datatable rows
+
+                    values[i] = Props[i].GetValue(item, null);
+
+                }
+
+                dataTable.Rows.Add(values);
+
+            }
+
+            //put a breakpoint here and check datatable
+
+            return dataTable;
 
         }
 
@@ -30,12 +96,12 @@ namespace Transportation.Repository
         {
             busType = BusTypeRepo.GetBusTypeForBus(busType);
            // string[] id = getRouteAndBusId(from,to,busType);//id[0]=routeid, id[1]=busNO
-            string sql = $"select dept_time,arrival_time,available_seat_count from schedule join route on route.route_id = schedule.route_id join booking on schedule.schedule_id = booking.schedule_id join bus on route.bus_no = bus.bus_no where dept_location = '{from}' and destination = '{to}' and journey_date = '{date}' and type_id = '{busType}'";
+            string sql = $"select schedule.schedule_id, dept_time,arrival_time,available_seat_count from schedule join route on route.route_id = schedule.route_id join booking on schedule.schedule_id = booking.schedule_id join bus on route.bus_no = bus.bus_no where dept_location = '{from}' and destination = '{to}' and journey_date = '{date}' and type_id = '{busType}'";
             var row = DataAccess.GetDataTable(sql);
 
             if (row.Rows.Count <=0)
             {
-                Console.WriteLine("12");
+                //Console.WriteLine("12");
                 sql = $"select schedule.schedule_id, dept_time,arrival_time, '37' as available_seat_count from schedule join route on route.route_id=schedule.route_id join bus on route.bus_no=bus.bus_no where dept_location='{from}' and destination='{to}' and type_id='{busType}'";
                 row = DataAccess.GetDataTable(sql);
             }

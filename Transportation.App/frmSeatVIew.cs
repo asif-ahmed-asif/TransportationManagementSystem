@@ -114,14 +114,19 @@ namespace Transportation.App
                         {
                             selectedSeats += "," + c.Text;
                             selectedSeatCount++;
+                            
                         }
                         else
                         {
                             selectedSeats += c.Text;
                             selectedSeatCount++;
+                           
                         }
+
+                    
                 }
             }
+            MainControl.selectedSeatCount = this.selectedSeatCount;
 
             this.FillEntity();
             try

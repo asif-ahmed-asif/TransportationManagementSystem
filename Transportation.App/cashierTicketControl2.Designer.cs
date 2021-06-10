@@ -45,9 +45,10 @@ namespace Transportation.App
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(31, 15);
+            this.btnBack.Location = new System.Drawing.Point(41, 18);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(100, 28);
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -55,9 +56,10 @@ namespace Transportation.App
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(156, 15);
+            this.button1.Location = new System.Drawing.Point(208, 18);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 1;
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
@@ -97,7 +99,8 @@ namespace Transportation.App
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCashierSchedule.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCashierSchedule.EnableHeadersVisualStyles = false;
-            this.dgvCashierSchedule.Location = new System.Drawing.Point(53, 74);
+            this.dgvCashierSchedule.Location = new System.Drawing.Point(71, 91);
+            this.dgvCashierSchedule.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCashierSchedule.Name = "dgvCashierSchedule";
             this.dgvCashierSchedule.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -112,48 +115,57 @@ namespace Transportation.App
             this.dgvCashierSchedule.RowHeadersWidth = 51;
             this.dgvCashierSchedule.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCashierSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCashierSchedule.Size = new System.Drawing.Size(399, 457);
+            this.dgvCashierSchedule.Size = new System.Drawing.Size(532, 506);
             this.dgvCashierSchedule.TabIndex = 129;
-            this.dgvCashierSchedule.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCashierSchedule_CellClick);
-            this.dgvCashierSchedule.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCashierSchedule_CellContentDoubleClick);
+            this.dgvCashierSchedule.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvCashierSchedule_DataBindingComplete);
+            this.dgvCashierSchedule.DoubleClick += new System.EventHandler(this.dgvCashierSchedule_DoubleClick);
             // 
             // schedule_id
             // 
+            this.schedule_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.schedule_id.DataPropertyName = "schedule_id";
             this.schedule_id.HeaderText = "Id";
+            this.schedule_id.MinimumWidth = 6;
             this.schedule_id.Name = "schedule_id";
             this.schedule_id.ReadOnly = true;
             // 
             // dept_time
             // 
+            this.dept_time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dept_time.DataPropertyName = "dept_time";
             this.dept_time.HeaderText = "Departure Time";
+            this.dept_time.MinimumWidth = 6;
             this.dept_time.Name = "dept_time";
             this.dept_time.ReadOnly = true;
             // 
             // arrival_time
             // 
+            this.arrival_time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.arrival_time.DataPropertyName = "arrival_time";
             this.arrival_time.HeaderText = "Arrival Time";
+            this.arrival_time.MinimumWidth = 6;
             this.arrival_time.Name = "arrival_time";
             this.arrival_time.ReadOnly = true;
             // 
             // available_seat_count
             // 
+            this.available_seat_count.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.available_seat_count.DataPropertyName = "available_seat_count";
             this.available_seat_count.HeaderText = "Available Number of Seats";
+            this.available_seat_count.MinimumWidth = 6;
             this.available_seat_count.Name = "available_seat_count";
             this.available_seat_count.ReadOnly = true;
             // 
             // cashierTicketControl2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvCashierSchedule);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "cashierTicketControl2";
-            this.Size = new System.Drawing.Size(749, 500);
+            this.Size = new System.Drawing.Size(999, 615);
             this.Load += new System.EventHandler(this.cashierTicketControl2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCashierSchedule)).EndInit();
             this.ResumeLayout(false);
