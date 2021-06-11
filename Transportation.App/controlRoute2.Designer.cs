@@ -32,24 +32,24 @@ namespace Transportation.App
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(controlRoute2));
             this.btnBack = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtDestination = new System.Windows.Forms.RichTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.departureText = new System.Windows.Forms.RichTextBox();
+            this.txtFrom = new System.Windows.Forms.RichTextBox();
             this.departureTextFiled = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbBusNo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtArrivalTime = new System.Windows.Forms.TextBox();
+            this.txtDeptTime = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.txtReturnDestination = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.txtReturnFrom = new System.Windows.Forms.RichTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -83,16 +83,16 @@ namespace Transportation.App
             this.label10.TabIndex = 114;
             this.label10.Text = "Departure Time";
             // 
-            // richTextBox1
+            // txtDestination
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Enabled = false;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(403, 165);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(206, 22);
-            this.richTextBox1.TabIndex = 121;
-            this.richTextBox1.Text = "";
+            this.txtDestination.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDestination.Enabled = false;
+            this.txtDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDestination.Location = new System.Drawing.Point(403, 165);
+            this.txtDestination.Name = "txtDestination";
+            this.txtDestination.Size = new System.Drawing.Size(206, 22);
+            this.txtDestination.TabIndex = 121;
+            this.txtDestination.Text = "";
             // 
             // pictureBox3
             // 
@@ -105,16 +105,16 @@ namespace Transportation.App
             this.pictureBox3.TabIndex = 120;
             this.pictureBox3.TabStop = false;
             // 
-            // departureText
+            // txtFrom
             // 
-            this.departureText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.departureText.Enabled = false;
-            this.departureText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.departureText.Location = new System.Drawing.Point(19, 165);
-            this.departureText.Name = "departureText";
-            this.departureText.Size = new System.Drawing.Size(206, 22);
-            this.departureText.TabIndex = 119;
-            this.departureText.Text = "";
+            this.txtFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFrom.Enabled = false;
+            this.txtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFrom.Location = new System.Drawing.Point(19, 165);
+            this.txtFrom.Name = "txtFrom";
+            this.txtFrom.Size = new System.Drawing.Size(206, 22);
+            this.txtFrom.TabIndex = 119;
+            this.txtFrom.Text = "";
             // 
             // departureTextFiled
             // 
@@ -147,6 +147,7 @@ namespace Transportation.App
             this.cmbBusNo.Name = "cmbBusNo";
             this.cmbBusNo.Size = new System.Drawing.Size(219, 33);
             this.cmbBusNo.TabIndex = 125;
+            this.cmbBusNo.SelectedIndexChanged += new System.EventHandler(this.cmbBusNo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -159,23 +160,23 @@ namespace Transportation.App
             this.label1.TabIndex = 124;
             this.label1.Text = "Bus Number";
             // 
-            // textBox1
+            // txtArrivalTime
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(504, 227);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 26);
-            this.textBox1.TabIndex = 127;
+            this.txtArrivalTime.Enabled = false;
+            this.txtArrivalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArrivalTime.Location = new System.Drawing.Point(504, 227);
+            this.txtArrivalTime.Name = "txtArrivalTime";
+            this.txtArrivalTime.Size = new System.Drawing.Size(142, 26);
+            this.txtArrivalTime.TabIndex = 127;
             // 
-            // textBox2
+            // txtDeptTime
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(151, 227);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(142, 26);
-            this.textBox2.TabIndex = 128;
+            this.txtDeptTime.Enabled = false;
+            this.txtDeptTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDeptTime.Location = new System.Drawing.Point(151, 227);
+            this.txtDeptTime.Name = "txtDeptTime";
+            this.txtDeptTime.Size = new System.Drawing.Size(142, 26);
+            this.txtDeptTime.TabIndex = 128;
             // 
             // label2
             // 
@@ -243,16 +244,16 @@ namespace Transportation.App
             this.label5.TabIndex = 138;
             this.label5.Text = "Departure From";
             // 
-            // richTextBox2
+            // txtReturnDestination
             // 
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Enabled = false;
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(405, 395);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(206, 22);
-            this.richTextBox2.TabIndex = 136;
-            this.richTextBox2.Text = "";
+            this.txtReturnDestination.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReturnDestination.Enabled = false;
+            this.txtReturnDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReturnDestination.Location = new System.Drawing.Point(405, 395);
+            this.txtReturnDestination.Name = "txtReturnDestination";
+            this.txtReturnDestination.Size = new System.Drawing.Size(206, 22);
+            this.txtReturnDestination.TabIndex = 136;
+            this.txtReturnDestination.Text = "";
             // 
             // pictureBox1
             // 
@@ -265,16 +266,16 @@ namespace Transportation.App
             this.pictureBox1.TabIndex = 135;
             this.pictureBox1.TabStop = false;
             // 
-            // richTextBox3
+            // txtReturnFrom
             // 
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Enabled = false;
-            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox3.Location = new System.Drawing.Point(21, 395);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(206, 22);
-            this.richTextBox3.TabIndex = 134;
-            this.richTextBox3.Text = "";
+            this.txtReturnFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReturnFrom.Enabled = false;
+            this.txtReturnFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReturnFrom.Location = new System.Drawing.Point(21, 395);
+            this.txtReturnFrom.Name = "txtReturnFrom";
+            this.txtReturnFrom.Size = new System.Drawing.Size(206, 22);
+            this.txtReturnFrom.TabIndex = 134;
+            this.txtReturnFrom.Text = "";
             // 
             // pictureBox2
             // 
@@ -336,22 +337,22 @@ namespace Transportation.App
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.txtReturnDestination);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.richTextBox3);
+            this.Controls.Add(this.txtReturnFrom);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDeptTime);
+            this.Controls.Add(this.txtArrivalTime);
             this.Controls.Add(this.cmbBusNo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtDestination);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.departureText);
+            this.Controls.Add(this.txtFrom);
             this.Controls.Add(this.departureTextFiled);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnBack);
@@ -371,24 +372,24 @@ namespace Transportation.App
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtDestination;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.RichTextBox departureText;
+        private System.Windows.Forms.RichTextBox txtFrom;
         private System.Windows.Forms.PictureBox departureTextFiled;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbBusNo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtArrivalTime;
+        private System.Windows.Forms.TextBox txtDeptTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox txtReturnDestination;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox txtReturnFrom;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;

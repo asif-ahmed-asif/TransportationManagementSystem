@@ -139,6 +139,7 @@ namespace Transportation.Repository
 
         public static string[] GetUnassignedBuses()
         {
+            //returns the buses that have been assigned only one active route 
             string sql = $"select bus_no from route where route.status='Active' group by bus_no having count(bus_no)= 1";
 
             DataTable data = DataAccess.GetDataTable(sql);

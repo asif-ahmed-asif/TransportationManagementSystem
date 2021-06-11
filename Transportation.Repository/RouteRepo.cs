@@ -173,5 +173,28 @@ namespace Transportation.Repository
             string amount = dt.Rows[0][0].ToString();
             return Int32.Parse(amount);
         }
+
+        public static string[,] GetRouteAndSchedule(string busNo)
+        {
+            //returns departure location, destination, departure time and arrival time
+            string sql = $@"select dept_location,destination,dept_time,arrival_time
+                            from schedule
+                            join route
+                            on route.route_id=schedule.route_id
+                            where bus_no='{busNo}' and status='active'";
+            var dataTable = DataAccess.GetDataTable(sql);
+            string[,] info = new string[1,4];
+
+            
+                info[0,0] = dataTable.Rows[0][0].ToString();//dep location
+                info[0,1] = dataTable.Rows[0][1].ToString();//destination
+                info[0,2] = dataTable.Rows[0][2].ToString();//dept time
+                info[0,3] = dataTable.Rows[0][3].ToString();//arrival time
+
+                
+            
+
+            return info;
+        }
     }
 }

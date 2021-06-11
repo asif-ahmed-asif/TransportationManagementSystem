@@ -51,5 +51,28 @@ namespace Transportation.App
             }
         }
 
+        private void cmbBusNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string[,] info = RouteRepo.GetRouteAndSchedule(this.cmbBusNo.Text);
+                //departure location info[][0]
+                //destination info[][1]
+                //departure time info[2]
+                //arrival info[3]
+
+                this.txtFrom.Text = info[0, 0];
+                this.txtDestination.Text = info[0, 1];
+                this.txtDeptTime.Text = info[0, 2];
+                this.txtArrivalTime.Text = info[0, 3];
+                this.txtReturnFrom.Text = this.txtDestination.Text;
+                this.txtReturnDestination.Text = this.txtFrom.Text;
+            }
+
+            catch (Exception f)
+            {
+                Console.WriteLine("Something went wrong when fetching data" + e);
+            }
+        }
     }
 }
