@@ -37,7 +37,7 @@ namespace Transportation.App
             this.departureText = new System.Windows.Forms.RichTextBox();
             this.departureTextFiled = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbBusNo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -138,15 +138,15 @@ namespace Transportation.App
             this.label11.TabIndex = 123;
             this.label11.Text = "Arrival Time";
             // 
-            // comboBox1
+            // cmbBusNo
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(513, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 33);
-            this.comboBox1.TabIndex = 125;
+            this.cmbBusNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBusNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBusNo.FormattingEnabled = true;
+            this.cmbBusNo.Location = new System.Drawing.Point(513, 10);
+            this.cmbBusNo.Name = "cmbBusNo";
+            this.cmbBusNo.Size = new System.Drawing.Size(219, 33);
+            this.cmbBusNo.TabIndex = 125;
             // 
             // label1
             // 
@@ -346,7 +346,7 @@ namespace Transportation.App
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbBusNo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.richTextBox1);
@@ -357,6 +357,7 @@ namespace Transportation.App
             this.Controls.Add(this.btnBack);
             this.Name = "controlRoute2";
             this.Size = new System.Drawing.Size(864, 531);
+            this.Load += new System.EventHandler(this.controlRoute2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departureTextFiled)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -375,7 +376,7 @@ namespace Transportation.App
         private System.Windows.Forms.RichTextBox departureText;
         private System.Windows.Forms.PictureBox departureTextFiled;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbBusNo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;

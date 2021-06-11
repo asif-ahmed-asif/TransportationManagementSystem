@@ -136,5 +136,24 @@ namespace Transportation.Repository
 
             return buses;
         }
+
+        public static string[] GetUnassignedBuses()
+        {
+            string sql = $"select bus_no from route where route.status='Active' group by bus_no having count(bus_no)= 1";
+
+            DataTable data = DataAccess.GetDataTable(sql);
+
+            string[] buses = new string[data.Rows.Count];
+            int index = 0;
+
+            while (index < data.Rows.Count)
+            {
+                buses[index] = data.Rows[index][0].ToString();
+
+                index++;
+            }
+
+            return buses;
+        }
     }
 }
