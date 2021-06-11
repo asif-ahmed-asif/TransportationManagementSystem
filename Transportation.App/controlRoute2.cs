@@ -16,5 +16,11 @@ namespace Transportation.App
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            controlRoute route = new controlRoute();
+            MainControl.showControl(route, frmAdminDashboard.ActiveForm);
+        }
     }
 }
