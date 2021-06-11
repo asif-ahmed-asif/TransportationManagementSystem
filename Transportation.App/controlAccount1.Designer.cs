@@ -43,16 +43,20 @@ namespace Transportation.App
             this.BusFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ControlAccountUserSearch = new System.Windows.Forms.RichTextBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.Searchlabel1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Controls.Add(this.dtpReport);
-            this.panel3.Location = new System.Drawing.Point(557, 87);
+            this.panel3.Location = new System.Drawing.Point(564, 70);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(345, 23);
@@ -61,7 +65,7 @@ namespace Transportation.App
             // dtpReport
             // 
             this.dtpReport.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.dtpReport.Location = new System.Drawing.Point(-1, -2);
             this.dtpReport.Margin = new System.Windows.Forms.Padding(4);
             this.dtpReport.Name = "dtpReport";
@@ -72,8 +76,8 @@ namespace Transportation.App
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(481, 46);
+            this.pictureBox3.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(488, 29);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(495, 105);
@@ -85,8 +89,8 @@ namespace Transportation.App
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(533, 11);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label4.Location = new System.Drawing.Point(540, -6);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(185, 29);
@@ -104,22 +108,18 @@ namespace Transportation.App
             this.dgvDate.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDate.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (109)))), ((int) (((byte) (122)))), ((int) (((byte) (224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (109)))), ((int) (((byte) (122)))), ((int) (((byte) (224)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDate.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.salary,
-            this.BusFare,
-            this.TotalAmount,
-            this.Date});
+            this.dgvDate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.salary, this.BusFare, this.TotalAmount, this.Date});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -133,7 +133,7 @@ namespace Transportation.App
             this.dgvDate.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -183,10 +183,49 @@ namespace Transportation.App
             this.Date.ReadOnly = true;
             this.Date.Width = 125;
             // 
+            // ControlAccountUserSearch
+            // 
+            this.ControlAccountUserSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ControlAccountUserSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.ControlAccountUserSearch.Location = new System.Drawing.Point(272, 152);
+            this.ControlAccountUserSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.ControlAccountUserSearch.Name = "ControlAccountUserSearch";
+            this.ControlAccountUserSearch.Size = new System.Drawing.Size(211, 27);
+            this.ControlAccountUserSearch.TabIndex = 135;
+            this.ControlAccountUserSearch.Text = "";
+            this.ControlAccountUserSearch.TextChanged += new System.EventHandler(this.ControlAccountUserSearch_TextChanged);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox8.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(240, 130);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(276, 71);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 134;
+            this.pictureBox8.TabStop = false;
+            // 
+            // Searchlabel1
+            // 
+            this.Searchlabel1.AutoSize = true;
+            this.Searchlabel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Searchlabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.Searchlabel1.Location = new System.Drawing.Point(524, 152);
+            this.Searchlabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Searchlabel1.Name = "Searchlabel1";
+            this.Searchlabel1.Size = new System.Drawing.Size(187, 29);
+            this.Searchlabel1.TabIndex = 136;
+            this.Searchlabel1.Text = "Search by User";
+            // 
             // controlAccount1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Searchlabel1);
+            this.Controls.Add(this.ControlAccountUserSearch);
+            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.dgvDate);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox3);
@@ -196,12 +235,17 @@ namespace Transportation.App
             this.Size = new System.Drawing.Size(1463, 668);
             this.Load += new System.EventHandler(this.controlAccount1_Load);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.RichTextBox ControlAccountUserSearch;
+        private System.Windows.Forms.Label Searchlabel1;
+
+        private System.Windows.Forms.PictureBox pictureBox8;
 
         private System.Windows.Forms.DataGridView dgvDate;
 
