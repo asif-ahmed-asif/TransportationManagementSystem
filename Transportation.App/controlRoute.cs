@@ -319,5 +319,11 @@ namespace Transportation.App
                 MessageBox.Show("Something went wrong in Selected Drop Down!\n" +exception);
             }
         }
+
+        private void btnReturnRoute_Click(object sender, EventArgs e)
+        {
+            controlRoute2 route = new controlRoute2();
+            MainControl.showControl(route,frmAdminDashboard.ActiveForm);
+        }
     }
 }

@@ -117,6 +117,12 @@
     <Compile Include="controlRoute.Designer.cs">
       <DependentUpon>controlRoute.cs</DependentUpon>
     </Compile>
+    <Compile Include="controlRoute2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlRoute2.Designer.cs">
+      <DependentUpon>controlRoute2.cs</DependentUpon>
+    </Compile>
     <Compile Include="controlUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controlRoute.resx">
       <DependentUpon>controlRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlRoute2.resx">
+      <DependentUpon>controlRoute2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controlUser.resx">
       <DependentUpon>controlUser.cs</DependentUpon>
