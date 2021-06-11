@@ -78,5 +78,31 @@ namespace Transportation.Repository
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1;
         }
+        
+        public static List<Sales> LiveSearchUser(string key, string date)
+        {
+            string sqlQuery = $@"select sales.*, [user].name
+                                from sales, [user]
+                                where sales.user_id = [user].user_id
+                                and date = '{date}'
+                                and [user].user_id like '%" + key + "%'" +
+                              " or [user].name like '%" + key + "%'" +
+                              " and sales.user_id = [user].user_id" +
+                              " and date = '" + date + "'";
+            
+            DataTable data = DataAccess.GetDataTable(sqlQuery);
+
+            List<Sales> userSales = new List<Sales>();
+            int index = 0;
+            
+            while (index < data.Rows.Count)
+            {
+                Sales sales = ConvertToEntityForUserSales(data.Rows[index]);
+                userSales.Add(sales);
+                index++;
+            }
+
+            return userSales;
+        }
     }
 }

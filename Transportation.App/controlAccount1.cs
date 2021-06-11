@@ -59,6 +59,18 @@ namespace Transportation.App
             this.dgvDate.ClearSelection();
             this.dgvDate.Refresh();
         }
+        
+        private void ControlAccountUserSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                this.dgvDate.DataSource = SalesRepo.LiveSearchUser(this.ControlAccountUserSearch.Text, this.dtpReport.Value.ToString("yyyy/MM/dd"));
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("Something went wrong when searching!"+ exception.Message);
+            }
+        }
 
         private void dgvDate_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
