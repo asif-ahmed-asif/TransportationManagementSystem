@@ -29,7 +29,7 @@ namespace Transportation.Repository
         public static bool Update(Booking b)
         {
             string seats = "," + b.Seats;
-         string sql = $"update booking set seats = concat(seats, '{seats}') where journey_date = '{b.JourneyDate}' and schedule_id='{b.ScheduleId}'";
+         string sql = $"update booking set seats = concat(seats, '{seats}'),available_seat_count='{b.AvailableSeatCount}'  where journey_date = '{b.JourneyDate}' and schedule_id='{b.ScheduleId}'";
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1;
         }
@@ -43,6 +43,18 @@ namespace Transportation.Repository
                 id = dt.Rows[0][0].ToString();
             
             return id;
+        }
+
+        public static int GetAvailableSeatCount(string journeyDate,string scheduleId)
+        {
+            string sql = $"select available_seat_count from booking where journey_date = '{journeyDate}' and schedule_id = '{scheduleId}'";
+            var dataTable = DataAccess.GetDataTable(sql);
+            string seatCount;
+
+            if (dataTable.Rows.Count > 0)
+                seatCount = dataTable.Rows[0][0].ToString();
+            else seatCount = "37" ;
+            return int.Parse(seatCount);
         }
     }
 }
