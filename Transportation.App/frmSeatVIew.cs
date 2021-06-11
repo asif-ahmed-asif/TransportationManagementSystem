@@ -148,19 +148,7 @@ namespace Transportation.App
 
         private void FillEntity()
         {
-            try
-            {
-                string[] id = TicketRepo.getRouteAndBusId(MainControl.cashierFrom, MainControl.cashierTo, MainControl.cashierBusType);
-                string routeId = id[0]; //route id is on the index 0
-                //scheduleId = ScheduleRepo.GetScheduleId(routeId);
-                availableSeatCount = 37 - selectedSeatCount;
-
-
-            }
-            catch (Exception id)
-            {
-                MessageBox.Show("Error fetching Schedule ID" + id.Message);
-            }
+           
 
             this.Booking = new Booking()
             {
@@ -169,6 +157,20 @@ namespace Transportation.App
                 AvailableSeatCount = availableSeatCount,
                 ScheduleId = MainControl.scheduleId
             };
+
+            try
+            {
+                // string[] id = TicketRepo.getRouteAndBusId(MainControl.cashierFrom, MainControl.cashierTo, MainControl.cashierBusType);
+                // string routeId = id[0]; //route id is on the index 0
+                //scheduleId = ScheduleRepo.GetScheduleId(routeId);
+                this.availableSeatCount = BookingRepo.GetAvailableSeatCount(MainControl.cashierJourneyDate, this.Booking.ScheduleId)- this.selectedSeatCount;
+                this.Booking.AvailableSeatCount = availableSeatCount;
+
+            }
+            catch (Exception id)
+            {
+                MessageBox.Show("Error fetching Schedule ID" + id.Message);
+            }
 
         }
     }

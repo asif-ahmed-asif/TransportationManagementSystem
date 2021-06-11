@@ -51,10 +51,11 @@ namespace Transportation.App
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtReturnFrom = new System.Windows.Forms.RichTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDeparture = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpArrival = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departureTextFiled)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -288,13 +289,13 @@ namespace Transportation.App
             this.pictureBox2.TabIndex = 133;
             this.pictureBox2.TabStop = false;
             // 
-            // dateTimePicker1
+            // dtpDeparture
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(156, 457);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 143;
+            this.dtpDeparture.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpDeparture.Location = new System.Drawing.Point(156, 457);
+            this.dtpDeparture.Name = "dtpDeparture";
+            this.dtpDeparture.Size = new System.Drawing.Size(200, 20);
+            this.dtpDeparture.TabIndex = 143;
             // 
             // label6
             // 
@@ -307,13 +308,13 @@ namespace Transportation.App
             this.label6.TabIndex = 142;
             this.label6.Text = "Arrival Time";
             // 
-            // dateTimePicker2
+            // dtpArrival
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(510, 455);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 141;
+            this.dtpArrival.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpArrival.Location = new System.Drawing.Point(510, 455);
+            this.dtpArrival.Name = "dtpArrival";
+            this.dtpArrival.Size = new System.Drawing.Size(200, 20);
+            this.dtpArrival.TabIndex = 141;
             // 
             // label9
             // 
@@ -326,14 +327,25 @@ namespace Transportation.App
             this.label9.TabIndex = 140;
             this.label9.Text = "Departure Time";
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSave.Location = new System.Drawing.Point(268, 507);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(169, 41);
+            this.btnSave.TabIndex = 144;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
             // controlRoute2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.dtpDeparture);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dtpArrival);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -357,7 +369,7 @@ namespace Transportation.App
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnBack);
             this.Name = "controlRoute2";
-            this.Size = new System.Drawing.Size(864, 531);
+            this.Size = new System.Drawing.Size(888, 552);
             this.Load += new System.EventHandler(this.controlRoute2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departureTextFiled)).EndInit();
@@ -391,9 +403,10 @@ namespace Transportation.App
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RichTextBox txtReturnFrom;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDeparture;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpArrival;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnSave;
     }
 }
