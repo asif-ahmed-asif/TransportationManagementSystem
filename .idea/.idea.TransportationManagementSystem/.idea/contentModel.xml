@@ -27,6 +27,9 @@
         <e p="controlRoute.cs" t="Include" />
         <e p="controlRoute.Designer.cs" t="Include" />
         <e p="controlRoute.resx" t="Include" />
+        <e p="controlRoute2.cs" t="Include" />
+        <e p="controlRoute2.Designer.cs" t="Include" />
+        <e p="controlRoute2.resx" t="Include" />
         <e p="controlUser.cs" t="Include" />
         <e p="controlUser.Designer.cs" t="Include" />
         <e p="controlUser.resx" t="Include" />

@@ -70,7 +70,7 @@ namespace Transportation.Repository
             var sql = @"SELECT [user].user_id, [user].name, [user].email, [user].phone,
                         [user].address, [user].user_type, [user].salary, [user].status, login.password FROM [user]
                         INNER JOIN login 
-                            ON [user].user_id = login.user_id WHERE [user].name like '" + key + "%';";
+                            ON [user].user_id = login.user_id WHERE [user].name like '%" + key + "%';";
             var dt = DataAccess.GetDataTable(sql);
             int row = 0;
             while (row < dt.Rows.Count)

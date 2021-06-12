@@ -259,9 +259,9 @@ namespace Transportation.App
                 this.dgvUser.ClearSelection();
                 this.dgvUser.Refresh();
             }
-            catch (Exception a)
+            catch
             {
-                MessageBox.Show("Error!" + a.Message);
+                //MessageBox.Show("Invalid Keyword");
             }
         }
     }
