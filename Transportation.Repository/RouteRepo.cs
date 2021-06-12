@@ -176,25 +176,64 @@ namespace Transportation.Repository
 
         public static string[,] GetRouteAndSchedule(string busNo)
         {
-            //returns departure location, destination, departure time and arrival time
-            string sql = $@"select dept_location,destination,dept_time,arrival_time
+            //returns departure location, destination, departure time and arrival time, fare
+            string sql = $@"select dept_location,destination,dept_time,arrival_time, fare
                             from schedule
                             join route
                             on route.route_id=schedule.route_id
                             where bus_no='{busNo}' and status='active'";
             var dataTable = DataAccess.GetDataTable(sql);
-            string[,] info = new string[1,4];
+            string[,] info = new string[1,5];
 
             
                 info[0,0] = dataTable.Rows[0][0].ToString();//dep location
                 info[0,1] = dataTable.Rows[0][1].ToString();//destination
                 info[0,2] = dataTable.Rows[0][2].ToString();//dept time
                 info[0,3] = dataTable.Rows[0][3].ToString();//arrival time
+                info[0,4] = dataTable.Rows[0][4].ToString();//fare
 
                 
             
 
             return info;
+        }
+
+        //Check if bus exist in any existing route. If exist we will not insert
+        public static bool CheckIfBusExistInRoute(string bus)
+        {
+            string sqlQuery = $"select * from route where bus_no = '{bus}'";
+
+            DataTable data = DataAccess.GetDataTable(sqlQuery);
+
+            //if row > 1, that is, the given parameter, bus number already exist in table and will return true
+            //which means we will not insert.
+            if (data.Rows.Count > 0)
+            {
+                return true;
+            }
+
+            //else the row == 0, that is, the given parameter, bus number does not exist in table and will return false
+            //which means we will insert.
+            return false;
+        }
+        
+        //Check if bus exist in any existing route for the particular route_id. If exist we will not update
+        public static bool CheckIfBusExistInRouteForUpdate(string bus, string routeId)
+        {
+            string sqlQuery = $"select * from route where bus_no = '{bus}' and route_id <> '{routeId}'";
+
+            DataTable data = DataAccess.GetDataTable(sqlQuery);
+
+            //if row > 1, that is, the given parameter, bus number already exist for particular route_id in table and will return true
+            //which means we will not update.
+            if (data.Rows.Count > 0)
+            {
+                return true;
+            }
+
+            //else the row == 0, that is, the given parameter, bus number does not exist for particular route_id in table
+            //and will return false, which means we will update.
+            return false;
         }
     }
 }

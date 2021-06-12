@@ -68,6 +68,7 @@ namespace Transportation.App
         private void btnSave_Click(object sender, EventArgs e)
         {
             bool idExist;
+            bool checkIfBusExistSignal;
             try
             {
                 idExist = RouteRepo.SearchRouteId(this.disableBusIdText.Text);
@@ -86,30 +87,50 @@ namespace Transportation.App
                 else
                 {
                     Route.Status = this.routeStatus.Text;
+                    
                     try
                     {
-                        bool updateRouteSignal = RouteRepo.Update(this.Route);
-                    
-                        Entity.Schedule schedule = new Entity.Schedule();
-                        schedule.ScheduleId = this.invisibleScheduleIdText.Text;
-                        schedule.DeptTime = this.dateTimePicker1.Text;
-                        schedule.ArrivalTime = this.dateTimePicker2.Text;
-                        schedule.RouteId = this.disableBusIdText.Text;
-
-                        bool updateScheduleSignal = ScheduleRepo.Update(schedule);
-                        if (updateRouteSignal && updateScheduleSignal)
-                        {
-                            MessageBox.Show("Route Updated Successuflly!!");
-
-                            //Once the save button is clicked for edit, new Id, as primary key, will be generated for the route table.
-                            this.disableBusIdText.Text = RouteRepo.GetId();
-                            this.ClearRouteInput();
-                            this.FillRouteDataGridView();
-                        }
+                        checkIfBusExistSignal = RouteRepo.CheckIfBusExistInRouteForUpdate(this.cmbBus.Text, this.disableBusIdText.Text);
                     }
                     catch (Exception exception)
                     {
-                        Console.WriteLine("Something went wrong in Update!\n" +exception);
+                        MessageBox.Show("Something went wrong when check bus exist or not");
+                        throw;
+                    }
+                    
+                    //we will check if the bus number exist for particular route_id in route table.
+                    //If exist we will not update, else will update.
+                    if (checkIfBusExistSignal == false)
+                    {
+                        try
+                        {
+                            bool updateRouteSignal = RouteRepo.Update(this.Route);
+
+                            Entity.Schedule schedule = new Entity.Schedule();
+                            schedule.ScheduleId = this.invisibleScheduleIdText.Text;
+                            schedule.DeptTime = this.dateTimePicker1.Text;
+                            schedule.ArrivalTime = this.dateTimePicker2.Text;
+                            schedule.RouteId = this.disableBusIdText.Text;
+
+                            bool updateScheduleSignal = ScheduleRepo.Update(schedule);
+                            if (updateRouteSignal && updateScheduleSignal)
+                            {
+                                MessageBox.Show("Route Updated Successuflly!!");
+
+                                //Once the save button is clicked for edit, new Id, as primary key, will be generated for the route table.
+                                this.disableBusIdText.Text = RouteRepo.GetId();
+                                this.ClearRouteInput();
+                                this.FillRouteDataGridView();
+                            }
+                        }
+                        catch (Exception exception)
+                        {
+                            Console.WriteLine("Something went wrong in Update!\n" + exception);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bus Number already Exists in different Route!\nCannot Update. Get a new Bus!");
                     }
                 }
             }
@@ -121,57 +142,78 @@ namespace Transportation.App
                 }
                 else if (this.RouteFill())
                 {
-                    bool insertSignal;
                     try
                     {
-                        insertSignal = RouteRepo.Insert(this.Route); //inserting into the route table
+                        checkIfBusExistSignal = RouteRepo.CheckIfBusExistInRoute(this.cmbBus.Text);
                     }
                     catch (Exception exception)
                     {
-                        Console.WriteLine(exception);
+                        MessageBox.Show("Something went wrong when check bus exist or not");
                         throw;
                     }
-                    
-                    //First we have to insert data into schedule table and then to route table
-                    Entity.Schedule schedule = new Entity.Schedule();
-                    try
-                    {
-                        schedule.ScheduleId = ScheduleRepo.GetId();
-                    }
-                    catch (Exception exception)
-                    {
-                        Console.WriteLine(exception);
-                    }
-                    schedule.DeptTime = this.dateTimePicker1.Text;
-                    schedule.ArrivalTime = this.dateTimePicker2.Text;
-                    schedule.RouteId = this.disableBusIdText.Text; //In Schedule table route_id is a foreign key.
-                    //this.Route.ScheduleId = schedule.ScheduleId; //In Route table schedule_id is a foreign key.
 
-                    bool insertSignalSchedule;
-                    try
+                    //we will check if the bus number exist in route table. If exist we will not insert, else will insert.
+                    if (!checkIfBusExistSignal)//if return false we will insert, else not
                     {
-                        insertSignalSchedule = ScheduleRepo.Insert(schedule); //inserting into schedule table
-                    }
-                    catch (Exception exception)
-                    {
-                        Console.WriteLine(exception);
-                        throw;
-                    }
-                    if (insertSignal && insertSignalSchedule)
-                    {
-                        MessageBox.Show("Route Created Successuflly!!");
-
-                        //Once the save button is clicked, new Id, as primary key, will be generated for the route table.
+                        bool insertSignal;
                         try
                         {
-                            this.disableBusIdText.Text = RouteRepo.GetId();
+                            insertSignal = RouteRepo.Insert(this.Route); //inserting into the route table
                         }
                         catch (Exception exception)
                         {
-                            Console.WriteLine("Something went wrong in Create!\n" +exception);
+                            MessageBox.Show("Something went wrong when inserting route");
+                            throw;
                         }
-                        this.ClearRouteInput();
-                        this.FillRouteDataGridView();
+
+                        //First we have to insert data into route table and then into the schedule table
+                        Entity.Schedule schedule = new Entity.Schedule();
+                        try
+                        {
+                            schedule.ScheduleId = ScheduleRepo.GetId();
+                        }
+                        catch (Exception exception)
+                        {
+                            Console.WriteLine(exception);
+                        }
+
+                        schedule.DeptTime = this.dateTimePicker1.Text;
+                        schedule.ArrivalTime = this.dateTimePicker2.Text;
+                        schedule.RouteId = this.disableBusIdText.Text; //In Schedule table route_id is a foreign key.
+                        //this.Route.ScheduleId = schedule.ScheduleId; //In Route table schedule_id is a foreign key.
+
+                        bool insertSignalSchedule;
+                        try
+                        {
+                            insertSignalSchedule = ScheduleRepo.Insert(schedule); //inserting into schedule table
+                        }
+                        catch (Exception exception)
+                        {
+                            MessageBox.Show("Something went wrong when inserting schedule");
+                            throw;
+                        }
+
+                        if (insertSignal && insertSignalSchedule)
+                        {
+                            MessageBox.Show("Route Created Successuflly!!");
+
+                            //Once the save button is clicked, new Id, as primary key, will be generated for the route table.
+                            try
+                            {
+                                this.disableBusIdText.Text = RouteRepo.GetId();
+                            }
+                            catch (Exception exception)
+                            {
+                                Console.WriteLine("Something went wrong in Create!\n" + exception);
+                            }
+
+                            this.ClearRouteInput();
+                            this.FillRouteDataGridView();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bus Number already Exists in different Route!\nCannot Insert. Get a new Bus!");
                     }
                 }
             }
@@ -252,7 +294,7 @@ namespace Transportation.App
             {
                 this.dgvRoute.DataSource = RouteRepo.LiveSearchRoutes(this.rtxtSearch.Text);
             }
-            catch (Exception exception)
+            catch
             {
                 Console.WriteLine("Something went wrong!");
             }
