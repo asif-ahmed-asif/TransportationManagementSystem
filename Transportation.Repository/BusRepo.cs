@@ -44,7 +44,7 @@ namespace Transportation.Repository
 
         public static List<Bus> GetAll()
         {
-            string sql = "Select * from [bus]";
+            string sql = "SELECT * FROM bus WHERE bus.bus_no NOT IN (SELECT route.bus_no FROM route)";
             DataTable data = DataAccess.GetDataTable(sql);
 
             int i = 0;
