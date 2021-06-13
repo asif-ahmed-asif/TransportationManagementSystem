@@ -90,8 +90,7 @@ namespace Transportation.App
             {
                 MessageBox.Show($"Error fetching data\n{error.Message}");
             }
-            this.cmbBusType.Items.Add("AC");
-            this.cmbBusType.Items.Add("NON-AC");
+            
 
             this.cboFrom.Text = MainControl.cashierFrom;
             this.cboTo.Text = MainControl.cashierTo;
@@ -113,6 +112,16 @@ namespace Transportation.App
             catch (Exception error)
             {
                 MessageBox.Show($"Error fetching data\n{error.Message}");
+            }
+        }
+
+        private void cboTo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] bustypes = BusTypeRepo.GetBusTypeByRoute(this.cboFrom.Text,this.cboTo.Text);
+            this.cmbBusType.Items.Clear();
+            foreach (string s in bustypes)
+            {
+                this.cmbBusType.Items.Add(s);
             }
         }
     }

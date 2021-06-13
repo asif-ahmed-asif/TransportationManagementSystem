@@ -28,7 +28,7 @@ namespace Transportation.Repository
 
         public static string[] GetAllDeptLocation()
         {
-            string sql = $"select dept_location from route group by dept_location";
+            string sql = $"select dept_location from route where route.status='Active' group by dept_location ";
             var dt = DataAccess.GetDataTable(sql);
             string[] list = new string[dt.Rows.Count];
             int row = 0;

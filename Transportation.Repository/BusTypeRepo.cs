@@ -12,5 +12,28 @@ namespace Transportation.Repository
             string data = row.Rows[0][0].ToString();
             return data;
         }
+
+        public static string[] GetBusTypeByRoute(string departure,string destination)
+        {
+            var sqlQuery = $@"select bus_type
+                                from  bus_type
+                                join bus
+                                on bus.type_id=bus_type.type_id
+                                join route
+                                on route.bus_no=bus.bus_no
+                                where dept_location='{departure}'
+                                and destination='{destination}'";
+            var row = DataAccess.GetDataTable(sqlQuery);
+
+            string[] busTypes = new string[row.Rows.Count];
+            byte index = 0;
+            while (index < row.Rows.Count)
+            {
+                busTypes[index] = row.Rows[index][index].ToString();
+                index++;
+            }
+
+            return busTypes;
+        }
     }
 }
