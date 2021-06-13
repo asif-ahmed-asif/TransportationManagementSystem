@@ -196,7 +196,7 @@ namespace Transportation.App
                         }
                         catch (Exception exception)
                         {
-                            Console.WriteLine(exception);
+                            MessageBox.Show("Something went wrong when getting schedule Id");
                         }
 
                         schedule.DeptTime = this.dateTimePicker1.Text;
