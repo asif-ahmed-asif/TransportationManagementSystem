@@ -87,10 +87,27 @@ namespace Transportation.App
                 else
                 {
                     Route.Status = this.routeStatus.Text;
+
+                    //Following line used to store Route information when a row from data grid view is double clicked.
+                    Route singleRouteInfo = RouteRepo.SingleRouteInfo(this.disableBusIdText.Text);
+                    
+                    //Following line gets the route_id.
+                    string secondRouteId = RouteRepo.CheckIfTwoRoutesExist(singleRouteInfo);
                     
                     try
                     {
-                        checkIfBusExistSignal = RouteRepo.CheckIfBusExistInRouteForUpdate(this.cmbBus.Text, this.disableBusIdText.Text);
+                        if (secondRouteId != null)//if two routes exist, will get a route_id, else null
+                        {
+                            //So there is two routes, and now checking if the bus exist to any different route if we select a different 
+                            //bus and click on save button.
+                            checkIfBusExistSignal = RouteRepo.CheckIfBusExistInTwoRoutesForUpdate(this.cmbBus.Text, this.disableBusIdText.Text, secondRouteId);
+                        }
+                        else
+                        {
+                            //So there is one route, and now checking if the bus exist to any different route if we select a different 
+                            //bus and click on save button.
+                            checkIfBusExistSignal = RouteRepo.CheckIfBusExistInRouteForUpdate(this.cmbBus.Text, this.disableBusIdText.Text);
+                        }
                     }
                     catch (Exception exception)
                     {
@@ -113,6 +130,11 @@ namespace Transportation.App
                             schedule.RouteId = this.disableBusIdText.Text;
 
                             bool updateScheduleSignal = ScheduleRepo.Update(schedule);
+                            if (secondRouteId != null)
+                            {
+                                //MessageBox.Show("not null");
+                                bool updateSecondRouteSignal = RouteRepo.UpdateSecondRoute(this.Route, secondRouteId);
+                            }
                             if (updateRouteSignal && updateScheduleSignal)
                             {
                                 MessageBox.Show("Route Updated Successuflly!!");

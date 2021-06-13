@@ -71,6 +71,22 @@ namespace Transportation.Repository
             return r;
         }
         
+        private static Route ConvertToEntityForRoute(DataRow row)
+        {
+            if (row == null)
+            {
+                return null;
+            }
+            var r = new Route();
+            r.RouteId = row["route_id"].ToString();
+            r.DeptLocation = row["dept_location"].ToString();
+            r.Destination = row["destination"].ToString();
+            r.BusNo = row["bus_no"].ToString();
+            r.Status = row["status"].ToString();
+            r.Fare = row["fare"].ToString();
+            return r;
+        }
+        
         public static string GetId() //Used to generate an Id
         {
             string sql = "select TOP 1 * from [Route] order by route_id DESC;";
@@ -234,6 +250,63 @@ namespace Transportation.Repository
             //else the row == 0, that is, the given parameter, bus number does not exist for particular route_id in table
             //and will return false, which means we will update.
             return false;
+        }
+        
+        public static bool CheckIfBusExistInTwoRoutesForUpdate(string bus, string firstRouteId, string secondRouteId)
+        {
+            string sqlQuery = $"select * from route where bus_no = '{bus}' and route_id <> '{firstRouteId}' and route_id <> '{secondRouteId}'";
+
+            DataTable data = DataAccess.GetDataTable(sqlQuery);
+
+            //if row > 0, that is, the given parameter, bus number already exist for other route_id in table and will return true
+            //which means we will not update.
+            if (data.Rows.Count > 0)
+            {
+                return true;
+            }
+
+            //else the row == 0, that is, the given parameter, bus number does not exist for any other route_id in table
+            //and will return false, which means we will update.
+            return false;
+        }
+        
+        public static Route SingleRouteInfo(string key)
+        {
+            var sql = $"select * from [Route] where route_id = '{key}'";
+            DataTable data = DataAccess.GetDataTable(sql);
+            if (data.Rows.Count > 0)
+            {
+                Route route = ConvertToEntityForRoute(data.Rows[0]);
+                return route;
+            }
+
+            return null;
+        }
+
+        public static string CheckIfTwoRoutesExist(Route route)
+        {
+            string sqlQuery = $@"select * from route
+                                where dept_location = '{route.Destination}'
+                                and destination = '{route.DeptLocation}'
+                                and bus_no = '{route.BusNo}'";
+            
+            DataTable data = DataAccess.GetDataTable(sqlQuery);
+
+            //if row > 0, that means there is two routes, one is the starting route and other one is the return route.
+            if (data.Rows.Count > 0)
+            {
+                return data.Rows[0][0].ToString(); //it returns the route_id
+            }
+
+            //else the row == 0, this means there is only one route and that is only the starting route and no return route
+            return null;
+        }
+        
+        public static bool UpdateSecondRoute(Route route, string routeId)
+        {
+            var sql = $"UPDATE [Route] SET dept_location = '{route.Destination}', destination = '{route.DeptLocation}', bus_no = '{route.BusNo}' , status = '{route.Status}', fare = '{route.Fare}' where route_id = '{routeId}';";
+            var row = DataAccess.ExecuteDmlQuery(sql);
+            return row == 1;
         }
     }
 }
