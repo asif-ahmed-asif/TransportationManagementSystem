@@ -14,16 +14,22 @@ namespace Transportation.App
     {
         public frmAdminDashboard()
         {
-            InitializeComponent();
-            this.pnlRed.Height = this.btnHome.Height;
+            InitializeComponent(); 
+            this.pnlRed.Height = this.btnUsers.Height;
+
+
+            controlUser user = new controlUser();
+            MainControl.showControl(user, this);
+
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+      /*  private void btnHome_Click(object sender, EventArgs e)
         {
             this.pnlRed.Height = this.btnHome.Height;
             this.pnlRed.Top = this.btnHome.Top;
-            
-        }
+
+
+        }*/
 
         
 
@@ -39,8 +45,8 @@ namespace Transportation.App
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            this.pnlRed.Height = this.btnProfile.Height;
-            this.pnlRed.Top = this.btnProfile.Top;
+            this.pnlRed.Height = this.btnUsers.Height;
+            this.pnlRed.Top = this.btnUsers.Top;
 
 
             controlUser user = new controlUser();

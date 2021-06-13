@@ -22,14 +22,15 @@ namespace Transportation.Repository
                                 join route
                                 on route.bus_no=bus.bus_no
                                 where dept_location='{departure}'
-                                and destination='{destination}'";
+                                and destination='{destination}'
+                                group by bus_type";
             var row = DataAccess.GetDataTable(sqlQuery);
 
             string[] busTypes = new string[row.Rows.Count];
             byte index = 0;
             while (index < row.Rows.Count)
             {
-                busTypes[index] = row.Rows[index][index].ToString();
+                busTypes[index] = row.Rows[index][0].ToString();
                 index++;
             }
 

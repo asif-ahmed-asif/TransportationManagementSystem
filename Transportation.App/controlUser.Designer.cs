@@ -91,10 +91,9 @@ namespace Transportation.App
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, -6);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(10, -5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 29);
+            this.label2.Size = new System.Drawing.Size(64, 25);
             this.label2.TabIndex = 53;
             this.label2.Text = "Name";
             // 
@@ -102,11 +101,10 @@ namespace Transportation.App
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(29, 464);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(22, 377);
             this.textBox1.MaxLength = 11;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 23);
+            this.textBox1.Size = new System.Drawing.Size(199, 19);
             this.textBox1.TabIndex = 64;
             // 
             // label1
@@ -114,10 +112,9 @@ namespace Transportation.App
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 364);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(10, 296);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 29);
+            this.label1.Size = new System.Drawing.Size(85, 25);
             this.label1.TabIndex = 61;
             this.label1.Text = "Address";
             // 
@@ -126,10 +123,9 @@ namespace Transportation.App
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 245);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(10, 199);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 29);
+            this.label4.Size = new System.Drawing.Size(58, 25);
             this.label4.TabIndex = 59;
             this.label4.Text = "email";
             // 
@@ -138,10 +134,9 @@ namespace Transportation.App
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 124);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(10, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 29);
+            this.label3.Size = new System.Drawing.Size(143, 25);
             this.label3.TabIndex = 55;
             this.label3.Text = "Phone Number";
             // 
@@ -150,10 +145,9 @@ namespace Transportation.App
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(477, 7);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(227, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 29);
+            this.label5.Size = new System.Drawing.Size(68, 25);
             this.label5.TabIndex = 69;
             this.label5.Text = "Salary";
             // 
@@ -162,10 +156,9 @@ namespace Transportation.App
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(492, 287);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(238, 227);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 29);
+            this.label6.Size = new System.Drawing.Size(57, 25);
             this.label6.TabIndex = 71;
             this.label6.Text = "Type";
             // 
@@ -174,10 +167,9 @@ namespace Transportation.App
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(492, 420);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(238, 335);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 29);
+            this.label7.Size = new System.Drawing.Size(68, 25);
             this.label7.TabIndex = 73;
             this.label7.Text = "Status";
             // 
@@ -186,10 +178,9 @@ namespace Transportation.App
             this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbType.FormattingEnabled = true;
-            this.cmbType.Location = new System.Drawing.Point(495, 336);
-            this.cmbType.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbType.Location = new System.Drawing.Point(240, 267);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(291, 37);
+            this.cmbType.Size = new System.Drawing.Size(219, 33);
             this.cmbType.TabIndex = 76;
             // 
             // cmbStatus
@@ -197,19 +188,17 @@ namespace Transportation.App
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(495, 468);
-            this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbStatus.Location = new System.Drawing.Point(240, 374);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(291, 37);
+            this.cmbStatus.Size = new System.Drawing.Size(219, 33);
             this.cmbStatus.TabIndex = 77;
             // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Location = new System.Drawing.Point(495, 564);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(240, 452);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(129, 50);
+            this.btnSave.Size = new System.Drawing.Size(97, 41);
             this.btnSave.TabIndex = 78;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -218,10 +207,9 @@ namespace Transportation.App
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.SystemColors.Control;
-            this.btnClear.Location = new System.Drawing.Point(657, 562);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClear.Location = new System.Drawing.Point(362, 451);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(129, 50);
+            this.btnClear.Size = new System.Drawing.Size(97, 41);
             this.btnClear.TabIndex = 79;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -232,10 +220,9 @@ namespace Transportation.App
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(477, 138);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(227, 106);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 29);
+            this.label8.Size = new System.Drawing.Size(31, 25);
             this.label8.TabIndex = 80;
             this.label8.Text = "ID";
             // 
@@ -244,10 +231,9 @@ namespace Transportation.App
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(13, 601);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(10, 488);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 29);
+            this.label9.Size = new System.Drawing.Size(98, 25);
             this.label9.TabIndex = 82;
             this.label9.Text = "Password";
             // 
@@ -255,10 +241,9 @@ namespace Transportation.App
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 23);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(316, 92);
+            this.pictureBox1.Size = new System.Drawing.Size(206, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 84;
             this.pictureBox1.TabStop = false;
@@ -267,10 +252,9 @@ namespace Transportation.App
             // 
             this.rtxtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtName.Location = new System.Drawing.Point(41, 60);
-            this.rtxtName.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxtName.Location = new System.Drawing.Point(31, 49);
             this.rtxtName.Name = "rtxtName";
-            this.rtxtName.Size = new System.Drawing.Size(275, 27);
+            this.rtxtName.Size = new System.Drawing.Size(163, 22);
             this.rtxtName.TabIndex = 85;
             this.rtxtName.Text = "";
             // 
@@ -278,10 +262,9 @@ namespace Transportation.App
             // 
             this.rtxtPhn.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtPhn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtPhn.Location = new System.Drawing.Point(41, 191);
-            this.rtxtPhn.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxtPhn.Location = new System.Drawing.Point(31, 155);
             this.rtxtPhn.Name = "rtxtPhn";
-            this.rtxtPhn.Size = new System.Drawing.Size(275, 27);
+            this.rtxtPhn.Size = new System.Drawing.Size(163, 22);
             this.rtxtPhn.TabIndex = 87;
             this.rtxtPhn.Text = "";
             // 
@@ -289,10 +272,9 @@ namespace Transportation.App
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(20, 156);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 127);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(316, 92);
+            this.pictureBox2.Size = new System.Drawing.Size(206, 75);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 86;
             this.pictureBox2.TabStop = false;
@@ -301,10 +283,9 @@ namespace Transportation.App
             // 
             this.rtxtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtMail.Location = new System.Drawing.Point(41, 306);
-            this.rtxtMail.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxtMail.Location = new System.Drawing.Point(31, 249);
             this.rtxtMail.Name = "rtxtMail";
-            this.rtxtMail.Size = new System.Drawing.Size(275, 27);
+            this.rtxtMail.Size = new System.Drawing.Size(163, 22);
             this.rtxtMail.TabIndex = 89;
             this.rtxtMail.Text = "";
             // 
@@ -312,10 +293,9 @@ namespace Transportation.App
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(20, 273);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(15, 222);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(316, 92);
+            this.pictureBox3.Size = new System.Drawing.Size(206, 75);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 88;
             this.pictureBox3.TabStop = false;
@@ -324,10 +304,9 @@ namespace Transportation.App
             // 
             this.rtxtSalary.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtSalary.Location = new System.Drawing.Point(509, 74);
-            this.rtxtSalary.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxtSalary.Location = new System.Drawing.Point(251, 54);
             this.rtxtSalary.Name = "rtxtSalary";
-            this.rtxtSalary.Size = new System.Drawing.Size(275, 27);
+            this.rtxtSalary.Size = new System.Drawing.Size(206, 22);
             this.rtxtSalary.TabIndex = 91;
             this.rtxtSalary.Text = "";
             // 
@@ -335,10 +314,9 @@ namespace Transportation.App
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(488, 42);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(235, 28);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(316, 92);
+            this.pictureBox4.Size = new System.Drawing.Size(237, 75);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 90;
             this.pictureBox4.TabStop = false;
@@ -347,10 +325,9 @@ namespace Transportation.App
             // 
             this.rtxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtPassword.Location = new System.Drawing.Point(41, 661);
-            this.rtxtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxtPassword.Location = new System.Drawing.Point(31, 537);
             this.rtxtPassword.Name = "rtxtPassword";
-            this.rtxtPassword.Size = new System.Drawing.Size(275, 27);
+            this.rtxtPassword.Size = new System.Drawing.Size(173, 22);
             this.rtxtPassword.TabIndex = 93;
             this.rtxtPassword.Text = "";
             // 
@@ -358,10 +335,9 @@ namespace Transportation.App
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(20, 629);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Location = new System.Drawing.Point(15, 511);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(316, 92);
+            this.pictureBox5.Size = new System.Drawing.Size(206, 75);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 92;
             this.pictureBox5.TabStop = false;
@@ -369,10 +345,9 @@ namespace Transportation.App
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(12, 399);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Location = new System.Drawing.Point(9, 324);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(373, 149);
+            this.pictureBox6.Size = new System.Drawing.Size(212, 121);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 94;
             this.pictureBox6.TabStop = false;
@@ -381,10 +356,9 @@ namespace Transportation.App
             // 
             this.rtxtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtAddress.Location = new System.Drawing.Point(27, 417);
-            this.rtxtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxtAddress.Location = new System.Drawing.Point(20, 339);
             this.rtxtAddress.Name = "rtxtAddress";
-            this.rtxtAddress.Size = new System.Drawing.Size(344, 116);
+            this.rtxtAddress.Size = new System.Drawing.Size(184, 94);
             this.rtxtAddress.TabIndex = 95;
             this.rtxtAddress.Text = "";
             // 
@@ -392,11 +366,10 @@ namespace Transportation.App
             // 
             this.rtxtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtId.Location = new System.Drawing.Point(508, 199);
-            this.rtxtId.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxtId.Location = new System.Drawing.Point(250, 156);
             this.rtxtId.Name = "rtxtId";
             this.rtxtId.ReadOnly = true;
-            this.rtxtId.Size = new System.Drawing.Size(275, 27);
+            this.rtxtId.Size = new System.Drawing.Size(206, 22);
             this.rtxtId.TabIndex = 97;
             this.rtxtId.Text = "";
             // 
@@ -404,10 +377,9 @@ namespace Transportation.App
             // 
             this.pictureBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(487, 167);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Location = new System.Drawing.Point(234, 130);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(316, 92);
+            this.pictureBox7.Size = new System.Drawing.Size(237, 75);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 96;
             this.pictureBox7.TabStop = false;
@@ -451,8 +423,7 @@ namespace Transportation.App
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUser.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUser.EnableHeadersVisualStyles = false;
-            this.dgvUser.Location = new System.Drawing.Point(849, 138);
-            this.dgvUser.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUser.Location = new System.Drawing.Point(512, 117);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -467,7 +438,7 @@ namespace Transportation.App
             this.dgvUser.RowHeadersWidth = 51;
             this.dgvUser.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUser.Size = new System.Drawing.Size(724, 562);
+            this.dgvUser.Size = new System.Drawing.Size(543, 428);
             this.dgvUser.TabIndex = 98;
             this.dgvUser.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvUser_DataBindingComplete);
             this.dgvUser.DoubleClick += new System.EventHandler(this.dgvUser_DoubleClick);
@@ -557,10 +528,9 @@ namespace Transportation.App
             // 
             this.rtxtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtSearch.Location = new System.Drawing.Point(1069, 60);
-            this.rtxtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxtSearch.Location = new System.Drawing.Point(532, 48);
             this.rtxtSearch.Name = "rtxtSearch";
-            this.rtxtSearch.Size = new System.Drawing.Size(211, 27);
+            this.rtxtSearch.Size = new System.Drawing.Size(158, 22);
             this.rtxtSearch.TabIndex = 101;
             this.rtxtSearch.Text = "";
             this.rtxtSearch.TextChanged += new System.EventHandler(this.rtxtSearch_TextChanged);
@@ -569,10 +539,9 @@ namespace Transportation.App
             // 
             this.pictureBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(1037, 38);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Location = new System.Drawing.Point(512, 28);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(276, 71);
+            this.pictureBox8.Size = new System.Drawing.Size(207, 58);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 100;
             this.pictureBox8.TabStop = false;
@@ -582,16 +551,15 @@ namespace Transportation.App
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1321, 60);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(725, 45);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(202, 29);
+            this.label10.Size = new System.Drawing.Size(158, 25);
             this.label10.TabIndex = 99;
             this.label10.Text = "Search by Name";
             // 
             // controlUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.rtxtSearch);
@@ -626,9 +594,8 @@ namespace Transportation.App
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "controlUser";
-            this.Size = new System.Drawing.Size(1596, 1033);
+            this.Size = new System.Drawing.Size(1068, 595);
             this.Load += new System.EventHandler(this.userControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
