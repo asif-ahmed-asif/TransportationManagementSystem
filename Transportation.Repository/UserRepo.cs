@@ -27,7 +27,7 @@ namespace Transportation.Repository
 
         public static string GetId()
         {
-            string sql = "select TOP 1 * from [user] order by user_id DESC;";
+            string sql = "select TOP 1 * from [user] order by id DESC;";
             var data = DataAccess.GetDataTable(sql);
             if (data.Rows.Count == 1)
             {

@@ -13,7 +13,7 @@ namespace Transportation.Repository
     {
         public static string GetId() //Used to generate an Id
         {
-            string sql = "select TOP 1 * from [Schedule] order by schedule_id DESC;";
+            string sql = "select TOP 1 * from [Schedule] order by id DESC;";
             var data = DataAccess.GetDataTable(sql);
             if (data.Rows.Count == 1)
             {
