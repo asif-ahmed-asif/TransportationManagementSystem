@@ -28,7 +28,12 @@ namespace Transportation.App
             var idExists = UserRepo.SearchUserId(this.rtxtId.Text);
             if (idExists)
             {
-                
+                if (this.cmbType.Text == "Admin")
+                {
+                    MessageBox.Show("Can not create a new admin");
+                    return;
+                }
+
                 try
                 {
                     if (!this.UpdateFillEntity())

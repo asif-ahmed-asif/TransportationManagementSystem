@@ -103,11 +103,14 @@ namespace Transportation.App
             if (MessageBox.Show("Are you sure to logout?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
                 return;
         
-        MainControl.cashierFrom = "";
-        MainControl.cashierTo = "";
-        MainControl.cashierBusType = "";
-        MainControl.cashierJourneyDate = "";
-        MainControl.cashierId = "";
+            MainControl.cashierFrom = "";
+            MainControl.cashierTo = "";
+            MainControl.cashierBusType = "";
+            MainControl.cashierJourneyDate = "";
+            MainControl.cashierId = "";
+            MainControl.booking = null;
+            MainControl.scheduleId = "";
+            MainControl.selectedSeatCount = 0;
 
             frmLogin login = new frmLogin();
             login.Show();
