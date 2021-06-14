@@ -47,7 +47,7 @@ namespace Transportation.App
             // 
             this.btnBack.Location = new System.Drawing.Point(147, 27);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(117, 23);
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -61,6 +61,7 @@ namespace Transportation.App
             this.button1.TabIndex = 1;
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // dgvCashierSchedule

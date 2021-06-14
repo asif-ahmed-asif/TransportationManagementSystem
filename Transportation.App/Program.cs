@@ -20,9 +20,9 @@ namespace Transportation.App
 
            
             //Application.Run(new frmAdminDashboard());
-            Application.Run(new frmLogin());
+            //Application.Run(new frmLogin());
             //Application.Run(new frmAccountDashboard());
-            //Application.Run(new frmCashierDashboard());
+            Application.Run(new frmCashierDashboard());
            
         }
     }
