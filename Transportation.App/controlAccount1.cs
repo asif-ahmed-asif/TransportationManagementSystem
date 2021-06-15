@@ -21,6 +21,7 @@ namespace Transportation.App
         private void controlAccount1_Load(object sender, EventArgs e)
         {
             this.dtpReport.MaxDate = DateTime.Now;
+            this.dateTimePickerStartsFrom.MaxDate = DateTime.Now;
             this.FillUserSalesDataGridView(); //When form is load, data will be shown interms of the current date in the data grid view
             //MessageBox.Show(this.dtpReport.Value.ToString("yyyy/MM/dd"));
         }
