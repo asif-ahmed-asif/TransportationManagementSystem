@@ -11,12 +11,14 @@ namespace Transportation.Validation
             RuleFor(r => r.DeptLocation)
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("Departure Location is required!")
-                .MaximumLength(50).WithMessage("Maximum 50 characters for Departure Location!");
-            
+                .MaximumLength(50).WithMessage("Maximum 50 characters for Departure Location!")
+                .MinimumLength(5).WithMessage("Minimum 5 characters for Departure Location!");
+
             RuleFor(dest => dest.Destination)
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("Destination is required!")
-                .MaximumLength(50).WithMessage("Maximum 50 characters is valid for Destination!");
+                .MaximumLength(50).WithMessage("Maximum 50 characters is valid for Destination!")
+                .MinimumLength(5).WithMessage("Minimum 5 characters for Destination!");
 
             RuleFor(busNo => busNo.BusNo)
                 .Cascade(CascadeMode.Stop)

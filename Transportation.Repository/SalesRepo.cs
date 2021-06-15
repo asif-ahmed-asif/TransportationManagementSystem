@@ -9,12 +9,12 @@ namespace Transportation.Repository
 {
     public class SalesRepo
     {
-        public static List<Sales> UserSalesByDate(string date)
+        public static List<Sales> UserSalesByDate(string dateStartsFrom, string dateEndsTo)
         {
             string sqlQuery = @"select sales.*, [user].name
                                 from sales, [user]
                                 where sales.user_id = [user].user_id
-                                and date = '"+date+"';";
+                                and date between '" + dateStartsFrom + "' and '" + dateEndsTo + "';";
             
             DataTable data = DataAccess.GetDataTable(sqlQuery);
 
@@ -79,16 +79,16 @@ namespace Transportation.Repository
             return row == 1;
         }
         
-        public static List<Sales> LiveSearchUser(string key, string date)
+        public static List<Sales> LiveSearchUser(string key, string dateStartsFrom, string dateEndsTo)
         {
             string sqlQuery = $@"select sales.*, [user].name
                                 from sales, [user]
                                 where sales.user_id = [user].user_id
-                                and date = '{date}'
+                                and date between '{dateStartsFrom}' and '{dateEndsTo}'
                                 and [user].user_id like '%" + key + "%'" +
                               " or [user].name like '%" + key + "%'" +
                               " and sales.user_id = [user].user_id" +
-                              " and date = '" + date + "'";
+                              $" and date between '{dateStartsFrom}' and '{dateEndsTo}'";
             
             DataTable data = DataAccess.GetDataTable(sqlQuery);
 

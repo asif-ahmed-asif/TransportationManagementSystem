@@ -24,11 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="11334c40-00de-4270-a28b-359055b33d6f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.App/controlRoute.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/controlRoute.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transportation.App/controlAccount1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/controlAccount1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transportation.App/controlAccount1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/controlAccount1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transportation.App/controlAccount1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/controlAccount1.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transportation.App/controlRoute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/controlRoute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.Repository/RouteRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Repository/RouteRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.Repository/ScheduleRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Repository/ScheduleRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.Repository/UserRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Repository/UserRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transportation.Repository/SalesRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Repository/SalesRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transportation.Validation/RouteValidation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Validation/RouteValidation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,6 @@
         <option value="$PROJECT_DIR$/Transportation.Validation/BusValidation.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/controlRoute.Designer.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/controlUser.Designer.cs" />
-        <option value="$PROJECT_DIR$/Transportation.Validation/RouteValidation.cs" />
         <option value="$PROJECT_DIR$/Transportation.Entity/Route.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/App.config" />
         <option value="$PROJECT_DIR$/Transportation.Entity/Bus.cs" />
@@ -70,16 +70,17 @@
         <option value="$PROJECT_DIR$/Transportation.Repository/AccountRepo.cs" />
         <option value="$PROJECT_DIR$/Transportation.Entity/Sales.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/controlAccount1.Designer.cs" />
-        <option value="$PROJECT_DIR$/Transportation.App/controlAccount1.cs" />
-        <option value="$PROJECT_DIR$/Transportation.Repository/SalesRepo.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/controlRoute2.Designer.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/controlUser.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/controlRoute2.cs" />
-        <option value="$PROJECT_DIR$/Transportation.App/Program.cs" />
         <option value="$PROJECT_DIR$/Transportation.Repository/RouteRepo.cs" />
         <option value="$PROJECT_DIR$/Transportation.Repository/ScheduleRepo.cs" />
         <option value="$PROJECT_DIR$/Transportation.Repository/UserRepo.cs" />
+        <option value="$PROJECT_DIR$/Transportation.Repository/SalesRepo.cs" />
+        <option value="$PROJECT_DIR$/Transportation.App/controlAccount1.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/controlRoute.cs" />
+        <option value="$PROJECT_DIR$/Transportation.Validation/RouteValidation.cs" />
+        <option value="$PROJECT_DIR$/Transportation.App/Program.cs" />
       </list>
     </option>
   </component>
@@ -142,7 +143,8 @@
       <workItem from="1623423387472" duration="3136000" />
       <workItem from="1623499657540" duration="27678000" />
       <workItem from="1623558752371" duration="5247000" />
-      <workItem from="1623590336430" duration="8204000" />
+      <workItem from="1623590336430" duration="10073000" />
+      <workItem from="1623777125302" duration="4783000" />
     </task>
     <servers />
   </component>
@@ -175,86 +177,86 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="519" height="464" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1623592030388" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1623600067611">
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1623781851963">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623600067611" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1623600067611">
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623781851963" />
+    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1623781851963">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623600067611" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1623600067610">
+    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623781851963" />
+    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1623781851963">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623600067610" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1623600067611">
+    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623781851963" />
+    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1623781851963">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623600067611" />
-    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1623592465775">
+    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623781851963" />
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1623607136360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623607136360" />
+    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1623607136360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1623607136360" />
+    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1623607136360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1623607136360" />
+    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1623607136360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.2.bottom" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1623607136360" />
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom" timestamp="1623607136360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.2.center" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623607136360" />
+    <state width="1493" height="288" key="GridCell.Tab.2.center" timestamp="1623607136360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.2.left" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1623607136360" />
+    <state width="1493" height="288" key="GridCell.Tab.2.left" timestamp="1623607136360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.2.right" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1623607136360" />
+    <state width="1493" height="288" key="GridCell.Tab.2.right" timestamp="1623607136360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.3.bottom" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1623607136360" />
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom" timestamp="1623607136361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.3.center" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623607136361" />
+    <state width="1493" height="288" key="GridCell.Tab.3.center" timestamp="1623607136361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.3.left" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1623607136361" />
+    <state width="1493" height="288" key="GridCell.Tab.3.left" timestamp="1623607136360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.3.right" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1623607136360" />
+    <state width="1493" height="288" key="GridCell.Tab.3.right" timestamp="1623607136361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.4.bottom" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1623607136361" />
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom" timestamp="1623607136361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.4.center" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623607136361" />
+    <state width="1493" height="288" key="GridCell.Tab.4.center" timestamp="1623607136361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.4.left" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1623607136361" />
+    <state width="1493" height="288" key="GridCell.Tab.4.left" timestamp="1623607136361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
-    <state width="1493" height="288" key="GridCell.Tab.4.right" timestamp="1623592465775">
+    <state width="1493" height="288" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1623607136361" />
+    <state width="1493" height="288" key="GridCell.Tab.4.right" timestamp="1623607136361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1623592465775" />
+    <state width="1493" height="288" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1623607136361" />
     <state x="399" y="71" key="ToolboxManager" timestamp="1622216712204">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -288,10 +290,10 @@
           <line>94</line>
           <properties documentPath="D:\TransportationManagementSystem\Transportation.Repository\SalesRepo.cs" initialLine="93">
             <startOffsets>
-              <option value="3484" />
+              <option value="3652" />
             </startOffsets>
             <endOffsets>
-              <option value="3526" />
+              <option value="3694" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
@@ -301,10 +303,10 @@
           <line>92</line>
           <properties documentPath="D:\TransportationManagementSystem\Transportation.Repository\SalesRepo.cs" initialLine="91">
             <startOffsets>
-              <option value="3419" />
+              <option value="3587" />
             </startOffsets>
             <endOffsets>
-              <option value="3470" />
+              <option value="3638" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
@@ -314,10 +316,10 @@
           <line>66</line>
           <properties documentPath="D:\TransportationManagementSystem\Transportation.App\controlAccount1.cs" initialLine="66">
             <startOffsets>
-              <option value="2072" />
+              <option value="2169" />
             </startOffsets>
             <endOffsets>
-              <option value="2204" />
+              <option value="2361" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
@@ -327,10 +329,10 @@
           <line>67</line>
           <properties documentPath="D:\TransportationManagementSystem\Transportation.App\controlAccount1.cs" initialLine="67">
             <startOffsets>
-              <option value="2217" />
+              <option value="2374" />
             </startOffsets>
             <endOffsets>
-              <option value="2218" />
+              <option value="2375" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
