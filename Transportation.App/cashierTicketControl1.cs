@@ -75,6 +75,7 @@ namespace Transportation.App
         private void cashierTicketControl1_Load(object sender, EventArgs e)
         {
             this.dateTimePicker1.MinDate = DateTime.Now;
+            this.dateTimePicker1.MaxDate = this.dateTimePicker1.Value.AddDays(30);
 
             try
             {
