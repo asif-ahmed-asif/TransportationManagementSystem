@@ -326,18 +326,22 @@ namespace Transportation.App
 
         private void dgvRoute_DoubleClick(object sender, EventArgs e)
         {
-            this.changeStatusBtn.Visible = true;
-            this.routeStatus.Visible = true;
-            this.routeStatus.Text = this.dgvRoute.CurrentRow.Cells[7].Value.ToString();
+            try
+            {
+                this.changeStatusBtn.Visible = true;
+                this.routeStatus.Visible = true;
+                this.routeStatus.Text = this.dgvRoute.CurrentRow.Cells[7].Value.ToString();
             
-            this.departureText.Text = this.dgvRoute.CurrentRow.Cells[2].Value.ToString();
-            this.richTextBox1.Text = this.dgvRoute.CurrentRow.Cells[3].Value.ToString();
-            this.cmbBus.Text = this.dgvRoute.CurrentRow.Cells[6].Value.ToString();
-            this.dateTimePicker1.Text = this.dgvRoute.CurrentRow.Cells[4].Value.ToString();
-            this.dateTimePicker2.Text = this.dgvRoute.CurrentRow.Cells[5].Value.ToString();
-            this.disableBusIdText.Text = this.dgvRoute.CurrentRow.Cells[0].Value.ToString();
-            this.invisibleScheduleIdText.Text = this.dgvRoute.CurrentRow.Cells[1].Value.ToString();
-            this.fareTextField.Text = this.dgvRoute.CurrentRow.Cells[8].Value.ToString();
+                this.departureText.Text = this.dgvRoute.CurrentRow.Cells[2].Value.ToString();
+                this.richTextBox1.Text = this.dgvRoute.CurrentRow.Cells[3].Value.ToString();
+                this.cmbBus.Text = this.dgvRoute.CurrentRow.Cells[6].Value.ToString();
+                this.dateTimePicker1.Text = this.dgvRoute.CurrentRow.Cells[4].Value.ToString();
+                this.dateTimePicker2.Text = this.dgvRoute.CurrentRow.Cells[5].Value.ToString();
+                this.disableBusIdText.Text = this.dgvRoute.CurrentRow.Cells[0].Value.ToString();
+                this.invisibleScheduleIdText.Text = this.dgvRoute.CurrentRow.Cells[1].Value.ToString();
+                this.fareTextField.Text = this.dgvRoute.CurrentRow.Cells[8].Value.ToString();
+            }
+            catch (Exception exception) { }
         }
 
         private void FillRouteDataGridView()

@@ -46,17 +46,22 @@ namespace Transportation.App
             this.ControlAccountUserSearch = new System.Windows.Forms.RichTextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.Searchlabel1 = new System.Windows.Forms.Label();
+            this.dateTimePickerStartsFrom = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Controls.Add(this.dtpReport);
-            this.panel3.Location = new System.Drawing.Point(564, 70);
+            this.panel3.Location = new System.Drawing.Point(793, 68);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(345, 23);
@@ -77,7 +82,7 @@ namespace Transportation.App
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox3.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(488, 29);
+            this.pictureBox3.Location = new System.Drawing.Point(717, 27);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(495, 105);
@@ -219,10 +224,61 @@ namespace Transportation.App
             this.Searchlabel1.TabIndex = 136;
             this.Searchlabel1.Text = "Search by User";
             // 
+            // dateTimePickerStartsFrom
+            // 
+            this.dateTimePickerStartsFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerStartsFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.dateTimePickerStartsFrom.Location = new System.Drawing.Point(258, 66);
+            this.dateTimePickerStartsFrom.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerStartsFrom.Name = "dateTimePickerStartsFrom";
+            this.dateTimePickerStartsFrom.Size = new System.Drawing.Size(344, 26);
+            this.dateTimePickerStartsFrom.TabIndex = 14;
+            this.dateTimePickerStartsFrom.ValueChanged += new System.EventHandler(this.dateTimePickerStartsFrom_ValueChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(185, 27);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(495, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 137;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.Location = new System.Drawing.Point(258, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 29);
+            this.label1.TabIndex = 138;
+            this.label1.Text = "From";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label2.Location = new System.Drawing.Point(1096, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 29);
+            this.label2.TabIndex = 139;
+            this.label2.Text = "To";
+            // 
             // controlAccount1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dateTimePickerStartsFrom);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Searchlabel1);
             this.Controls.Add(this.ControlAccountUserSearch);
             this.Controls.Add(this.pictureBox8);
@@ -238,9 +294,16 @@ namespace Transportation.App
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+
+        private System.Windows.Forms.DateTimePicker dateTimePickerStartsFrom;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
         private System.Windows.Forms.RichTextBox ControlAccountUserSearch;
         private System.Windows.Forms.Label Searchlabel1;

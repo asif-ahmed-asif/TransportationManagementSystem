@@ -31,7 +31,7 @@ namespace Transportation.App
 
             try
             {
-                this.dgvDate.DataSource = SalesRepo.UserSalesByDate(DateTime.Now.ToString("yyyy/MM/dd"));
+                this.dgvDate.DataSource = SalesRepo.UserSalesByDate(DateTime.Now.ToString("yyyy/MM/dd"), DateTime.Now.ToString("yyyy/MM/dd"));
             }
             catch (Exception exception)
             {
@@ -49,7 +49,7 @@ namespace Transportation.App
             this.dgvDate.AutoGenerateColumns = false;
             try
             {
-                this.dgvDate.DataSource = SalesRepo.UserSalesByDate(this.dtpReport.Value.ToString("yyyy/MM/dd"));
+                this.dgvDate.DataSource = SalesRepo.UserSalesByDate(this.dateTimePickerStartsFrom.Value.ToString("yyyy/MM/dd"), this.dtpReport.Value.ToString("yyyy/MM/dd"));
             }
             catch (Exception exception)
             {
@@ -64,7 +64,7 @@ namespace Transportation.App
         {
             try
             {
-                this.dgvDate.DataSource = SalesRepo.LiveSearchUser(this.ControlAccountUserSearch.Text, this.dtpReport.Value.ToString("yyyy/MM/dd"));
+                this.dgvDate.DataSource = SalesRepo.LiveSearchUser(this.ControlAccountUserSearch.Text, this.dateTimePickerStartsFrom.Value.ToString("yyyy/MM/dd"), this.dtpReport.Value.ToString("yyyy/MM/dd"));
             }
             catch (Exception exception)
             {
@@ -75,6 +75,22 @@ namespace Transportation.App
         private void dgvDate_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             this.dgvDate.ClearSelection();
+        }
+
+        private void dateTimePickerStartsFrom_ValueChanged(object sender, EventArgs e)
+        {
+            this.dgvDate.AutoGenerateColumns = false;
+            try
+            {
+                this.dgvDate.DataSource = SalesRepo.UserSalesByDate(this.dateTimePickerStartsFrom.Value.ToString("yyyy/MM/dd"), this.dtpReport.Value.ToString("yyyy/MM/dd"));
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong!" + exception.Message);
+            }
+            
+            this.dgvDate.ClearSelection();
+            this.dgvDate.Refresh();
         }
     }
 }
