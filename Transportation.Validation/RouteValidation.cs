@@ -23,10 +23,6 @@ namespace Transportation.Validation
             RuleFor(busNo => busNo.BusNo)
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("Select a Bus Number");
-
-            RuleFor(t => t.BusType)
-                .Cascade(CascadeMode.Stop)
-                .NotEmpty().WithMessage("Select a Bus Type");
             
             RuleFor(fare => fare.Fare)
                 .Cascade(CascadeMode.Stop)

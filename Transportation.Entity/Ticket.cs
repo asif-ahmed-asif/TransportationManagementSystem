@@ -17,6 +17,7 @@ namespace Transportation.Entity
         public string FareId { get; set; }
         public string DeptLocation { get; set; }
         public string Destination { get; set; }
+        public string BusType { get; set; }
         public string DeptTime { get; set; }
     }
 }
