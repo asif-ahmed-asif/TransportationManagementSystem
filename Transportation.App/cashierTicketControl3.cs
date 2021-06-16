@@ -17,6 +17,8 @@ namespace Transportation.App
     public partial class cashierTicketControl3 : UserControl
     {
         private Ticket Ticket { get; set; }
+        private Booking booking = new Booking();
+            
         public cashierTicketControl3()
         {
             InitializeComponent();
@@ -71,6 +73,20 @@ namespace Transportation.App
             ticket.JourneyDate = MainControl.cashierJourneyDate;
             ticket.SeatNo = MainControl.booking.Seats;
             ticket.ScheduleId = MainControl.booking.ScheduleId;
+            this.booking= MainControl.booking;
+            try
+            {
+
+                if (BookingRepo.Save(this.booking))
+                {
+                    MessageBox.Show("Booking data saved");
+                }
+
+            }
+            catch (Exception save)
+            {
+                MessageBox.Show("Can not save into Booking Table" + save.Message);
+            }
             TicketRepo.Insert(ticket);
             this.SaveSalesAmount(ticket.ScheduleId);
             frmPrintedTicket printT= new frmPrintedTicket();
