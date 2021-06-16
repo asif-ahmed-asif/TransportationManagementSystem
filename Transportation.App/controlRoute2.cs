@@ -127,7 +127,6 @@ namespace Transportation.App
                     Destination = this.txtReturnDestination.Text,
                     BusNo = this.cmbBusNo.Text,
                     Fare = this.invisibleFareTextField.Text,
-                    BusType = "01",
                     Status = "Active"
                 };
             }

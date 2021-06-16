@@ -18,7 +18,7 @@ namespace Transportation.App
     {
 
         private List<Route> RouteList;
-        private Route Route { get; set; }
+        private Ticket Ticket { get; set; }
         public cashierTicketControl1()
         {
             InitializeComponent();
@@ -40,17 +40,15 @@ namespace Transportation.App
         private bool Validation()
         {
             
-            this.Route = new Route
+            this.Ticket = new Ticket
             {
                 DeptLocation = this.cboFrom.Text,
                 Destination = this.cboTo.Text,
-                BusType = this.cmbBusType.Text,
-                BusNo = "null",
-                Fare = "5"
+                BusType = this.cmbBusType.Text
             };
 
-            RouteValidation routeValidation = new RouteValidation();
-            ValidationResult validationResult = routeValidation.Validate(this.Route);
+            CashierValidation cashierValidation = new CashierValidation();
+            ValidationResult validationResult = cashierValidation.Validate(this.Ticket);
 
             IList<ValidationFailure> failures = validationResult.Errors;
 
@@ -63,9 +61,9 @@ namespace Transportation.App
                     return false;
                 }
             }
-            MainControl.cashierBusType = this.Route.BusType;
-            MainControl.cashierFrom = this.Route.DeptLocation;
-            MainControl.cashierTo = this.Route.Destination;
+            MainControl.cashierBusType = this.Ticket.BusType;
+            MainControl.cashierFrom = this.Ticket.DeptLocation;
+            MainControl.cashierTo = this.Ticket.Destination;
             MainControl.cashierJourneyDate = dateTimePicker1.Value.ToString("yyyy/MM/dd");
 
             return true;
