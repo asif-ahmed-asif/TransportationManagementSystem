@@ -129,19 +129,7 @@ namespace Transportation.App
             MainControl.selectedSeatCount = this.selectedSeatCount;
 
             this.FillEntity();
-            try
-            {
-                
-                if (BookingRepo.Save(this.Booking))
-                {
-                    MessageBox.Show("Booking data saved");
-                }
-
-            }
-            catch (Exception save)
-            {
-                MessageBox.Show("Can not save into Booking Table" + save.Message);
-            }
+           
             MainControl.booking = this.Booking;
 
         }
