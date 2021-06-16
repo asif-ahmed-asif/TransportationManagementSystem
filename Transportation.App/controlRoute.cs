@@ -33,6 +33,7 @@ namespace Transportation.App
 
         private void FillDropDownFromDb() //Used to Fill the Drop Down List with bus_no
         {
+            this.cmbBus.Items.Clear();
             try
             {
                 List<Bus> buses = BusRepo.GetAll();
@@ -277,6 +278,7 @@ namespace Transportation.App
             this.richTextBox1.Text = "";
             try
             {
+                this.FillDropDownFromDb();
                 this.cmbBus.SelectedIndex = -1;
             }
             catch (Exception e) { }
@@ -333,7 +335,9 @@ namespace Transportation.App
             
                 this.departureText.Text = this.dgvRoute.CurrentRow.Cells[2].Value.ToString();
                 this.richTextBox1.Text = this.dgvRoute.CurrentRow.Cells[3].Value.ToString();
-                this.cmbBus.Text = this.dgvRoute.CurrentRow.Cells[6].Value.ToString();
+                this.FillDropDownFromDb();
+                this.cmbBus.Items.Add(this.dgvRoute.CurrentRow.Cells["bus_no"].Value.ToString());
+                this.cmbBus.Text = this.dgvRoute.CurrentRow.Cells["bus_no"].Value.ToString();
                 this.dateTimePicker1.Text = this.dgvRoute.CurrentRow.Cells[4].Value.ToString();
                 this.dateTimePicker2.Text = this.dgvRoute.CurrentRow.Cells[5].Value.ToString();
                 this.disableBusIdText.Text = this.dgvRoute.CurrentRow.Cells[0].Value.ToString();

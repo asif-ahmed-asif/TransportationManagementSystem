@@ -112,7 +112,7 @@ namespace Transportation.App
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Something went wrong when inserting schedule");
+                MessageBox.Show("Please Select A Bus No", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
