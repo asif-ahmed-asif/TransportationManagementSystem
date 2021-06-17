@@ -122,18 +122,30 @@ namespace Transportation.Repository
 
         }
 
-        private static void getRouteId(string from, string to, string busType)
+        private static string getRouteId(string scheduleId)
         {
-            busType = BusTypeRepo.GetBusTypeForBus(busType);
-            string sql = $"select route_id,route.bus_no from route join bus on route.bus_no = bus.bus_no where dept_location = '{from}' and destination = '{to}' and type_id = '{busType}'";
-            // var row
-           // return "1";
+
+            string sql = $"select route_id from schedule where swchedule_id='{scheduleId}'";
+            var row = DataAccess.GetDataTable(sql);
+            string id=row.Rows[0][0].ToString();//route id
+            return id;
         }
 
+        public static string GetFare(string scheduleId)
+        {
+            
+            string sql = $@"select fare from route
+                            join schedule
+                            on route.route_id=schedule.route_id
+                            where schedule_id='{scheduleId}'";
+            var row = DataAccess.GetDataTable(sql);
+            string fare = row.Rows[0][0].ToString();//route id
+            return fare;
+        }
         public static void Insert(Ticket ticket)
         {
 
-            string sql = $"insert into ticket values('{ticket.CustomerName}','{ticket.CustomerPhone}','{ticket.JourneyDate}','{ticket.SeatNo}','{ticket.ScheduleId}')";
+            string sql = $"insert into ticket values('{ticket.CustomerName}','{ticket.CustomerPhone}','{ticket.JourneyDate}','{ticket.SeatNo}','{ticket.ScheduleId}','{ticket.TotalFare}')";
             DataAccess.ExecuteDmlQuery(sql);
         }
     }

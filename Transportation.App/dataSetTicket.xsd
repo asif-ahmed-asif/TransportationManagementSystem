@@ -12,7 +12,7 @@
   <xs:element name="DataSetTicket" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetTicket" msprop:Generator_UserDSName="DataSetTicket">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="PrintTable" msprop:Generator_TableClassName="PrintTableDataTable" msprop:Generator_TableVarName="tablePrintTable" msprop:Generator_RowChangedName="PrintTableRowChanged" msprop:Generator_TablePropName="PrintTable" msprop:Generator_RowDeletingName="PrintTableRowDeleting" msprop:Generator_RowChangingName="PrintTableRowChanging" msprop:Generator_RowEvHandlerName="PrintTableRowChangeEventHandler" msprop:Generator_RowDeletedName="PrintTableRowDeleted" msprop:Generator_RowClassName="PrintTableRow" msprop:Generator_UserTableName="PrintTable" msprop:Generator_RowEvArgName="PrintTableRowChangeEvent">
+        <xs:element name="PrintTable" msprop:Generator_TableClassName="PrintTableDataTable" msprop:Generator_TableVarName="tablePrintTable" msprop:Generator_TablePropName="PrintTable" msprop:Generator_RowDeletingName="PrintTableRowDeleting" msprop:Generator_RowChangingName="PrintTableRowChanging" msprop:Generator_RowEvHandlerName="PrintTableRowChangeEventHandler" msprop:Generator_RowDeletedName="PrintTableRowDeleted" msprop:Generator_UserTableName="PrintTable" msprop:Generator_RowChangedName="PrintTableRowChanged" msprop:Generator_RowEvArgName="PrintTableRowChangeEvent" msprop:Generator_RowClassName="PrintTableRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
@@ -23,6 +23,8 @@
               <xs:element name="dept_location" msprop:Generator_ColumnVarNameInTable="columndept_location" msprop:Generator_ColumnPropNameInRow="dept_location" msprop:Generator_ColumnPropNameInTable="dept_locationColumn" msprop:Generator_UserColumnName="dept_location" type="xs:string" minOccurs="0" />
               <xs:element name="destination" msprop:Generator_ColumnVarNameInTable="columndestination" msprop:Generator_ColumnPropNameInRow="destination" msprop:Generator_ColumnPropNameInTable="destinationColumn" msprop:Generator_UserColumnName="destination" type="xs:string" minOccurs="0" />
               <xs:element name="dept_time" msprop:Generator_ColumnVarNameInTable="columndept_time" msprop:Generator_ColumnPropNameInRow="dept_time" msprop:Generator_ColumnPropNameInTable="dept_timeColumn" msprop:Generator_UserColumnName="dept_time" type="xs:string" minOccurs="0" />
+              <xs:element name="fare" msprop:Generator_ColumnVarNameInTable="columnfare" msprop:Generator_ColumnPropNameInRow="fare" msprop:Generator_ColumnPropNameInTable="fareColumn" msprop:Generator_UserColumnName="fare" type="xs:string" minOccurs="0" />
+              <xs:element name="total_fare" msprop:Generator_ColumnVarNameInTable="columntotal_fare" msprop:Generator_ColumnPropNameInRow="total_fare" msprop:Generator_ColumnPropNameInTable="total_fareColumn" msprop:Generator_UserColumnName="total_fare" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

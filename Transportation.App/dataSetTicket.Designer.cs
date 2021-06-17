@@ -295,6 +295,10 @@ namespace Transportation.App {
             
             private global::System.Data.DataColumn columndept_time;
             
+            private global::System.Data.DataColumn columnfare;
+            
+            private global::System.Data.DataColumn columntotal_fare;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public PrintTableDataTable() {
@@ -394,6 +398,22 @@ namespace Transportation.App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fareColumn {
+                get {
+                    return this.columnfare;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn total_fareColumn {
+                get {
+                    return this.columntotal_fare;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,7 +449,7 @@ namespace Transportation.App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PrintTableRow AddPrintTableRow(string id, string customer_name, string customer_phone, string journey_date, string seat_no, string dept_location, string destination, string dept_time) {
+            public PrintTableRow AddPrintTableRow(string id, string customer_name, string customer_phone, string journey_date, string seat_no, string dept_location, string destination, string dept_time, string fare, string total_fare) {
                 PrintTableRow rowPrintTableRow = ((PrintTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -439,7 +459,9 @@ namespace Transportation.App {
                         seat_no,
                         dept_location,
                         destination,
-                        dept_time};
+                        dept_time,
+                        fare,
+                        total_fare};
                 rowPrintTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPrintTableRow);
                 return rowPrintTableRow;
@@ -470,6 +492,8 @@ namespace Transportation.App {
                 this.columndept_location = base.Columns["dept_location"];
                 this.columndestination = base.Columns["destination"];
                 this.columndept_time = base.Columns["dept_time"];
+                this.columnfare = base.Columns["fare"];
+                this.columntotal_fare = base.Columns["total_fare"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -491,6 +515,10 @@ namespace Transportation.App {
                 base.Columns.Add(this.columndestination);
                 this.columndept_time = new global::System.Data.DataColumn("dept_time", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndept_time);
+                this.columnfare = new global::System.Data.DataColumn("fare", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfare);
+                this.columntotal_fare = new global::System.Data.DataColumn("total_fare", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal_fare);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -761,6 +789,38 @@ namespace Transportation.App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string fare {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrintTable.fareColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'fare\' in table \'PrintTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrintTable.fareColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string total_fare {
+                get {
+                    try {
+                        return ((string)(this[this.tablePrintTable.total_fareColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_fare\' in table \'PrintTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrintTable.total_fareColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tablePrintTable.idColumn);
             }
@@ -853,6 +913,30 @@ namespace Transportation.App {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setdept_timeNull() {
                 this[this.tablePrintTable.dept_timeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsfareNull() {
+                return this.IsNull(this.tablePrintTable.fareColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetfareNull() {
+                this[this.tablePrintTable.fareColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Istotal_fareNull() {
+                return this.IsNull(this.tablePrintTable.total_fareColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Settotal_fareNull() {
+                this[this.tablePrintTable.total_fareColumn] = global::System.Convert.DBNull;
             }
         }
         
