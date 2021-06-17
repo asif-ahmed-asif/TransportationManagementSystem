@@ -49,6 +49,7 @@ namespace Transportation.App
             this.label1 = new System.Windows.Forms.Label();
             this.invisibleBusNoText = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.deleteBusBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvBus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox8)).BeginInit();
@@ -267,11 +268,24 @@ namespace Transportation.App
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
+            // deleteBusBtn
+            // 
+            this.deleteBusBtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.deleteBusBtn.Location = new System.Drawing.Point(323, 263);
+            this.deleteBusBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.deleteBusBtn.Name = "deleteBusBtn";
+            this.deleteBusBtn.Size = new System.Drawing.Size(212, 50);
+            this.deleteBusBtn.TabIndex = 135;
+            this.deleteBusBtn.Text = "Delete";
+            this.deleteBusBtn.UseVisualStyleBackColor = false;
+            this.deleteBusBtn.Click += new System.EventHandler(this.deleteBusBtn_Click);
+            // 
             // controlBus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.deleteBusBtn);
             this.Controls.Add(this.invisibleBusNoText);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvBus);
@@ -296,6 +310,8 @@ namespace Transportation.App
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button deleteBusBtn;
 
         private System.Windows.Forms.RichTextBox invisibleBusNoText;
 

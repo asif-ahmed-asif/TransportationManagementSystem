@@ -210,5 +210,46 @@ namespace Transportation.App
             this.invisibleBusNoText.Text = this.dgvBus.CurrentRow.Cells[0].Value.ToString();
             this.rtxtPhn.Enabled = false;
         }
+
+        private void deleteBusBtn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete?", caption: "Confirmation", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                //MessageBox.Show("hello");
+                //when delete button is clicked the bus will be null to route table since it is foreign key
+                bool ifBusSetsToNullInRoute = RouteRepo.SetNullToBusNum(this.rtxtPhn.Text);
+
+                if (ifBusSetsToNullInRoute)
+                {
+                    try
+                    {
+                        bool ifBusDeleted = BusRepo.Delete(this.rtxtPhn.Text);
+
+                        if (ifBusDeleted)
+                        {
+                            MessageBox.Show("Deleted Successfully!\nBus associated with routes is inactivated");
+                            
+                            ClearBusInput();
+                            this.invisibleBusNoText.Text = "";
+                            this.FillBusDataGridView();
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show("Something went wrong when deleting the bus");
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong when setting bus number to null to route\n"+exception);
+            }
+        }
     }
 }
