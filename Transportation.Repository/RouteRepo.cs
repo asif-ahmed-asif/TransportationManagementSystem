@@ -308,5 +308,17 @@ namespace Transportation.Repository
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1;
         }
+
+        public static bool SetNullToBusNum(string busNo)
+        {
+            string sql = "Update [Route] SET bus_no = null, status = 'Inactive' where bus_no = '"+busNo+"';";
+            var row = DataAccess.ExecuteDmlQuery(sql);
+            if (row >= 0)
+            {
+                return true;
+            }
+            
+            return false;
+        }
     }
 }
