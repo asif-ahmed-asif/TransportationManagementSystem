@@ -34,20 +34,22 @@ namespace Transportation.App
                 {
                     if(loginDetails[1] == "Active")
                     {
-                        this.Visible = false;
+                        this.Hide();
                         if (loginDetails[0] == "Admin")
                         {
-                            new frmAdminDashboard().Show();
+                            new frmAdminDashboard(this).Show();
                         }
                         else if (loginDetails[0] == "Cashier")
                         {
                             MainControl.cashierId = this.txtUserName.Text;
-                            new frmCashierDashboard().Show();
+                            new frmCashierDashboard(this).Show();
                         }
                         else if (loginDetails[0] == "Accountant")
                         {
-                            new frmAccountDashboard().Show();
+                            new frmAccountDashboard(this).Show();
                         }
+                        this.txtUserName.Text = "";
+                        this.txtPassword.Text = "";
                     }
                     else
                     {

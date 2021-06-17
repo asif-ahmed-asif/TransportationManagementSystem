@@ -12,6 +12,12 @@ namespace Transportation.App
 {
     public partial class frmCashierDashboard : Form
     {
+        private frmLogin Login { get; set; }
+        public frmCashierDashboard(frmLogin login):this()
+        {
+            this.Login = login;
+        }
+
         public frmCashierDashboard()
         {
             InitializeComponent();
@@ -112,9 +118,14 @@ namespace Transportation.App
             MainControl.scheduleId = "";
             MainControl.selectedSeatCount = 0;
 
-            frmLogin login = new frmLogin();
-            login.Show();
-            this.Visible = false;
+            this.Dispose();
+            this.Login.Show();
+        }
+
+        private void frmCashierDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
+            this.Login.Show();
         }
 
         /* private void SetPanelPosition(object button)

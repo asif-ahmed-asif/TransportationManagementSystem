@@ -21,7 +21,7 @@ namespace Transportation.Validation
             RuleFor(t => t.CustomerPhone)
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("Phone Number cannot be empty!")
-                .Length(8, 15).WithMessage("Phone Number length must be between 8 to 15")
+                .Length(11).WithMessage("Phone Number length must be 11")
                 .Must(CustomValidations.ValidPhoneNumber).WithMessage("Phone Number cannot contain any character!");
         }
     }

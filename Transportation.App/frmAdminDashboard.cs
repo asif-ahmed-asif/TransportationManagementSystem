@@ -12,6 +12,11 @@ namespace Transportation.App
 {
     public partial class frmAdminDashboard : Form
     {
+        private frmLogin Login { get; set; }
+        public frmAdminDashboard(frmLogin login) : this()
+        {
+            this.Login = login;
+        }
         public frmAdminDashboard()
         {
             InitializeComponent(); 
@@ -82,9 +87,14 @@ namespace Transportation.App
             if (MessageBox.Show("Are you sure to logout?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
                 return;
 
-            frmLogin login = new frmLogin();
-            login.Show();
-            this.Visible = false;
+            this.Dispose();
+            this.Login.Show();
+        }
+
+        private void frmAdminDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
+            this.Login.Show();
         }
 
 

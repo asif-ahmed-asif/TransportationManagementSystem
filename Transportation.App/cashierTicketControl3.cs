@@ -81,12 +81,7 @@ namespace Transportation.App
             this.booking= MainControl.booking;
             try
             {
-
-                if (BookingRepo.Save(this.booking))
-                {
-                    MessageBox.Show("Booking data saved");
-                }
-
+                BookingRepo.Save(this.booking);
             }
             catch (Exception save)
             {
@@ -111,19 +106,12 @@ namespace Transportation.App
                 if(currentSalesAmount == 0)
                 {
                     int amount = ticketPrice * MainControl.selectedSeatCount;
-                    if (SalesRepo.Insert(MainControl.cashierId, amount))
-                    {
-                        MessageBox.Show("Sales data added");
-                    }
+                    SalesRepo.Insert(MainControl.cashierId, amount);
                 }
                 else
                 {
                     int updatedAmount = currentSalesAmount + (ticketPrice * MainControl.selectedSeatCount);
-
-                    if (SalesRepo.Update(MainControl.cashierId, updatedAmount))
-                    {
-                        MessageBox.Show("Sales data Updated");
-                    }
+                    SalesRepo.Update(MainControl.cashierId, updatedAmount);
                 }
                 
             }catch(Exception e)
