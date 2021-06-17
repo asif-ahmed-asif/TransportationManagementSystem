@@ -14,7 +14,8 @@ namespace Transportation.Entity
         public string JourneyDate { get; set; }
         public string SeatNo { get; set; }
         public string ScheduleId { get; set; }
-        public string FareId { get; set; }
+        public string Fare { get; set; }
+        public string TotalFare { get; set; }
         public string DeptLocation { get; set; }
         public string Destination { get; set; }
         public string BusType { get; set; }

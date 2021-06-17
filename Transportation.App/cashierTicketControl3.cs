@@ -18,10 +18,13 @@ namespace Transportation.App
     {
         private Ticket Ticket { get; set; }
         private Booking booking = new Booking();
-            
+        private int selectedSeatCount = 0;
+
+        
         public cashierTicketControl3()
         {
             InitializeComponent();
+            this.selectedSeatCount = MainControl.selectedSeatCount;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -73,6 +76,8 @@ namespace Transportation.App
             ticket.JourneyDate = MainControl.cashierJourneyDate;
             ticket.SeatNo = MainControl.booking.Seats;
             ticket.ScheduleId = MainControl.booking.ScheduleId;
+            ticket.Fare = TicketRepo.GetFare(ticket.ScheduleId);
+            ticket.TotalFare = (int.Parse(ticket.Fare) * MainControl.selectedSeatCount).ToString();
             this.booking= MainControl.booking;
             try
             {
