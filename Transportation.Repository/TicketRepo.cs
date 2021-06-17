@@ -145,7 +145,7 @@ namespace Transportation.Repository
         public static void Insert(Ticket ticket)
         {
 
-            string sql = $"insert into ticket values('{ticket.CustomerName}','{ticket.CustomerPhone}','{ticket.JourneyDate}','{ticket.SeatNo}','{ticket.ScheduleId}','{ticket.Fare}','{ticket.TotalFare}')";
+            string sql = $"insert into ticket values('{ticket.CustomerName}','{ticket.CustomerPhone}','{ticket.JourneyDate}','{ticket.SeatNo}','{ticket.ScheduleId}','{ticket.TotalFare}')";
             DataAccess.ExecuteDmlQuery(sql);
         }
     }
