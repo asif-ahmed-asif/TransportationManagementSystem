@@ -42,13 +42,13 @@ namespace Transportation.App
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.dgvBus = new System.Windows.Forms.DataGridView();
+            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BusFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rtxtSearch = new System.Windows.Forms.RichTextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.invisibleBusNoText = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BusFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvBus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox8)).BeginInit();
@@ -188,6 +188,24 @@ namespace Transportation.App
             this.dgvBus.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvBus_DataBindingComplete);
             this.dgvBus.DoubleClick += new System.EventHandler(this.dgvRoute_DoubleClick);
             // 
+            // salary
+            // 
+            this.salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.salary.DataPropertyName = "BusNo";
+            this.salary.HeaderText = "Bus No.";
+            this.salary.MinimumWidth = 6;
+            this.salary.Name = "salary";
+            this.salary.ReadOnly = true;
+            // 
+            // BusFare
+            // 
+            this.BusFare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BusFare.DataPropertyName = "BusType";
+            this.BusFare.HeaderText = "Bus Type";
+            this.BusFare.MinimumWidth = 6;
+            this.BusFare.Name = "BusFare";
+            this.BusFare.ReadOnly = true;
+            // 
             // rtxtSearch
             // 
             this.rtxtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -248,24 +266,6 @@ namespace Transportation.App
             this.pictureBox1.TabIndex = 133;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
-            // 
-            // salary
-            // 
-            this.salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.salary.DataPropertyName = "BusNo";
-            this.salary.HeaderText = "Bus No.";
-            this.salary.MinimumWidth = 6;
-            this.salary.Name = "salary";
-            this.salary.ReadOnly = true;
-            // 
-            // BusFare
-            // 
-            this.BusFare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BusFare.DataPropertyName = "BusType";
-            this.BusFare.HeaderText = "Bus Type";
-            this.BusFare.MinimumWidth = 6;
-            this.BusFare.Name = "BusFare";
-            this.BusFare.ReadOnly = true;
             // 
             // controlBus
             // 
