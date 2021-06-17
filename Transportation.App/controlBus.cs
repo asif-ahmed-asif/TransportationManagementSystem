@@ -83,6 +83,10 @@ namespace Transportation.App
 
         private void ClearBusInput()
         {
+            //If the clear button is clicked then this means a new Bus is willingly to be created.
+            //So, in the following line the bus number will be empty, which indicates the bus will not be for update,
+            //rather it is in create mode.
+            this.invisibleBusNoText.Text = "";
             rtxtPhn.Text = "";
             cmbType.SelectedIndex = -1;
             this.rtxtPhn.Enabled = true;
