@@ -213,6 +213,12 @@ namespace Transportation.App
 
         private void deleteBusBtn_Click(object sender, EventArgs e)
         {
+            if (this.dgvBus.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("No data selected");
+                return;
+            }
+            
             if (MessageBox.Show("Are you sure you want to delete?", caption: "Confirmation", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning) == DialogResult.No)
             {

@@ -25,10 +25,6 @@
     <list default="true" id="11334c40-00de-4270-a28b-359055b33d6f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TransportationManagementSystem/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transportation.App/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.App/controlBus.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/controlBus.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.App/controlBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.App/controlBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.Repository/BusRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Repository/BusRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transportation.Repository/RouteRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transportation.Repository/RouteRepo.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,10 +72,10 @@
         <option value="$PROJECT_DIR$/Transportation.App/controlAccount1.cs" />
         <option value="$PROJECT_DIR$/Transportation.Validation/RouteValidation.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/controlRoute.cs" />
-        <option value="$PROJECT_DIR$/Transportation.App/Program.cs" />
         <option value="$PROJECT_DIR$/Transportation.App/controlBus.cs" />
         <option value="$PROJECT_DIR$/Transportation.Repository/BusRepo.cs" />
         <option value="$PROJECT_DIR$/Transportation.Repository/RouteRepo.cs" />
+        <option value="$PROJECT_DIR$/Transportation.App/Program.cs" />
       </list>
     </option>
   </component>
@@ -148,7 +144,7 @@
       <workItem from="1623867896312" duration="1538000" />
       <workItem from="1623922716935" duration="498000" />
       <workItem from="1623940477100" duration="1280000" />
-      <workItem from="1623946695092" duration="6105000" />
+      <workItem from="1623946695092" duration="7089000" />
     </task>
     <servers />
   </component>
@@ -181,22 +177,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="519" height="464" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1623592030388" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1623954186667">
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1623954767500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623954186667" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1623954186667">
+    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623954767500" />
+    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1623954767499">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623954186667" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1623954186667">
+    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623954767499" />
+    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1623954767499">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623954186667" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1623954186667">
+    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623954767499" />
+    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1623954767499">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623954186667" />
+    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623954767499" />
     <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1623952599646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
