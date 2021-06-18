@@ -87,13 +87,22 @@ namespace Transportation.App
             {
                 MessageBox.Show("Can not save into Booking Table" + save.Message);
             }
-            TicketRepo.Insert(ticket);
-            this.SaveSalesAmount(ticket.ScheduleId);
-            frmPrintedTicket printT= new frmPrintedTicket();
-            printT.Phone = this.txtPhnNumber.Text;
-            printT.Show();
-            this.ClearUserInput();
 
+            try
+            {
+                TicketRepo.Insert(ticket);
+                this.SaveSalesAmount(ticket.ScheduleId);
+                frmPrintedTicket printT = new frmPrintedTicket();
+                printT.Phone = this.txtPhnNumber.Text;
+                printT.Show();
+                this.ClearUserInput();
+
+            }
+            catch (Exception save)
+            {
+                MessageBox.Show("Can not save into Ticket Table" + save.Message);
+            }
+            
         }
 
         private void SaveSalesAmount(string scheduleId)
