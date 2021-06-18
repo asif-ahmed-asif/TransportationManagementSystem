@@ -50,6 +50,8 @@ namespace Transportation.App
                         }
                         this.txtUserName.Text = "";
                         this.txtPassword.Text = "";
+                        btnViewPassword.BackgroundImage = Properties.Resources.s1;
+                        txtPassword.UseSystemPasswordChar = true;
                     }
                     else
                     {
