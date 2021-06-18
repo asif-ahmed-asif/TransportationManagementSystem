@@ -14,7 +14,7 @@ namespace Transportation.Repository
         public static List<Route> GetAllDestination(string from)
         {
             var routeList = new List<Route>();
-            string sql = $"select destination from route where dept_location = '{from}' group by destination";
+            string sql = $"select destination from route where route.status='Active' and dept_location = '{from}' group by destination";
             var dt = DataAccess.GetDataTable(sql);
             int row = 0;
             while (row < dt.Rows.Count)

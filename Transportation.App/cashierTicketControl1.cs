@@ -123,5 +123,10 @@ namespace Transportation.App
                 this.cmbBusType.Items.Add(s);
             }
         }
+
+        private void cmbBusType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
