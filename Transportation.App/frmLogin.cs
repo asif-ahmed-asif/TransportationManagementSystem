@@ -67,5 +67,24 @@ namespace Transportation.App
                 MessageBox.Show("Invalid Username or Password!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnViewPassword_Click(object sender, EventArgs e)
+        {
+
+            if (txtPassword.UseSystemPasswordChar)
+            {
+                btnViewPassword.BackgroundImage = Properties.Resources.p1;
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                btnViewPassword.BackgroundImage = Properties.Resources.s1;
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
