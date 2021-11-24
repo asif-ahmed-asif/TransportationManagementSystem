@@ -12,6 +12,19 @@ There are three user classes in this project:
 
 These three user classes will work in a simultaneous to manner to ensure a seamless experience for customers by automating routing, generating secure digital tickets etc.
 
+## Credentials
+
+- Admin
+Username: user-1
+Password: asif1234
+
+- Cashier
+Username: user-2
+Password: rifat1234
+
+- Accountant
+Username: user-3
+Password: shafiq1234
 
 ## Features
 
