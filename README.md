@@ -27,4 +27,7 @@ Cashier can fill out the "from" and "to" textboxes in the page and choose the da
 
 ![](Readme%20attachments/CashierDashboard.png)
 
+Cashier can then select from a bus from a given  given list based on the number of seats a customer wants to avail
+
+![](Readme%20attachments/CashierDashboard2.png)
 
