@@ -31,3 +31,9 @@ Cashier can then select from a bus from a given  given list based on the number 
 
 ![](Readme%20attachments/CashierDashboard2.png)
 
+Cashier will then select the seats from the popup
+
+- Already booked seats will be unavailabe for selection
+
+![](Readme%20attachments/CashierDashboard3.png)
+
