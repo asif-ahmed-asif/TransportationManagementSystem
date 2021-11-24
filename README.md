@@ -48,8 +48,34 @@ Routes for buses can be inserted or deleted by the admins. Each route must be as
 
 ![](Readme%20attachments/RouteForm1.png)
 
-**3. Return Routes Inertion**
+**4. Route Searching**
+
+Routes can be searched by name in this form from the list on the right hand side
+
+![](Readme%20attachments/RouteForm3.png)
+
+**5. Return Routes Inertion**
 
 When a bus goes to a destination it also needs a return path to return from that destination, return routes page are designed for that purpose
 
 ![](Readme%20attachments/RouteForm2.png)
+
+- Departure, destination and bus number cannot be changed as this is designed for the buses to return. Only the departure and arrival time can be set
+
+- The original route will be shown before the return route on this page
+
+**5. User Creation and Update**
+
+Admin can create new users and update the information of existing ones
+
+![](Readme%20attachments/UserForm1.png)
+
+Admin can also search for the users from the users list
+
+![](Readme%20attachments/UserForm2.png)
+
+**6. Bus Operations**
+
+Buses can be created, updated and searched by the admin
+
+![](Readme%20attachments/BusForm1.png)
