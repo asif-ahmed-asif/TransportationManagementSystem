@@ -19,4 +19,4 @@ These three user classes will work in a simultaneous to manner to ensure a seaml
 
 The database of the entire systemn has been taken online by using Microsoft Azure. All registered users of the system can login from anywhere in the world 
 
-![Azure Online Database Screenshot](Readme attachments\Online db.png)
+![Azure Online Database Screenshot](Readme%20attachments\Online%20db.png)
