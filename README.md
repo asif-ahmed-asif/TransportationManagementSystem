@@ -18,11 +18,13 @@ These three user classes will work in a simultaneous to manner to ensure a seaml
 **1. Online Database**
 
 The database of the entire systemn has been taken online by using Microsoft Azure. All registered users of the system can login from anywhere in the world 
+![Azure Online Database Screenshot](Readme%20attachments/Online%20db.png)
 
-![Azure Online Database Screenshot](Readme%20attachments\Online%20db.png)
 
 **2. Ticket Booking**
 
 Cashier can fill out the "from" and "to" textboxes in the page and choose the date of departure as well as choosing the bus type for the customer (AC/Non AC)
 
-![](Readme%20attachments\CashierDashboard.png)
+![](Readme%20attachments/CashierDashboard.png)
+
+

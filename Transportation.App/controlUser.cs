@@ -85,8 +85,8 @@ namespace Transportation.App
             {
                 UserId = UserRepo.GetId(),
                 Name = this.rtxtName.Text,
-                Email = this.rtxtMail.Text,
                 Phone = this.rtxtPhn.Text,
+                Email = this.rtxtMail.Text,
                 Address = this.rtxtAddress.Text,
                 Password = this.rtxtPassword.Text,
                 UserType = this.cmbType.Text,
@@ -121,8 +121,8 @@ namespace Transportation.App
             {
                 UserId = this.rtxtId.Text,
                 Name = this.rtxtName.Text,
-                Email = this.rtxtMail.Text,
                 Phone = this.rtxtPhn.Text,
+                Email = this.rtxtMail.Text,
                 Address = this.rtxtAddress.Text,
                 Password = this.rtxtPassword.Text,
                 UserType = this.cmbType.Text,

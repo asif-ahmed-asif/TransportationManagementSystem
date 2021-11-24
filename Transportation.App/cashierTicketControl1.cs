@@ -116,12 +116,24 @@ namespace Transportation.App
 
         private void cboTo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] bustypes = BusTypeRepo.GetBusTypeByRoute(this.cboFrom.Text,this.cboTo.Text);
-            this.cmbBusType.Items.Clear();
-            foreach (string s in bustypes)
+            try
             {
-                this.cmbBusType.Items.Add(s);
+                string[] bustypes = BusTypeRepo.GetBusTypeByRoute(this.cboFrom.Text, this.cboTo.Text);
+                this.cmbBusType.Items.Clear();
+                foreach (string s in bustypes)
+                {
+                    this.cmbBusType.Items.Add(s);
+                }
             }
+            catch
+            {
+                MessageBox.Show("Unable to find bus type!");
+            }
+        }
+
+        private void cmbBusType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Transportation.Repository
         public static List<Route> GetAllDestination(string from)
         {
             var routeList = new List<Route>();
-            string sql = $"select destination from route where dept_location = '{from}' group by destination";
+            string sql = $"select destination from route where route.status='Active' and dept_location = '{from}' group by destination";
             var dt = DataAccess.GetDataTable(sql);
             int row = 0;
             while (row < dt.Rows.Count)
@@ -307,6 +307,18 @@ namespace Transportation.Repository
             var sql = $"UPDATE [Route] SET dept_location = '{route.Destination}', destination = '{route.DeptLocation}', bus_no = '{route.BusNo}' , status = '{route.Status}', fare = '{route.Fare}' where route_id = '{routeId}';";
             var row = DataAccess.ExecuteDmlQuery(sql);
             return row == 1;
+        }
+
+        public static bool SetNullToBusNum(string busNo)
+        {
+            string sql = "Update [Route] SET bus_no = null, status = 'Inactive' where bus_no = '"+busNo+"';";
+            var row = DataAccess.ExecuteDmlQuery(sql);
+            if (row >= 0)
+            {
+                return true;
+            }
+            
+            return false;
         }
     }
 }

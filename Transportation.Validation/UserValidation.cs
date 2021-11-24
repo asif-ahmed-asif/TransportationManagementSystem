@@ -18,16 +18,16 @@ namespace Transportation.Validation
                 .Length(2, 50).WithMessage("Name Length must be between 2 to 50")
                 .Must(CustomValidations.ValidName).WithMessage("Name contains invalid characters");
 
+            RuleFor(p => p.Phone)
+                .Cascade(CascadeMode.Stop)
+                .NotEmpty().WithMessage("Phone Number cannot be empty!")
+                .Length(11).WithMessage("Phone Number length must be 11")
+                .Must(CustomValidations.ValidPhoneNumber).WithMessage("Phone Number cannot contain any character!");
+
             RuleFor(e => e.Email)
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("Email field is empty")
                 .EmailAddress().WithMessage("Invalid email address");
-
-            RuleFor(p => p.Phone)
-                .Cascade(CascadeMode.Stop)
-                .NotEmpty().WithMessage("Phone Number cannot be empty!")
-                .Length(8, 15).WithMessage("Phone Number length must be between 8 to 15")
-                .Must(CustomValidations.ValidPhoneNumber).WithMessage("Phone Number cannot contain any character!");
 
             RuleFor(a => a.Address)
                 .Cascade(CascadeMode.Stop)

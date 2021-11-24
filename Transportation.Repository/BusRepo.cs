@@ -44,7 +44,7 @@ namespace Transportation.Repository
 
         public static List<Bus> GetAll()
         {
-            string sql = "SELECT * FROM bus WHERE bus.bus_no NOT IN (SELECT route.bus_no FROM route)";
+            string sql = "SELECT * FROM bus WHERE bus.bus_no NOT IN (SELECT route.bus_no FROM route where bus_no is not null)";
             DataTable data = DataAccess.GetDataTable(sql);
 
             int i = 0;
@@ -155,6 +155,14 @@ namespace Transportation.Repository
             }
 
             return buses;
+        }
+
+        public static bool Delete(string busNo)
+        {
+            string sqlQuery = $"Delete from [Bus] where bus_no = '{busNo}'";
+            
+            var row = DataAccess.ExecuteDmlQuery(sqlQuery);
+            return row == 1;
         }
     }
 }

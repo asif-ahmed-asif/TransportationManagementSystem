@@ -81,24 +81,28 @@ namespace Transportation.App
             this.booking= MainControl.booking;
             try
             {
-
-                if (BookingRepo.Save(this.booking))
-                {
-                    MessageBox.Show("Booking data saved");
-                }
-
+                BookingRepo.Save(this.booking);
             }
             catch (Exception save)
             {
                 MessageBox.Show("Can not save into Booking Table" + save.Message);
             }
-            TicketRepo.Insert(ticket);
-            this.SaveSalesAmount(ticket.ScheduleId);
-            frmPrintedTicket printT= new frmPrintedTicket();
-            printT.Phone = this.txtPhnNumber.Text;
-            printT.Show();
-            this.ClearUserInput();
 
+            try
+            {
+                TicketRepo.Insert(ticket);
+                this.SaveSalesAmount(ticket.ScheduleId);
+                frmPrintedTicket printT = new frmPrintedTicket();
+                printT.Phone = this.txtPhnNumber.Text;
+                printT.Show();
+                this.ClearUserInput();
+
+            }
+            catch (Exception save)
+            {
+                MessageBox.Show("Can not save into Ticket Table" + save.Message);
+            }
+            
         }
 
         private void SaveSalesAmount(string scheduleId)
@@ -111,19 +115,12 @@ namespace Transportation.App
                 if(currentSalesAmount == 0)
                 {
                     int amount = ticketPrice * MainControl.selectedSeatCount;
-                    if (SalesRepo.Insert(MainControl.cashierId, amount))
-                    {
-                        MessageBox.Show("Sales data added");
-                    }
+                    SalesRepo.Insert(MainControl.cashierId, amount);
                 }
                 else
                 {
                     int updatedAmount = currentSalesAmount + (ticketPrice * MainControl.selectedSeatCount);
-
-                    if (SalesRepo.Update(MainControl.cashierId, updatedAmount))
-                    {
-                        MessageBox.Show("Sales data Updated");
-                    }
+                    SalesRepo.Update(MainControl.cashierId, updatedAmount);
                 }
                 
             }catch(Exception e)

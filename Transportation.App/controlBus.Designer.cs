@@ -42,13 +42,14 @@ namespace Transportation.App
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.dgvBus = new System.Windows.Forms.DataGridView();
+            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BusFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rtxtSearch = new System.Windows.Forms.RichTextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.invisibleBusNoText = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BusFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deleteBusBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvBus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox8)).BeginInit();
@@ -188,6 +189,24 @@ namespace Transportation.App
             this.dgvBus.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvBus_DataBindingComplete);
             this.dgvBus.DoubleClick += new System.EventHandler(this.dgvRoute_DoubleClick);
             // 
+            // salary
+            // 
+            this.salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.salary.DataPropertyName = "BusNo";
+            this.salary.HeaderText = "Bus No.";
+            this.salary.MinimumWidth = 6;
+            this.salary.Name = "salary";
+            this.salary.ReadOnly = true;
+            // 
+            // BusFare
+            // 
+            this.BusFare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BusFare.DataPropertyName = "BusType";
+            this.BusFare.HeaderText = "Bus Type";
+            this.BusFare.MinimumWidth = 6;
+            this.BusFare.Name = "BusFare";
+            this.BusFare.ReadOnly = true;
+            // 
             // rtxtSearch
             // 
             this.rtxtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -249,29 +268,24 @@ namespace Transportation.App
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
-            // salary
+            // deleteBusBtn
             // 
-            this.salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.salary.DataPropertyName = "BusNo";
-            this.salary.HeaderText = "Bus No.";
-            this.salary.MinimumWidth = 6;
-            this.salary.Name = "salary";
-            this.salary.ReadOnly = true;
-            // 
-            // BusFare
-            // 
-            this.BusFare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BusFare.DataPropertyName = "BusType";
-            this.BusFare.HeaderText = "Bus Type";
-            this.BusFare.MinimumWidth = 6;
-            this.BusFare.Name = "BusFare";
-            this.BusFare.ReadOnly = true;
+            this.deleteBusBtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.deleteBusBtn.Location = new System.Drawing.Point(323, 263);
+            this.deleteBusBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.deleteBusBtn.Name = "deleteBusBtn";
+            this.deleteBusBtn.Size = new System.Drawing.Size(212, 50);
+            this.deleteBusBtn.TabIndex = 135;
+            this.deleteBusBtn.Text = "Delete";
+            this.deleteBusBtn.UseVisualStyleBackColor = false;
+            this.deleteBusBtn.Click += new System.EventHandler(this.deleteBusBtn_Click);
             // 
             // controlBus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.deleteBusBtn);
             this.Controls.Add(this.invisibleBusNoText);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvBus);
@@ -296,6 +310,8 @@ namespace Transportation.App
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button deleteBusBtn;
 
         private System.Windows.Forms.RichTextBox invisibleBusNoText;
 

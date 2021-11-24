@@ -40,6 +40,7 @@ namespace Transportation.App
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnViewPassword = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -49,6 +50,7 @@ namespace Transportation.App
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnViewPassword);
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.txtUserName);
             this.panel2.Controls.Add(this.panel1);
@@ -68,9 +70,9 @@ namespace Transportation.App
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(152, 375);
+            this.txtPassword.Location = new System.Drawing.Point(152, 377);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(199, 19);
+            this.txtPassword.Size = new System.Drawing.Size(169, 19);
             this.txtPassword.TabIndex = 100;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -163,8 +165,20 @@ namespace Transportation.App
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnViewPassword
+            // 
+            this.btnViewPassword.BackgroundImage = global::Transportation.App.Properties.Resources.s1;
+            this.btnViewPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnViewPassword.Location = new System.Drawing.Point(324, 372);
+            this.btnViewPassword.Name = "btnViewPassword";
+            this.btnViewPassword.Size = new System.Drawing.Size(34, 29);
+            this.btnViewPassword.TabIndex = 101;
+            this.btnViewPassword.UseVisualStyleBackColor = true;
+            this.btnViewPassword.Click += new System.EventHandler(this.btnViewPassword_Click);
+            // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 484);
@@ -196,5 +210,6 @@ namespace Transportation.App
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.Button btnViewPassword;
     }
 }

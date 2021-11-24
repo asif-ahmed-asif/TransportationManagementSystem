@@ -83,6 +83,10 @@ namespace Transportation.App
 
         private void ClearBusInput()
         {
+            //If the clear button is clicked then this means a new Bus is willingly to be created.
+            //So, in the following line the bus number will be empty, which indicates the bus will not be for update,
+            //rather it is in create mode.
+            this.invisibleBusNoText.Text = "";
             rtxtPhn.Text = "";
             cmbType.SelectedIndex = -1;
             this.rtxtPhn.Enabled = true;
@@ -205,6 +209,53 @@ namespace Transportation.App
             this.cmbType.Text = this.dgvBus.CurrentRow.Cells[1].Value.ToString();
             this.invisibleBusNoText.Text = this.dgvBus.CurrentRow.Cells[0].Value.ToString();
             this.rtxtPhn.Enabled = false;
+        }
+
+        private void deleteBusBtn_Click(object sender, EventArgs e)
+        {
+            if (this.dgvBus.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("No data selected");
+                return;
+            }
+            
+            if (MessageBox.Show("Are you sure you want to delete?", caption: "Confirmation", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                //MessageBox.Show("hello");
+                //when delete button is clicked the bus will be null to route table since it is foreign key
+                bool ifBusSetsToNullInRoute = RouteRepo.SetNullToBusNum(this.rtxtPhn.Text);
+
+                if (ifBusSetsToNullInRoute)
+                {
+                    try
+                    {
+                        bool ifBusDeleted = BusRepo.Delete(this.rtxtPhn.Text);
+
+                        if (ifBusDeleted)
+                        {
+                            MessageBox.Show("Deleted Successfully!\nBus associated with routes is inactivated");
+                            
+                            ClearBusInput();
+                            this.invisibleBusNoText.Text = "";
+                            this.FillBusDataGridView();
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show("Something went wrong when deleting the bus");
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong when setting bus number to null to route\n"+exception);
+            }
         }
     }
 }
