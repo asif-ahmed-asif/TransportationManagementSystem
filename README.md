@@ -79,3 +79,19 @@ Admin can also search for the users from the users list
 Buses can be created, updated and searched by the admin
 
 ![](Readme%20attachments/BusForm1.png)
+
+**7. Sales Montoring**
+
+The admin can view the sales made by the cashiers by date
+
+![](Readme%20attachments/SalesForm1.png)
+
+Admins can also search for a specific cashier and view how much sales they have made
+
+![](Readme%20attachments/SalesForm2.png)
+
+**8. Login Form Validation**
+
+Login credentials are validated username and password
+
+![](Readme%20attachments/LoginForm1.png)
