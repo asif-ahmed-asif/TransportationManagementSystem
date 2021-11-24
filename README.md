@@ -21,7 +21,7 @@ The database of the entire systemn has been taken online by using Microsoft Azur
 ![Azure Online Database Screenshot](Readme%20attachments/Online%20db.png)
 
 
-**2. Ticket Booking**
+**2. Ticket Booking and Printing**
 
 Cashier can fill out the "from" and "to" textboxes in the page and choose the date of departure as well as choosing the bus type for the customer (AC/Non AC)
 
@@ -33,7 +33,23 @@ Cashier can then select from a bus from a given  given list based on the number 
 
 Cashier will then select the seats from the popup
 
-- Already booked seats will be unavailabe for selection
+- Already booked seats will be unavailabe for selection and are shown to user as orange coloured
 
 ![](Readme%20attachments/CashierDashboard3.png)
 
+After submitting customer's phone number and name the ticket can be printed by the cashier
+
+![](Readme%20attachments/CashierDashboard4.png)
+
+
+**3. Route Insertion and Deletion**
+
+Routes for buses can be inserted or deleted by the admins. Each route must be assigned all the values that are present in this form to be inserted into the system
+
+![](Readme%20attachments/RouteForm1.png)
+
+**3. Return Routes Inertion**
+
+When a bus goes to a destination it also needs a return path to return from that destination, return routes page are designed for that purpose
+
+![](Readme%20attachments/RouteForm2.png)
